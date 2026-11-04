@@ -42,3 +42,11 @@ def test_public_metrics_match_the_documented_sample():
     assert metrics['matched_leaf_fields']==metrics['expected_leaf_fields']==836
     assert metrics['initial_valid_documents_held']==1
     assert metrics['live_acceptance']['counted_total_gbp']=='95.16'
+
+
+def test_replay_steps_and_reset_without_external_network():
+    import os,shutil,subprocess
+    import pytest
+    node=os.getenv('NODE_BINARY') or shutil.which('node')
+    if not node:pytest.skip('Node is required for the standalone replay check; CI installs it.')
+    subprocess.run([node,str(ROOT/'tests/replay_checks.cjs')],check=True,capture_output=True,text=True)

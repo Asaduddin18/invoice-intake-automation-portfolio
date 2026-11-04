@@ -10,4 +10,4 @@ Release checks and publication URLs are recorded in `artifacts/public/release-ve
 
 Future client work requires agreed data permissions, deployment/authentication, managed secrets, monitoring, retention and representative acceptance tests. Payments, bill authorization and banking changes are outside this project. A license for third-party reuse has not been selected.
 
-The portfolio project is signed off within this scope once the release verification records the public repository and reachable walkthrough. New client deployments and feature extensions are separate work.
+The portfolio project is signed off within this scope. The public repository and reachable walkthrough are recorded in the release verification. New client deployments and feature extensions are separate work.

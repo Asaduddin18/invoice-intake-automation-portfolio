@@ -33,7 +33,7 @@ Supplier invoices arrive in different PDF layouts. Copying fields into accountin
 | Live intake acceptance | Five arrivals: valid + duplicate linked to one GBP 95.16 draft, two invalid invoices held, one text attachment unsupported |
 | Repeated polling | Zero new receipts for the same five deliveries after fixing rotating Gmail download locators |
 | Reporting recovery | Locally injected write failure recovered against live Sheets; accounting and extraction counts stayed unchanged |
-| Test suite | 126 automated tests; see CI and release evidence |
+| Test suite | 127 automated tests; see CI and release evidence |
 
 These are small synthetic tests, not production accuracy or scan/OCR coverage. The full dataset has 50 searchable fictional PDFs, but only 20 were evaluated with the model. Phase 6 reused saved extractions and an existing draft, adding no model calls or bill creation intents. [Measured evidence](artifacts/public/metrics.json) · [Case study](docs/case-study.md).
 

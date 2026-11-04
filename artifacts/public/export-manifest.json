@@ -17,8 +17,8 @@
     },
     {
       "path": ".github/workflows/tests.yml",
-      "sha256": "6c0b62e813e253c5061e2d7e19eccc2f197346bed2e2fb3d6817292d6ec493f5",
-      "bytes": 332
+      "sha256": "c89406ff179a42a99c5d0772996eda66784077cafacd64a24a9d0dcd6a35a036",
+      "bytes": 411
     },
     {
       "path": ".gitignore",
@@ -27,7 +27,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "c14c43d3b405c947d85fa3e153fd4637222f42e001459b6e3fa0c617c153753b",
+      "sha256": "40b5d3f5ec5ab17617c952458ba62ce318cbae05e52fe6325c4efb6e1bd66e83",
       "bytes": 6069
     },
     {
@@ -167,8 +167,8 @@
     },
     {
       "path": "artifacts/public/release-verification.json",
-      "sha256": "aa2d7152df5706c1e090f5b41593bd9717a985eb838a1620683d986495b6db78",
-      "bytes": 451
+      "sha256": "d83c797210eb595a10b6893e7a4c3d0f34a2eeed5f117e85883ac88a12b29c5a",
+      "bytes": 907
     },
     {
       "path": "dataset/README.md",
@@ -742,8 +742,8 @@
     },
     {
       "path": "docs/sign-off.md",
-      "sha256": "3cddb7753e2f613d6fab1aa53b52d3de03d8d67ea13a441f8ce587358451b670",
-      "bytes": 1745
+      "sha256": "e8e30d0a56aa57c37989298e2c6fa05e3b2095f2b9dfaa2b7437e21edd63d8e0",
+      "bytes": 1749
     },
     {
       "path": "fixtures/README.md",
@@ -1071,6 +1071,11 @@
       "bytes": 5188
     },
     {
+      "path": "tests/replay_checks.cjs",
+      "sha256": "9ea0eb0d3b1733f12f84300cd230582e76beb0a9af0427a98a626eaeeeac3a73",
+      "bytes": 2120
+    },
+    {
       "path": "tests/test_bills.py",
       "sha256": "182b2cbc8406310ad71e651c2f2384bc19a2a7f03f1ab3f0708c1e82e1539c5e",
       "bytes": 6621
@@ -1102,8 +1107,8 @@
     },
     {
       "path": "tests/test_portfolio_release.py",
-      "sha256": "775f70478e9cde5afd812fbb94bd41ca9fc08d46906e81a8a254f220ca8684ff",
-      "bytes": 1840
+      "sha256": "699084164f5507f727d2e105ff8c953481278f67f213d517d2e339ab69bffec9",
+      "bytes": 2211
     },
     {
       "path": "tests/test_review.py",

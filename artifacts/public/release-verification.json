@@ -1,7 +1,7 @@
 {
   "release": "v1.0.0",
-  "status": "publication_pending",
-  "tests": 126,
+  "status": "published_and_verified",
+  "tests": 127,
   "test_failures": 0,
   "fresh_environment_install": "passed",
   "fresh_export_baseline_tests": 123,
@@ -10,5 +10,10 @@
   "known_credential_history_matches": 0,
   "history_blobs_checked": 180,
   "new_paid_model_calls": 0,
-  "publication_scope": "Clean source snapshot and synthetic assets; account-linked development history excluded"
+  "publication_scope": "Clean source snapshot and synthetic assets; account-linked development history excluded",
+  "repository": "https://github.com/Asaduddin18/invoice-intake-automation-portfolio",
+  "walkthrough": "https://asaduddin18.github.io/invoice-intake-automation-portfolio/",
+  "desktop_browser_check": "passed: rendered layout, valid draft replay and incorrect-total held replay",
+  "public_assets_http": "7 resources returned HTTP 200",
+  "github_pages_run": "https://github.com/Asaduddin18/invoice-intake-automation-portfolio/actions/runs/41839679851"
 }
