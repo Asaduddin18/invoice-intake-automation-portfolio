@@ -1,0 +1,47 @@
+{
+  "id": "INV-020",
+  "filename": "invoice_020.pdf",
+  "split": "tuning",
+  "scenario": "valid",
+  "supplier": {
+    "name": "Bracken Industrial Components Ltd",
+    "email": "accounts@bracken.example",
+    "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+    "known": true,
+    "category": "Industrial components"
+  },
+  "buyer": {
+    "name": "Northmere Distribution Ltd",
+    "email": "finance@northmere.example",
+    "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+  },
+  "invoice_number": "BC-2026-1020",
+  "invoice_date": "2026-09-10",
+  "due_date": "2026-10-10",
+  "currency": "GBP",
+  "purchase_order_reference": "PO-7020",
+  "line_items": [
+    {
+      "description": "M12 zinc-plated fasteners, box of 100",
+      "quantity": "3",
+      "unit": "box",
+      "unit_price": "14.85",
+      "line_amount": "44.55",
+      "tax_rate": "0.20"
+    }
+  ],
+  "subtotal": "44.55",
+  "tax": "8.91",
+  "tax_rate": "0.20",
+  "displayed_total": "53.46",
+  "calculated_total": "53.46",
+  "layout": 2,
+  "date_format": "%Y-%m-%d",
+  "expected_validation": {
+    "outcome": "eligible_for_draft",
+    "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+  },
+  "duplicate_of": null,
+  "source_document_type": "supplier_invoice",
+  "notes": "Payment due under agreed trade terms. No bank details supplied."
+}

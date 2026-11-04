@@ -1,0 +1,14 @@
+{
+  "release": "v1.0.0",
+  "status": "publication_pending",
+  "tests": 126,
+  "test_failures": 0,
+  "fresh_environment_install": "passed",
+  "fresh_export_baseline_tests": 123,
+  "dataset_pdfs": 50,
+  "public_evaluation_records": 20,
+  "known_credential_history_matches": 0,
+  "history_blobs_checked": 180,
+  "new_paid_model_calls": 0,
+  "publication_scope": "Clean source snapshot and synthetic assets; account-linked development history excluded"
+}

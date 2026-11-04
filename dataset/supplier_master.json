@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Alder Packing Supplies Ltd",
+    "email": "accounts@alder.example",
+    "category": "Packaging materials",
+    "known": true
+  },
+  {
+    "name": "Bracken Industrial Components Ltd",
+    "email": "accounts@bracken.example",
+    "category": "Industrial components",
+    "known": true
+  },
+  {
+    "name": "Cedar Facilities Services Ltd",
+    "email": "accounts@cedar.example",
+    "category": "Facilities services",
+    "known": true
+  },
+  {
+    "name": "Dovetail Trade Supplies Ltd",
+    "email": "accounts@dovetail.example",
+    "category": "Unknown supplier",
+    "known": false
+  }
+]

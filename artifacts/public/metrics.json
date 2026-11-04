@@ -1,0 +1,23 @@
+{
+  "evaluated_distinct_invoices": 20,
+  "matched_leaf_fields": 836,
+  "expected_leaf_fields": 836,
+  "invented_missing_values": 0,
+  "initial_valid_documents_held": 1,
+  "fixture_dataset_count": 50,
+  "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+  "limitations": "Small synthetic familiar-layout sample. Not production accuracy or scan/OCR coverage.",
+  "live_acceptance": {
+    "deliveries": 5,
+    "verified_arrivals": 2,
+    "held": 2,
+    "unsupported": 1,
+    "distinct_verified_drafts": 1,
+    "counted_total_gbp": "95.16",
+    "repeat_poll_new_deliveries": 0,
+    "new_model_calls": 0,
+    "new_creation_intents": 0
+  },
+  "historical_estimated_extraction_usd": 0.02536268,
+  "cost_basis": "Historical peak-rate estimate checked 2026-11-02, including tuning and smoke calls. Not a billing statement."
+}

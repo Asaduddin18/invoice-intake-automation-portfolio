@@ -1,0 +1,47 @@
+{
+  "id": "INV-045",
+  "filename": "invoice_045.pdf",
+  "split": "evaluation",
+  "scenario": "valid",
+  "supplier": {
+    "name": "Cedar Facilities Services Ltd",
+    "email": "accounts@cedar.example",
+    "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+    "known": true,
+    "category": "Facilities services"
+  },
+  "buyer": {
+    "name": "Northmere Distribution Ltd",
+    "email": "finance@northmere.example",
+    "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+  },
+  "invoice_number": "CF-2026-1045",
+  "invoice_date": "2026-10-30",
+  "due_date": "2026-12-14",
+  "currency": "GBP",
+  "purchase_order_reference": null,
+  "line_items": [
+    {
+      "description": "Preventive equipment inspection, October service",
+      "quantity": "1",
+      "unit": "hour",
+      "unit_price": "65.00",
+      "line_amount": "65.00",
+      "tax_rate": "0.20"
+    }
+  ],
+  "subtotal": "65.00",
+  "tax": "13.00",
+  "tax_rate": "0.20",
+  "displayed_total": "78.00",
+  "calculated_total": "78.00",
+  "layout": 3,
+  "date_format": "%d/%m/%Y",
+  "expected_validation": {
+    "outcome": "eligible_for_draft",
+    "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+  },
+  "duplicate_of": null,
+  "source_document_type": "supplier_invoice",
+  "notes": "Payment due under agreed trade terms. No bank details supplied."
+}

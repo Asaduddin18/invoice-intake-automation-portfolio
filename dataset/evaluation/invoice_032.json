@@ -1,0 +1,63 @@
+{
+  "id": "INV-032",
+  "filename": "invoice_032.pdf",
+  "split": "evaluation",
+  "scenario": "valid",
+  "supplier": {
+    "name": "Bracken Industrial Components Ltd",
+    "email": "accounts@bracken.example",
+    "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+    "known": true,
+    "category": "Industrial components"
+  },
+  "buyer": {
+    "name": "Northmere Distribution Ltd",
+    "email": "finance@northmere.example",
+    "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+  },
+  "invoice_number": "BC-2026-1032",
+  "invoice_date": "2026-10-04",
+  "due_date": "2026-11-03",
+  "currency": "GBP",
+  "purchase_order_reference": "PO-7032",
+  "line_items": [
+    {
+      "description": "M12 zinc-plated fasteners, box of 100",
+      "quantity": "6",
+      "unit": "box",
+      "unit_price": "14.85",
+      "line_amount": "89.10",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Warehouse handling gloves, size L",
+      "quantity": "7",
+      "unit": "pair",
+      "unit_price": "6.40",
+      "line_amount": "44.80",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Machine coupling replacement, specification M24",
+      "quantity": "8",
+      "unit": "unit",
+      "unit_price": "38.95",
+      "line_amount": "311.60",
+      "tax_rate": "0.20"
+    }
+  ],
+  "subtotal": "445.50",
+  "tax": "89.10",
+  "tax_rate": "0.20",
+  "displayed_total": "534.60",
+  "calculated_total": "534.60",
+  "layout": 2,
+  "date_format": "%Y-%m-%d",
+  "expected_validation": {
+    "outcome": "eligible_for_draft",
+    "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+  },
+  "duplicate_of": null,
+  "source_document_type": "supplier_invoice",
+  "notes": "Payment due under agreed trade terms. No bank details supplied."
+}

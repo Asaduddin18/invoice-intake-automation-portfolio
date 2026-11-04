@@ -1,0 +1,63 @@
+{
+  "id": "INV-037",
+  "filename": "invoice_037.pdf",
+  "split": "evaluation",
+  "scenario": "unknown_supplier",
+  "supplier": {
+    "name": "Dovetail Trade Supplies Ltd",
+    "email": "accounts@dovetail.example",
+    "address": "88 Fictional Supply Estate, Demo Borough, United Kingdom",
+    "known": false,
+    "category": "Unknown supplier"
+  },
+  "buyer": {
+    "name": "Northmere Distribution Ltd",
+    "email": "finance@northmere.example",
+    "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+  },
+  "invoice_number": "AP-2026-1037",
+  "invoice_date": "2026-10-14",
+  "due_date": "2026-10-28",
+  "currency": "GBP",
+  "purchase_order_reference": "PO-7037",
+  "line_items": [
+    {
+      "description": "Recycled pallet wrap, 400 mm x 250 m",
+      "quantity": "2",
+      "unit": "roll",
+      "unit_price": "12.35",
+      "line_amount": "24.70",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Storage bin labels, printed batch of 100",
+      "quantity": "3",
+      "unit": "batch",
+      "unit_price": "18.20",
+      "line_amount": "54.60",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Double-wall shipping cartons, pack of 25",
+      "quantity": "4",
+      "unit": "pack",
+      "unit_price": "24.75",
+      "line_amount": "99.00",
+      "tax_rate": "0.20"
+    }
+  ],
+  "subtotal": "178.30",
+  "tax": "35.66",
+  "tax_rate": "0.20",
+  "displayed_total": "213.96",
+  "calculated_total": "213.96",
+  "layout": 1,
+  "date_format": "%d %b %Y",
+  "expected_validation": {
+    "outcome": "hold",
+    "reason": "Supplier is outside seeded mapping; correct extraction alone does not authorize posting."
+  },
+  "duplicate_of": null,
+  "source_document_type": "supplier_invoice",
+  "notes": "Payment due under agreed trade terms. No bank details supplied."
+}

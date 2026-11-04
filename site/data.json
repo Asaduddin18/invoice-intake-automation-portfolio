@@ -1,0 +1,143 @@
+[
+  {
+    "name": "Valid invoice",
+    "outcome": "verified",
+    "reason": "Existing synthetic draft verified at GBP 95.16.",
+    "source": "sources/invoice_001.pdf",
+    "supplier": "Alder Packing Supplies Ltd",
+    "number": "AP-2026-1001",
+    "date": "2026-08-03",
+    "total": "95.16",
+    "subtotal": "79.30",
+    "tax": "15.86",
+    "items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "2",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "24.70",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "3",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "54.60",
+        "tax_rate": "0.20"
+      }
+    ]
+  },
+  {
+    "name": "Duplicate submission",
+    "outcome": "duplicate",
+    "reason": "Separate email receipt, same document and business invoice. No second obligation.",
+    "source": "sources/invoice_001.pdf",
+    "supplier": "Alder Packing Supplies Ltd",
+    "number": "AP-2026-1001",
+    "date": "2026-08-03",
+    "total": "95.16",
+    "subtotal": "79.30",
+    "tax": "15.86",
+    "items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "2",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "24.70",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "3",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "54.60",
+        "tax_rate": "0.20"
+      }
+    ]
+  },
+  {
+    "name": "Missing invoice number",
+    "outcome": "held",
+    "reason": "Invoice number is missing. Preserve the null and hold for source-based correction.",
+    "source": "sources/invoice_013.pdf",
+    "supplier": "Alder Packing Supplies Ltd",
+    "number": null,
+    "date": "2026-08-27",
+    "total": "531.60",
+    "subtotal": "443.00",
+    "tax": "88.60",
+    "items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "5",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "61.75",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "6",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "109.20",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Double-wall shipping cartons, pack of 25",
+        "quantity": "7",
+        "unit": "pack",
+        "unit_price": "24.75",
+        "line_amount": "173.25",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "8",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "98.80",
+        "tax_rate": "0.20"
+      }
+    ]
+  },
+  {
+    "name": "Incorrect printed total",
+    "outcome": "held",
+    "reason": "Printed total 553.13 disagrees with 455.00 + 91.00 = 546.00. Supplier mapping also needs configuration.",
+    "source": "sources/invoice_015.pdf",
+    "supplier": "Cedar Facilities Services Ltd",
+    "number": "CF-2026-1015",
+    "date": "2026-08-31",
+    "total": "553.13",
+    "subtotal": "455.00",
+    "tax": "91.00",
+    "items": [
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "7",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "455.00",
+        "tax_rate": "0.20"
+      }
+    ]
+  },
+  {
+    "name": "Unsupported attachment",
+    "outcome": "unsupported",
+    "reason": "A text attachment is recorded and skipped. No extraction or accounting call.",
+    "source": null,
+    "supplier": null,
+    "number": null,
+    "date": null,
+    "total": null,
+    "subtotal": null,
+    "tax": null,
+    "items": []
+  }
+]

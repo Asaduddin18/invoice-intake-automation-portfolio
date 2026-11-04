@@ -1,0 +1,63 @@
+{
+  "id": "INV-017",
+  "filename": "invoice_017.pdf",
+  "split": "tuning",
+  "scenario": "unknown_supplier",
+  "supplier": {
+    "name": "Dovetail Trade Supplies Ltd",
+    "email": "accounts@dovetail.example",
+    "address": "88 Fictional Supply Estate, Demo Borough, United Kingdom",
+    "known": false,
+    "category": "Unknown supplier"
+  },
+  "buyer": {
+    "name": "Northmere Distribution Ltd",
+    "email": "finance@northmere.example",
+    "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+  },
+  "invoice_number": "BC-2026-1017",
+  "invoice_date": "2026-09-04",
+  "due_date": "2026-10-04",
+  "currency": "GBP",
+  "purchase_order_reference": "PO-7017",
+  "line_items": [
+    {
+      "description": "M12 zinc-plated fasteners, box of 100",
+      "quantity": "9",
+      "unit": "box",
+      "unit_price": "14.85",
+      "line_amount": "133.65",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Warehouse handling gloves, size L",
+      "quantity": "1",
+      "unit": "pair",
+      "unit_price": "6.40",
+      "line_amount": "6.40",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Machine coupling replacement, specification M24",
+      "quantity": "2",
+      "unit": "unit",
+      "unit_price": "38.95",
+      "line_amount": "77.90",
+      "tax_rate": "0.20"
+    }
+  ],
+  "subtotal": "217.95",
+  "tax": "43.59",
+  "tax_rate": "0.20",
+  "displayed_total": "261.54",
+  "calculated_total": "261.54",
+  "layout": 2,
+  "date_format": "%Y-%m-%d",
+  "expected_validation": {
+    "outcome": "hold",
+    "reason": "Supplier is outside seeded mapping; correct extraction alone does not authorize posting."
+  },
+  "duplicate_of": null,
+  "source_document_type": "supplier_invoice",
+  "notes": "Payment due under agreed trade terms. No bank details supplied."
+}

@@ -1,0 +1,3682 @@
+[
+  {
+    "id": "INV-001",
+    "filename": "invoice_001.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Alder Packing Supplies Ltd",
+      "email": "accounts@alder.example",
+      "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Packaging materials"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "AP-2026-1001",
+    "invoice_date": "2026-08-03",
+    "due_date": "2026-08-17",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7001",
+    "line_items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "2",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "24.70",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "3",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "54.60",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "79.30",
+    "tax": "15.86",
+    "tax_rate": "0.20",
+    "displayed_total": "95.16",
+    "calculated_total": "95.16",
+    "layout": 1,
+    "date_format": "%d %b %Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-002",
+    "filename": "invoice_002.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Bracken Industrial Components Ltd",
+      "email": "accounts@bracken.example",
+      "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Industrial components"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1002",
+    "invoice_date": "2026-08-05",
+    "due_date": "2026-09-04",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7002",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "3",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "44.55",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse handling gloves, size L",
+        "quantity": "4",
+        "unit": "pair",
+        "unit_price": "6.40",
+        "line_amount": "25.60",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Machine coupling replacement, specification M24",
+        "quantity": "5",
+        "unit": "unit",
+        "unit_price": "38.95",
+        "line_amount": "194.75",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "264.90",
+    "tax": "52.98",
+    "tax_rate": "0.20",
+    "displayed_total": "317.88",
+    "calculated_total": "317.88",
+    "layout": 2,
+    "date_format": "%Y-%m-%d",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-003",
+    "filename": "invoice_003.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Cedar Facilities Services Ltd",
+      "email": "accounts@cedar.example",
+      "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Facilities services"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "CF-2026-1003",
+    "invoice_date": "2026-08-07",
+    "due_date": "2026-09-21",
+    "currency": "GBP",
+    "purchase_order_reference": null,
+    "line_items": [
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "4",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "260.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "5",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "142.50",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "6",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "690.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "7",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "455.00",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "1547.50",
+    "tax": "309.50",
+    "tax_rate": "0.20",
+    "displayed_total": "1857.00",
+    "calculated_total": "1857.00",
+    "layout": 3,
+    "date_format": "%d/%m/%Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-004",
+    "filename": "invoice_004.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Alder Packing Supplies Ltd",
+      "email": "accounts@alder.example",
+      "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Packaging materials"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "AP-2026-1004",
+    "invoice_date": "2026-08-09",
+    "due_date": "2026-08-23",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7004",
+    "line_items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "5",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "61.75",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "6",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "109.20",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Double-wall shipping cartons, pack of 25",
+        "quantity": "7",
+        "unit": "pack",
+        "unit_price": "24.75",
+        "line_amount": "173.25",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "8",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "98.80",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "9",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "163.80",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "606.80",
+    "tax": "121.36",
+    "tax_rate": "0.20",
+    "displayed_total": "728.16",
+    "calculated_total": "728.16",
+    "layout": 1,
+    "date_format": "%d %b %Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-005",
+    "filename": "invoice_005.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Bracken Industrial Components Ltd",
+      "email": "accounts@bracken.example",
+      "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Industrial components"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1005",
+    "invoice_date": "2026-08-11",
+    "due_date": "2026-09-10",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7005",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "6",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "89.10",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "89.10",
+    "tax": "17.82",
+    "tax_rate": "0.20",
+    "displayed_total": "106.92",
+    "calculated_total": "106.92",
+    "layout": 2,
+    "date_format": "%Y-%m-%d",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-006",
+    "filename": "invoice_006.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Cedar Facilities Services Ltd",
+      "email": "accounts@cedar.example",
+      "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Facilities services"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "CF-2026-1006",
+    "invoice_date": "2026-08-13",
+    "due_date": "2026-09-27",
+    "currency": "GBP",
+    "purchase_order_reference": null,
+    "line_items": [
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1.5",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "97.50",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "8",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "228.00",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "325.50",
+    "tax": "65.10",
+    "tax_rate": "0.20",
+    "displayed_total": "390.60",
+    "calculated_total": "390.60",
+    "layout": 3,
+    "date_format": "%d/%m/%Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-007",
+    "filename": "invoice_007.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Alder Packing Supplies Ltd",
+      "email": "accounts@alder.example",
+      "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Packaging materials"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "AP-2026-1007",
+    "invoice_date": "2026-08-15",
+    "due_date": "2026-08-29",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7007",
+    "line_items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "8",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "98.80",
+        "tax_rate": "0.00"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "9",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "163.80",
+        "tax_rate": "0.00"
+      },
+      {
+        "description": "Double-wall shipping cartons, pack of 25",
+        "quantity": "1",
+        "unit": "pack",
+        "unit_price": "24.75",
+        "line_amount": "24.75",
+        "tax_rate": "0.00"
+      }
+    ],
+    "subtotal": "287.35",
+    "tax": "0.00",
+    "tax_rate": "0.00",
+    "displayed_total": "287.35",
+    "calculated_total": "287.35",
+    "layout": 1,
+    "date_format": "%d %b %Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-008",
+    "filename": "invoice_008.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Bracken Industrial Components Ltd",
+      "email": "accounts@bracken.example",
+      "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Industrial components"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1008",
+    "invoice_date": "2026-08-17",
+    "due_date": "2026-09-16",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7008",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "9",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "133.65",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse handling gloves, size L",
+        "quantity": "1",
+        "unit": "pair",
+        "unit_price": "6.40",
+        "line_amount": "6.40",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Machine coupling replacement, specification M24",
+        "quantity": "2",
+        "unit": "unit",
+        "unit_price": "38.95",
+        "line_amount": "77.90",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "3",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "44.55",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "262.50",
+    "tax": "52.50",
+    "tax_rate": "0.20",
+    "displayed_total": "315.00",
+    "calculated_total": "315.00",
+    "layout": 2,
+    "date_format": "%Y-%m-%d",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-009",
+    "filename": "invoice_009.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Cedar Facilities Services Ltd",
+      "email": "accounts@cedar.example",
+      "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Facilities services"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "CF-2026-1009",
+    "invoice_date": "2026-08-19",
+    "due_date": "2026-10-03",
+    "currency": "GBP",
+    "purchase_order_reference": null,
+    "line_items": [
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "65.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "2",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "57.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "3",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "345.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "4",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "260.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "5",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "142.50",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "6",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "690.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "7",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "455.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "8",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "228.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "9",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "1035.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "65.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "2",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "57.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "3",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "345.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "4",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "260.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "5",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "142.50",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "6",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "690.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "7",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "455.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "8",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "228.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "9",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "1035.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "65.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "2",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "57.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "3",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "345.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "4",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "260.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "5",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "142.50",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "6",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "690.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "7",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "455.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "8",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "228.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "9",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "1035.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "65.00",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "9897.50",
+    "tax": "1979.50",
+    "tax_rate": "0.20",
+    "displayed_total": "11877.00",
+    "calculated_total": "11877.00",
+    "layout": 3,
+    "date_format": "%d/%m/%Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-010",
+    "filename": "invoice_010.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Alder Packing Supplies Ltd",
+      "email": "accounts@alder.example",
+      "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Packaging materials"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "AP-2026-1010",
+    "invoice_date": "2026-08-21",
+    "due_date": "2026-09-04",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7010",
+    "line_items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "2",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "24.70",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "24.70",
+    "tax": "4.94",
+    "tax_rate": "0.20",
+    "displayed_total": "29.64",
+    "calculated_total": "29.64",
+    "layout": 1,
+    "date_format": "%d %b %Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-011",
+    "filename": "invoice_011.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Bracken Industrial Components Ltd",
+      "email": "accounts@bracken.example",
+      "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Industrial components"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1011",
+    "invoice_date": "2026-08-23",
+    "due_date": "2026-09-22",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7011",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "3",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "44.55",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse handling gloves, size L",
+        "quantity": "4",
+        "unit": "pair",
+        "unit_price": "6.40",
+        "line_amount": "25.60",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "70.15",
+    "tax": "14.03",
+    "tax_rate": "0.20",
+    "displayed_total": "84.18",
+    "calculated_total": "84.18",
+    "layout": 2,
+    "date_format": "%Y-%m-%d",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-012",
+    "filename": "invoice_012.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Cedar Facilities Services Ltd",
+      "email": "accounts@cedar.example",
+      "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Facilities services"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "CF-2026-1012",
+    "invoice_date": "2026-08-25",
+    "due_date": "2026-10-09",
+    "currency": "GBP",
+    "purchase_order_reference": null,
+    "line_items": [
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1.5",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "97.50",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "5",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "142.50",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "6",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "690.00",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "930.00",
+    "tax": "186.00",
+    "tax_rate": "0.20",
+    "displayed_total": "1116.00",
+    "calculated_total": "1116.00",
+    "layout": 3,
+    "date_format": "%d/%m/%Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-013",
+    "filename": "invoice_013.pdf",
+    "split": "tuning",
+    "scenario": "missing_invoice_number",
+    "supplier": {
+      "name": "Alder Packing Supplies Ltd",
+      "email": "accounts@alder.example",
+      "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Packaging materials"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": null,
+    "invoice_date": "2026-08-27",
+    "due_date": "2026-09-10",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7013",
+    "line_items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "5",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "61.75",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "6",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "109.20",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Double-wall shipping cartons, pack of 25",
+        "quantity": "7",
+        "unit": "pack",
+        "unit_price": "24.75",
+        "line_amount": "173.25",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "8",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "98.80",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "443.00",
+    "tax": "88.60",
+    "tax_rate": "0.20",
+    "displayed_total": "531.60",
+    "calculated_total": "531.60",
+    "layout": 1,
+    "date_format": "%d %b %Y",
+    "expected_validation": {
+      "outcome": "hold",
+      "reason": "Missing invoice_number; do not invent a value."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-014",
+    "filename": "invoice_014.pdf",
+    "split": "tuning",
+    "scenario": "missing_supplier",
+    "supplier": null,
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1014",
+    "invoice_date": "2026-08-29",
+    "due_date": "2026-09-28",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7014",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "6",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "89.10",
+        "tax_rate": "0.00"
+      },
+      {
+        "description": "Warehouse handling gloves, size L",
+        "quantity": "7",
+        "unit": "pair",
+        "unit_price": "6.40",
+        "line_amount": "44.80",
+        "tax_rate": "0.00"
+      },
+      {
+        "description": "Machine coupling replacement, specification M24",
+        "quantity": "8",
+        "unit": "unit",
+        "unit_price": "38.95",
+        "line_amount": "311.60",
+        "tax_rate": "0.00"
+      },
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "9",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "133.65",
+        "tax_rate": "0.00"
+      },
+      {
+        "description": "Warehouse handling gloves, size L",
+        "quantity": "1",
+        "unit": "pair",
+        "unit_price": "6.40",
+        "line_amount": "6.40",
+        "tax_rate": "0.00"
+      }
+    ],
+    "subtotal": "585.55",
+    "tax": "0.00",
+    "tax_rate": "0.00",
+    "displayed_total": "585.55",
+    "calculated_total": "585.55",
+    "layout": 2,
+    "date_format": "%Y-%m-%d",
+    "expected_validation": {
+      "outcome": "hold",
+      "reason": "Missing supplier; do not invent a value."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-015",
+    "filename": "invoice_015.pdf",
+    "split": "tuning",
+    "scenario": "inconsistent_displayed_total",
+    "supplier": {
+      "name": "Cedar Facilities Services Ltd",
+      "email": "accounts@cedar.example",
+      "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Facilities services"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "CF-2026-1015",
+    "invoice_date": "2026-08-31",
+    "due_date": "2026-10-15",
+    "currency": "GBP",
+    "purchase_order_reference": null,
+    "line_items": [
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "7",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "455.00",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "455.00",
+    "tax": "91.00",
+    "tax_rate": "0.20",
+    "displayed_total": "553.13",
+    "calculated_total": "546.00",
+    "layout": 3,
+    "date_format": "%d/%m/%Y",
+    "expected_validation": {
+      "outcome": "hold",
+      "reason": "Printed displayed_total disagrees with independently calculated line arithmetic."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-016",
+    "filename": "invoice_016.pdf",
+    "split": "tuning",
+    "scenario": "inconsistent_tax",
+    "supplier": {
+      "name": "Alder Packing Supplies Ltd",
+      "email": "accounts@alder.example",
+      "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Packaging materials"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "AP-2026-1016",
+    "invoice_date": "2026-09-02",
+    "due_date": "2026-09-16",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7016",
+    "line_items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "8",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "98.80",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "9",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "163.80",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "262.60",
+    "tax": "59.65",
+    "tax_rate": "0.20",
+    "displayed_total": "315.12",
+    "calculated_total": "315.12",
+    "layout": 1,
+    "date_format": "%d %b %Y",
+    "expected_validation": {
+      "outcome": "hold",
+      "reason": "Printed tax disagrees with independently calculated line arithmetic."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-017",
+    "filename": "invoice_017.pdf",
+    "split": "tuning",
+    "scenario": "unknown_supplier",
+    "supplier": {
+      "name": "Dovetail Trade Supplies Ltd",
+      "email": "accounts@dovetail.example",
+      "address": "88 Fictional Supply Estate, Demo Borough, United Kingdom",
+      "known": false,
+      "category": "Unknown supplier"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1017",
+    "invoice_date": "2026-09-04",
+    "due_date": "2026-10-04",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7017",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "9",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "133.65",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse handling gloves, size L",
+        "quantity": "1",
+        "unit": "pair",
+        "unit_price": "6.40",
+        "line_amount": "6.40",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Machine coupling replacement, specification M24",
+        "quantity": "2",
+        "unit": "unit",
+        "unit_price": "38.95",
+        "line_amount": "77.90",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "217.95",
+    "tax": "43.59",
+    "tax_rate": "0.20",
+    "displayed_total": "261.54",
+    "calculated_total": "261.54",
+    "layout": 2,
+    "date_format": "%Y-%m-%d",
+    "expected_validation": {
+      "outcome": "hold",
+      "reason": "Supplier is outside seeded mapping; correct extraction alone does not authorize posting."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-018",
+    "filename": "invoice_018.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Cedar Facilities Services Ltd",
+      "email": "accounts@cedar.example",
+      "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Facilities services"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "CF-2026-1018",
+    "invoice_date": "2026-09-06",
+    "due_date": "2026-10-21",
+    "currency": "GBP",
+    "purchase_order_reference": null,
+    "line_items": [
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1.5",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "97.50",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "2",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "57.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "3",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "345.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "4",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "260.00",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "759.50",
+    "tax": "151.90",
+    "tax_rate": "0.20",
+    "displayed_total": "911.40",
+    "calculated_total": "911.40",
+    "layout": 3,
+    "date_format": "%d/%m/%Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-019",
+    "filename": "invoice_019.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Alder Packing Supplies Ltd",
+      "email": "accounts@alder.example",
+      "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Packaging materials"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "AP-2026-1019",
+    "invoice_date": "2026-09-08",
+    "due_date": "2026-09-22",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7019",
+    "line_items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "2",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "24.70",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "3",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "54.60",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Double-wall shipping cartons, pack of 25",
+        "quantity": "4",
+        "unit": "pack",
+        "unit_price": "24.75",
+        "line_amount": "99.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "5",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "61.75",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "6",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "109.20",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "349.25",
+    "tax": "69.85",
+    "tax_rate": "0.20",
+    "displayed_total": "419.10",
+    "calculated_total": "419.10",
+    "layout": 1,
+    "date_format": "%d %b %Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-020",
+    "filename": "invoice_020.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Bracken Industrial Components Ltd",
+      "email": "accounts@bracken.example",
+      "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Industrial components"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1020",
+    "invoice_date": "2026-09-10",
+    "due_date": "2026-10-10",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7020",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "3",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "44.55",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "44.55",
+    "tax": "8.91",
+    "tax_rate": "0.20",
+    "displayed_total": "53.46",
+    "calculated_total": "53.46",
+    "layout": 2,
+    "date_format": "%Y-%m-%d",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-021",
+    "filename": "invoice_021.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Cedar Facilities Services Ltd",
+      "email": "accounts@cedar.example",
+      "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Facilities services"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "CF-2026-1021",
+    "invoice_date": "2026-09-12",
+    "due_date": "2026-10-27",
+    "currency": "GBP",
+    "purchase_order_reference": null,
+    "line_items": [
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "4",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "260.00",
+        "tax_rate": "0.00"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "5",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "142.50",
+        "tax_rate": "0.00"
+      }
+    ],
+    "subtotal": "402.50",
+    "tax": "0.00",
+    "tax_rate": "0.00",
+    "displayed_total": "402.50",
+    "calculated_total": "402.50",
+    "layout": 3,
+    "date_format": "%d/%m/%Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-022",
+    "filename": "invoice_022.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Alder Packing Supplies Ltd",
+      "email": "accounts@alder.example",
+      "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Packaging materials"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "AP-2026-1022",
+    "invoice_date": "2026-09-14",
+    "due_date": "2026-09-28",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7022",
+    "line_items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "5",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "61.75",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "6",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "109.20",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Double-wall shipping cartons, pack of 25",
+        "quantity": "7",
+        "unit": "pack",
+        "unit_price": "24.75",
+        "line_amount": "173.25",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "344.20",
+    "tax": "68.84",
+    "tax_rate": "0.20",
+    "displayed_total": "413.04",
+    "calculated_total": "413.04",
+    "layout": 1,
+    "date_format": "%d %b %Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-023",
+    "filename": "invoice_023.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Bracken Industrial Components Ltd",
+      "email": "accounts@bracken.example",
+      "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Industrial components"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1023",
+    "invoice_date": "2026-09-16",
+    "due_date": "2026-10-16",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7023",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "6",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "89.10",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse handling gloves, size L",
+        "quantity": "7",
+        "unit": "pair",
+        "unit_price": "6.40",
+        "line_amount": "44.80",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Machine coupling replacement, specification M24",
+        "quantity": "8",
+        "unit": "unit",
+        "unit_price": "38.95",
+        "line_amount": "311.60",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "9",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "133.65",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "579.15",
+    "tax": "115.83",
+    "tax_rate": "0.20",
+    "displayed_total": "694.98",
+    "calculated_total": "694.98",
+    "layout": 2,
+    "date_format": "%Y-%m-%d",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-024",
+    "filename": "invoice_024.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Cedar Facilities Services Ltd",
+      "email": "accounts@cedar.example",
+      "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Facilities services"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "CF-2026-1024",
+    "invoice_date": "2026-09-18",
+    "due_date": "2026-11-02",
+    "currency": "GBP",
+    "purchase_order_reference": null,
+    "line_items": [
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1.5",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "97.50",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "8",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "228.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "9",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "1035.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "65.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "2",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "57.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "3",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "345.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "4",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "260.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "5",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "142.50",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "6",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "690.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "7",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "455.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "8",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "228.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "9",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "1035.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "65.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "2",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "57.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "3",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "345.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "4",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "260.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "5",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "142.50",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "6",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "690.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "7",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "455.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "8",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "228.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "9",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "1035.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "65.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "2",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "57.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "3",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "345.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "4",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "260.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "5",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "142.50",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "6",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "690.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "7",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "455.00",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "9930.00",
+    "tax": "1986.00",
+    "tax_rate": "0.20",
+    "displayed_total": "11916.00",
+    "calculated_total": "11916.00",
+    "layout": 3,
+    "date_format": "%d/%m/%Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-025",
+    "filename": "invoice_025.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Alder Packing Supplies Ltd",
+      "email": "accounts@alder.example",
+      "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Packaging materials"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "AP-2026-1025",
+    "invoice_date": "2026-09-20",
+    "due_date": "2026-10-04",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7025",
+    "line_items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "8",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "98.80",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "98.80",
+    "tax": "19.76",
+    "tax_rate": "0.20",
+    "displayed_total": "118.56",
+    "calculated_total": "118.56",
+    "layout": 1,
+    "date_format": "%d %b %Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-026",
+    "filename": "invoice_026.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Bracken Industrial Components Ltd",
+      "email": "accounts@bracken.example",
+      "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Industrial components"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1026",
+    "invoice_date": "2026-09-22",
+    "due_date": "2026-10-22",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7026",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "9",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "133.65",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse handling gloves, size L",
+        "quantity": "1",
+        "unit": "pair",
+        "unit_price": "6.40",
+        "line_amount": "6.40",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "140.05",
+    "tax": "28.01",
+    "tax_rate": "0.20",
+    "displayed_total": "168.06",
+    "calculated_total": "168.06",
+    "layout": 2,
+    "date_format": "%Y-%m-%d",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-027",
+    "filename": "invoice_027.pdf",
+    "split": "tuning",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Cedar Facilities Services Ltd",
+      "email": "accounts@cedar.example",
+      "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Facilities services"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "CF-2026-1027",
+    "invoice_date": "2026-09-24",
+    "due_date": "2026-11-08",
+    "currency": "GBP",
+    "purchase_order_reference": null,
+    "line_items": [
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "65.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "2",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "57.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "3",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "345.00",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "467.00",
+    "tax": "93.40",
+    "tax_rate": "0.20",
+    "displayed_total": "560.40",
+    "calculated_total": "560.40",
+    "layout": 3,
+    "date_format": "%d/%m/%Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-028",
+    "filename": "invoice_028_resubmitted.pdf",
+    "split": "tuning",
+    "scenario": "duplicate_renamed",
+    "supplier": {
+      "name": "Alder Packing Supplies Ltd",
+      "email": "accounts@alder.example",
+      "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Packaging materials"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "AP-2026-1001",
+    "invoice_date": "2026-08-03",
+    "due_date": "2026-08-17",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7001",
+    "line_items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "2",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "24.70",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "3",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "54.60",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "79.30",
+    "tax": "15.86",
+    "tax_rate": "0.20",
+    "displayed_total": "95.16",
+    "calculated_total": "95.16",
+    "layout": 1,
+    "date_format": "%d %b %Y",
+    "expected_validation": {
+      "outcome": "duplicate_if_original_processed",
+      "reason": "Same supplier and invoice number as the referenced original. If this arrives first, process once and hold the later copy."
+    },
+    "duplicate_of": "INV-001",
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-029",
+    "filename": "invoice_029_resubmitted.pdf",
+    "split": "tuning",
+    "scenario": "duplicate_relayout",
+    "supplier": {
+      "name": "Bracken Industrial Components Ltd",
+      "email": "accounts@bracken.example",
+      "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Industrial components"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1002",
+    "invoice_date": "2026-08-05",
+    "due_date": "2026-09-04",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7002",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "3",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "44.55",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse handling gloves, size L",
+        "quantity": "4",
+        "unit": "pair",
+        "unit_price": "6.40",
+        "line_amount": "25.60",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Machine coupling replacement, specification M24",
+        "quantity": "5",
+        "unit": "unit",
+        "unit_price": "38.95",
+        "line_amount": "194.75",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "264.90",
+    "tax": "52.98",
+    "tax_rate": "0.20",
+    "displayed_total": "317.88",
+    "calculated_total": "317.88",
+    "layout": 3,
+    "date_format": "%d %B %Y",
+    "expected_validation": {
+      "outcome": "duplicate_if_original_processed",
+      "reason": "Same supplier and invoice number as the referenced original. If this arrives first, process once and hold the later copy."
+    },
+    "duplicate_of": "INV-002",
+    "source_document_type": "supplier_invoice",
+    "notes": "Copy supplied again for accounts processing. No bank details supplied."
+  },
+  {
+    "id": "INV-030",
+    "filename": "invoice_030_resubmitted.pdf",
+    "split": "tuning",
+    "scenario": "duplicate_relayout",
+    "supplier": {
+      "name": "Cedar Facilities Services Ltd",
+      "email": "accounts@cedar.example",
+      "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Facilities services"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "CF-2026-1003",
+    "invoice_date": "2026-08-07",
+    "due_date": "2026-09-21",
+    "currency": "GBP",
+    "purchase_order_reference": null,
+    "line_items": [
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "4",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "260.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "5",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "142.50",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "6",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "690.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "7",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "455.00",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "1547.50",
+    "tax": "309.50",
+    "tax_rate": "0.20",
+    "displayed_total": "1857.00",
+    "calculated_total": "1857.00",
+    "layout": 1,
+    "date_format": "%d %B %Y",
+    "expected_validation": {
+      "outcome": "duplicate_if_original_processed",
+      "reason": "Same supplier and invoice number as the referenced original. If this arrives first, process once and hold the later copy."
+    },
+    "duplicate_of": "INV-003",
+    "source_document_type": "supplier_invoice",
+    "notes": "Copy supplied again for accounts processing. No bank details supplied."
+  },
+  {
+    "id": "INV-031",
+    "filename": "invoice_031.pdf",
+    "split": "evaluation",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Alder Packing Supplies Ltd",
+      "email": "accounts@alder.example",
+      "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Packaging materials"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "AP-2026-1031",
+    "invoice_date": "2026-10-02",
+    "due_date": "2026-10-16",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7031",
+    "line_items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "5",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "61.75",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "6",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "109.20",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "170.95",
+    "tax": "34.19",
+    "tax_rate": "0.20",
+    "displayed_total": "205.14",
+    "calculated_total": "205.14",
+    "layout": 1,
+    "date_format": "%d %b %Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-032",
+    "filename": "invoice_032.pdf",
+    "split": "evaluation",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Bracken Industrial Components Ltd",
+      "email": "accounts@bracken.example",
+      "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Industrial components"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1032",
+    "invoice_date": "2026-10-04",
+    "due_date": "2026-11-03",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7032",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "6",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "89.10",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse handling gloves, size L",
+        "quantity": "7",
+        "unit": "pair",
+        "unit_price": "6.40",
+        "line_amount": "44.80",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Machine coupling replacement, specification M24",
+        "quantity": "8",
+        "unit": "unit",
+        "unit_price": "38.95",
+        "line_amount": "311.60",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "445.50",
+    "tax": "89.10",
+    "tax_rate": "0.20",
+    "displayed_total": "534.60",
+    "calculated_total": "534.60",
+    "layout": 2,
+    "date_format": "%Y-%m-%d",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-033",
+    "filename": "invoice_033.pdf",
+    "split": "evaluation",
+    "scenario": "missing_due_date",
+    "supplier": {
+      "name": "Cedar Facilities Services Ltd",
+      "email": "accounts@cedar.example",
+      "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Facilities services"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "CF-2026-1033",
+    "invoice_date": "2026-10-06",
+    "due_date": null,
+    "currency": "GBP",
+    "purchase_order_reference": null,
+    "line_items": [
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "7",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "455.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "8",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "228.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "9",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "1035.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "65.00",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "1783.00",
+    "tax": "356.60",
+    "tax_rate": "0.20",
+    "displayed_total": "2139.60",
+    "calculated_total": "2139.60",
+    "layout": 3,
+    "date_format": "%d/%m/%Y",
+    "expected_validation": {
+      "outcome": "hold",
+      "reason": "Missing due_date; do not invent a value."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-034",
+    "filename": "invoice_034.pdf",
+    "split": "evaluation",
+    "scenario": "missing_invoice_date",
+    "supplier": {
+      "name": "Alder Packing Supplies Ltd",
+      "email": "accounts@alder.example",
+      "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Packaging materials"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "AP-2026-1034",
+    "invoice_date": null,
+    "due_date": "2026-10-22",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7034",
+    "line_items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "8",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "98.80",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "9",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "163.80",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Double-wall shipping cartons, pack of 25",
+        "quantity": "1",
+        "unit": "pack",
+        "unit_price": "24.75",
+        "line_amount": "24.75",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "2",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "24.70",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "3",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "54.60",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "366.65",
+    "tax": "73.33",
+    "tax_rate": "0.20",
+    "displayed_total": "439.98",
+    "calculated_total": "439.98",
+    "layout": 1,
+    "date_format": "%d %b %Y",
+    "expected_validation": {
+      "outcome": "hold",
+      "reason": "Missing invoice_date; do not invent a value."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-035",
+    "filename": "invoice_035.pdf",
+    "split": "evaluation",
+    "scenario": "inconsistent_subtotal",
+    "supplier": {
+      "name": "Bracken Industrial Components Ltd",
+      "email": "accounts@bracken.example",
+      "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Industrial components"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1035",
+    "invoice_date": "2026-10-10",
+    "due_date": "2026-11-09",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7035",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "9",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "133.65",
+        "tax_rate": "0.00"
+      }
+    ],
+    "subtotal": "140.78",
+    "tax": "0.00",
+    "tax_rate": "0.00",
+    "displayed_total": "133.65",
+    "calculated_total": "133.65",
+    "layout": 2,
+    "date_format": "%Y-%m-%d",
+    "expected_validation": {
+      "outcome": "hold",
+      "reason": "Printed subtotal disagrees with independently calculated line arithmetic."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-036",
+    "filename": "invoice_036.pdf",
+    "split": "evaluation",
+    "scenario": "inconsistent_displayed_total",
+    "supplier": {
+      "name": "Cedar Facilities Services Ltd",
+      "email": "accounts@cedar.example",
+      "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Facilities services"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "CF-2026-1036",
+    "invoice_date": "2026-10-12",
+    "due_date": "2026-11-26",
+    "currency": "GBP",
+    "purchase_order_reference": null,
+    "line_items": [
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1.5",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "97.50",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "2",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "57.00",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "154.50",
+    "tax": "30.90",
+    "tax_rate": "0.20",
+    "displayed_total": "192.53",
+    "calculated_total": "185.40",
+    "layout": 3,
+    "date_format": "%d/%m/%Y",
+    "expected_validation": {
+      "outcome": "hold",
+      "reason": "Printed displayed_total disagrees with independently calculated line arithmetic."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-037",
+    "filename": "invoice_037.pdf",
+    "split": "evaluation",
+    "scenario": "unknown_supplier",
+    "supplier": {
+      "name": "Dovetail Trade Supplies Ltd",
+      "email": "accounts@dovetail.example",
+      "address": "88 Fictional Supply Estate, Demo Borough, United Kingdom",
+      "known": false,
+      "category": "Unknown supplier"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "AP-2026-1037",
+    "invoice_date": "2026-10-14",
+    "due_date": "2026-10-28",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7037",
+    "line_items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "2",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "24.70",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "3",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "54.60",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Double-wall shipping cartons, pack of 25",
+        "quantity": "4",
+        "unit": "pack",
+        "unit_price": "24.75",
+        "line_amount": "99.00",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "178.30",
+    "tax": "35.66",
+    "tax_rate": "0.20",
+    "displayed_total": "213.96",
+    "calculated_total": "213.96",
+    "layout": 1,
+    "date_format": "%d %b %Y",
+    "expected_validation": {
+      "outcome": "hold",
+      "reason": "Supplier is outside seeded mapping; correct extraction alone does not authorize posting."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-038",
+    "filename": "invoice_038.pdf",
+    "split": "evaluation",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Bracken Industrial Components Ltd",
+      "email": "accounts@bracken.example",
+      "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Industrial components"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1038",
+    "invoice_date": "2026-10-16",
+    "due_date": "2026-11-15",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7038",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "3",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "44.55",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse handling gloves, size L",
+        "quantity": "4",
+        "unit": "pair",
+        "unit_price": "6.40",
+        "line_amount": "25.60",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Machine coupling replacement, specification M24",
+        "quantity": "5",
+        "unit": "unit",
+        "unit_price": "38.95",
+        "line_amount": "194.75",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "6",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "89.10",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "354.00",
+    "tax": "70.80",
+    "tax_rate": "0.20",
+    "displayed_total": "424.80",
+    "calculated_total": "424.80",
+    "layout": 2,
+    "date_format": "%Y-%m-%d",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-039",
+    "filename": "invoice_039.pdf",
+    "split": "evaluation",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Cedar Facilities Services Ltd",
+      "email": "accounts@cedar.example",
+      "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Facilities services"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "CF-2026-1039",
+    "invoice_date": "2026-10-18",
+    "due_date": "2026-12-02",
+    "currency": "GBP",
+    "purchase_order_reference": null,
+    "line_items": [
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "4",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "260.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "5",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "142.50",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "6",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "690.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "7",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "455.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "8",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "228.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "9",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "1035.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "65.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "2",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "57.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "3",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "345.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "4",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "260.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "5",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "142.50",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "6",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "690.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "7",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "455.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "8",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "228.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "9",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "1035.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "65.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "2",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "57.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "3",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "345.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "4",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "260.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "5",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "142.50",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "6",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "690.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "7",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "455.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "8",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "228.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "9",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "1035.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "65.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "2",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "57.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "3",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "345.00",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "4",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "260.00",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "10092.50",
+    "tax": "2018.50",
+    "tax_rate": "0.20",
+    "displayed_total": "12111.00",
+    "calculated_total": "12111.00",
+    "layout": 3,
+    "date_format": "%d/%m/%Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-040",
+    "filename": "invoice_040.pdf",
+    "split": "evaluation",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Alder Packing Supplies Ltd",
+      "email": "accounts@alder.example",
+      "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Packaging materials"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "AP-2026-1040",
+    "invoice_date": "2026-10-20",
+    "due_date": "2026-11-03",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7040",
+    "line_items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "5",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "61.75",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "61.75",
+    "tax": "12.35",
+    "tax_rate": "0.20",
+    "displayed_total": "74.10",
+    "calculated_total": "74.10",
+    "layout": 1,
+    "date_format": "%d %b %Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-041",
+    "filename": "invoice_041.pdf",
+    "split": "evaluation",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Bracken Industrial Components Ltd",
+      "email": "accounts@bracken.example",
+      "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Industrial components"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1041",
+    "invoice_date": "2026-10-22",
+    "due_date": "2026-11-21",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7041",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "6",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "89.10",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse handling gloves, size L",
+        "quantity": "7",
+        "unit": "pair",
+        "unit_price": "6.40",
+        "line_amount": "44.80",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "133.90",
+    "tax": "26.78",
+    "tax_rate": "0.20",
+    "displayed_total": "160.68",
+    "calculated_total": "160.68",
+    "layout": 2,
+    "date_format": "%Y-%m-%d",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-042",
+    "filename": "invoice_042.pdf",
+    "split": "evaluation",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Cedar Facilities Services Ltd",
+      "email": "accounts@cedar.example",
+      "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Facilities services"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "CF-2026-1042",
+    "invoice_date": "2026-10-24",
+    "due_date": "2026-12-08",
+    "currency": "GBP",
+    "purchase_order_reference": null,
+    "line_items": [
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1.5",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "97.50",
+        "tax_rate": "0.00"
+      },
+      {
+        "description": "Warehouse cleaning, scheduled service",
+        "quantity": "8",
+        "unit": "hour",
+        "unit_price": "28.50",
+        "line_amount": "228.00",
+        "tax_rate": "0.00"
+      },
+      {
+        "description": "Equipment safety inspection, itemised service",
+        "quantity": "9",
+        "unit": "visit",
+        "unit_price": "115.00",
+        "line_amount": "1035.00",
+        "tax_rate": "0.00"
+      }
+    ],
+    "subtotal": "1360.50",
+    "tax": "0.00",
+    "tax_rate": "0.00",
+    "displayed_total": "1360.50",
+    "calculated_total": "1360.50",
+    "layout": 3,
+    "date_format": "%d/%m/%Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-043",
+    "filename": "invoice_043.pdf",
+    "split": "evaluation",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Alder Packing Supplies Ltd",
+      "email": "accounts@alder.example",
+      "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Packaging materials"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "AP-2026-1043",
+    "invoice_date": "2026-10-26",
+    "due_date": "2026-11-09",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7043",
+    "line_items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "8",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "98.80",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "9",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "163.80",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Double-wall shipping cartons, pack of 25",
+        "quantity": "1",
+        "unit": "pack",
+        "unit_price": "24.75",
+        "line_amount": "24.75",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "2",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "24.70",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "312.05",
+    "tax": "62.41",
+    "tax_rate": "0.20",
+    "displayed_total": "374.46",
+    "calculated_total": "374.46",
+    "layout": 1,
+    "date_format": "%d %b %Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-044",
+    "filename": "invoice_044.pdf",
+    "split": "evaluation",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Bracken Industrial Components Ltd",
+      "email": "accounts@bracken.example",
+      "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Industrial components"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1044",
+    "invoice_date": "2026-10-28",
+    "due_date": "2026-11-27",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7044",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "9",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "133.65",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse handling gloves, size L",
+        "quantity": "1",
+        "unit": "pair",
+        "unit_price": "6.40",
+        "line_amount": "6.40",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Machine coupling replacement, specification M24",
+        "quantity": "2",
+        "unit": "unit",
+        "unit_price": "38.95",
+        "line_amount": "77.90",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "3",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "44.55",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse handling gloves, size L",
+        "quantity": "4",
+        "unit": "pair",
+        "unit_price": "6.40",
+        "line_amount": "25.60",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "288.10",
+    "tax": "57.62",
+    "tax_rate": "0.20",
+    "displayed_total": "345.72",
+    "calculated_total": "345.72",
+    "layout": 2,
+    "date_format": "%Y-%m-%d",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-045",
+    "filename": "invoice_045.pdf",
+    "split": "evaluation",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Cedar Facilities Services Ltd",
+      "email": "accounts@cedar.example",
+      "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Facilities services"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "CF-2026-1045",
+    "invoice_date": "2026-10-30",
+    "due_date": "2026-12-14",
+    "currency": "GBP",
+    "purchase_order_reference": null,
+    "line_items": [
+      {
+        "description": "Preventive equipment inspection, October service",
+        "quantity": "1",
+        "unit": "hour",
+        "unit_price": "65.00",
+        "line_amount": "65.00",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "65.00",
+    "tax": "13.00",
+    "tax_rate": "0.20",
+    "displayed_total": "78.00",
+    "calculated_total": "78.00",
+    "layout": 3,
+    "date_format": "%d/%m/%Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-046",
+    "filename": "invoice_046.pdf",
+    "split": "evaluation",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Alder Packing Supplies Ltd",
+      "email": "accounts@alder.example",
+      "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Packaging materials"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "AP-2026-1046",
+    "invoice_date": "2026-11-01",
+    "due_date": "2026-11-15",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7046",
+    "line_items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "2",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "24.70",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "3",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "54.60",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "79.30",
+    "tax": "15.86",
+    "tax_rate": "0.20",
+    "displayed_total": "95.16",
+    "calculated_total": "95.16",
+    "layout": 1,
+    "date_format": "%d %b %Y",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-047",
+    "filename": "invoice_047.pdf",
+    "split": "evaluation",
+    "scenario": "valid",
+    "supplier": {
+      "name": "Bracken Industrial Components Ltd",
+      "email": "accounts@bracken.example",
+      "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Industrial components"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1047",
+    "invoice_date": "2026-11-03",
+    "due_date": "2026-12-03",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7047",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "3",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "44.55",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse handling gloves, size L",
+        "quantity": "4",
+        "unit": "pair",
+        "unit_price": "6.40",
+        "line_amount": "25.60",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Machine coupling replacement, specification M24",
+        "quantity": "5",
+        "unit": "unit",
+        "unit_price": "38.95",
+        "line_amount": "194.75",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "264.90",
+    "tax": "52.98",
+    "tax_rate": "0.20",
+    "displayed_total": "317.88",
+    "calculated_total": "317.88",
+    "layout": 2,
+    "date_format": "%Y-%m-%d",
+    "expected_validation": {
+      "outcome": "eligible_for_draft",
+      "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+    },
+    "duplicate_of": null,
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-048",
+    "filename": "invoice_048_resubmitted.pdf",
+    "split": "evaluation",
+    "scenario": "duplicate_renamed",
+    "supplier": {
+      "name": "Alder Packing Supplies Ltd",
+      "email": "accounts@alder.example",
+      "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Packaging materials"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "AP-2026-1031",
+    "invoice_date": "2026-10-02",
+    "due_date": "2026-10-16",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7031",
+    "line_items": [
+      {
+        "description": "Recycled pallet wrap, 400 mm x 250 m",
+        "quantity": "5",
+        "unit": "roll",
+        "unit_price": "12.35",
+        "line_amount": "61.75",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Storage bin labels, printed batch of 100",
+        "quantity": "6",
+        "unit": "batch",
+        "unit_price": "18.20",
+        "line_amount": "109.20",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "170.95",
+    "tax": "34.19",
+    "tax_rate": "0.20",
+    "displayed_total": "205.14",
+    "calculated_total": "205.14",
+    "layout": 1,
+    "date_format": "%d %b %Y",
+    "expected_validation": {
+      "outcome": "duplicate_if_original_processed",
+      "reason": "Same supplier and invoice number as the referenced original. If this arrives first, process once and hold the later copy."
+    },
+    "duplicate_of": "INV-031",
+    "source_document_type": "supplier_invoice",
+    "notes": "Payment due under agreed trade terms. No bank details supplied."
+  },
+  {
+    "id": "INV-049",
+    "filename": "invoice_049_resubmitted.pdf",
+    "split": "evaluation",
+    "scenario": "duplicate_relayout",
+    "supplier": {
+      "name": "Bracken Industrial Components Ltd",
+      "email": "accounts@bracken.example",
+      "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Industrial components"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1032",
+    "invoice_date": "2026-10-04",
+    "due_date": "2026-11-03",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7032",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "6",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "89.10",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse handling gloves, size L",
+        "quantity": "7",
+        "unit": "pair",
+        "unit_price": "6.40",
+        "line_amount": "44.80",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Machine coupling replacement, specification M24",
+        "quantity": "8",
+        "unit": "unit",
+        "unit_price": "38.95",
+        "line_amount": "311.60",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "445.50",
+    "tax": "89.10",
+    "tax_rate": "0.20",
+    "displayed_total": "534.60",
+    "calculated_total": "534.60",
+    "layout": 3,
+    "date_format": "%d %B %Y",
+    "expected_validation": {
+      "outcome": "duplicate_if_original_processed",
+      "reason": "Same supplier and invoice number as the referenced original. If this arrives first, process once and hold the later copy."
+    },
+    "duplicate_of": "INV-032",
+    "source_document_type": "supplier_invoice",
+    "notes": "Copy supplied again for accounts processing. No bank details supplied."
+  },
+  {
+    "id": "INV-050",
+    "filename": "invoice_050_resubmitted.pdf",
+    "split": "evaluation",
+    "scenario": "duplicate_relayout",
+    "supplier": {
+      "name": "Bracken Industrial Components Ltd",
+      "email": "accounts@bracken.example",
+      "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+      "known": true,
+      "category": "Industrial components"
+    },
+    "buyer": {
+      "name": "Northmere Distribution Ltd",
+      "email": "finance@northmere.example",
+      "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+    },
+    "invoice_number": "BC-2026-1038",
+    "invoice_date": "2026-10-16",
+    "due_date": "2026-11-15",
+    "currency": "GBP",
+    "purchase_order_reference": "PO-7038",
+    "line_items": [
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "3",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "44.55",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Warehouse handling gloves, size L",
+        "quantity": "4",
+        "unit": "pair",
+        "unit_price": "6.40",
+        "line_amount": "25.60",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "Machine coupling replacement, specification M24",
+        "quantity": "5",
+        "unit": "unit",
+        "unit_price": "38.95",
+        "line_amount": "194.75",
+        "tax_rate": "0.20"
+      },
+      {
+        "description": "M12 zinc-plated fasteners, box of 100",
+        "quantity": "6",
+        "unit": "box",
+        "unit_price": "14.85",
+        "line_amount": "89.10",
+        "tax_rate": "0.20"
+      }
+    ],
+    "subtotal": "354.00",
+    "tax": "70.80",
+    "tax_rate": "0.20",
+    "displayed_total": "424.80",
+    "calculated_total": "424.80",
+    "layout": 3,
+    "date_format": "%d %B %Y",
+    "expected_validation": {
+      "outcome": "duplicate_if_original_processed",
+      "reason": "Same supplier and invoice number as the referenced original. If this arrives first, process once and hold the later copy."
+    },
+    "duplicate_of": "INV-038",
+    "source_document_type": "supplier_invoice",
+    "notes": "Copy supplied again for accounts processing. No bank details supplied."
+  }
+]

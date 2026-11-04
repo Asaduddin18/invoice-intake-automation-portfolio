@@ -1,0 +1,71 @@
+{
+  "id": "INV-013",
+  "filename": "invoice_013.pdf",
+  "split": "tuning",
+  "scenario": "missing_invoice_number",
+  "supplier": {
+    "name": "Alder Packing Supplies Ltd",
+    "email": "accounts@alder.example",
+    "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+    "known": true,
+    "category": "Packaging materials"
+  },
+  "buyer": {
+    "name": "Northmere Distribution Ltd",
+    "email": "finance@northmere.example",
+    "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+  },
+  "invoice_number": null,
+  "invoice_date": "2026-08-27",
+  "due_date": "2026-09-10",
+  "currency": "GBP",
+  "purchase_order_reference": "PO-7013",
+  "line_items": [
+    {
+      "description": "Recycled pallet wrap, 400 mm x 250 m",
+      "quantity": "5",
+      "unit": "roll",
+      "unit_price": "12.35",
+      "line_amount": "61.75",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Storage bin labels, printed batch of 100",
+      "quantity": "6",
+      "unit": "batch",
+      "unit_price": "18.20",
+      "line_amount": "109.20",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Double-wall shipping cartons, pack of 25",
+      "quantity": "7",
+      "unit": "pack",
+      "unit_price": "24.75",
+      "line_amount": "173.25",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Recycled pallet wrap, 400 mm x 250 m",
+      "quantity": "8",
+      "unit": "roll",
+      "unit_price": "12.35",
+      "line_amount": "98.80",
+      "tax_rate": "0.20"
+    }
+  ],
+  "subtotal": "443.00",
+  "tax": "88.60",
+  "tax_rate": "0.20",
+  "displayed_total": "531.60",
+  "calculated_total": "531.60",
+  "layout": 1,
+  "date_format": "%d %b %Y",
+  "expected_validation": {
+    "outcome": "hold",
+    "reason": "Missing invoice_number; do not invent a value."
+  },
+  "duplicate_of": null,
+  "source_document_type": "supplier_invoice",
+  "notes": "Payment due under agreed trade terms. No bank details supplied."
+}

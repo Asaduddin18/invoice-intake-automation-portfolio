@@ -1,0 +1,79 @@
+{
+  "id": "INV-044",
+  "filename": "invoice_044.pdf",
+  "split": "evaluation",
+  "scenario": "valid",
+  "supplier": {
+    "name": "Bracken Industrial Components Ltd",
+    "email": "accounts@bracken.example",
+    "address": "11 Fictional Trade Park, Demo Borough, United Kingdom",
+    "known": true,
+    "category": "Industrial components"
+  },
+  "buyer": {
+    "name": "Northmere Distribution Ltd",
+    "email": "finance@northmere.example",
+    "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+  },
+  "invoice_number": "BC-2026-1044",
+  "invoice_date": "2026-10-28",
+  "due_date": "2026-11-27",
+  "currency": "GBP",
+  "purchase_order_reference": "PO-7044",
+  "line_items": [
+    {
+      "description": "M12 zinc-plated fasteners, box of 100",
+      "quantity": "9",
+      "unit": "box",
+      "unit_price": "14.85",
+      "line_amount": "133.65",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Warehouse handling gloves, size L",
+      "quantity": "1",
+      "unit": "pair",
+      "unit_price": "6.40",
+      "line_amount": "6.40",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Machine coupling replacement, specification M24",
+      "quantity": "2",
+      "unit": "unit",
+      "unit_price": "38.95",
+      "line_amount": "77.90",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "M12 zinc-plated fasteners, box of 100",
+      "quantity": "3",
+      "unit": "box",
+      "unit_price": "14.85",
+      "line_amount": "44.55",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Warehouse handling gloves, size L",
+      "quantity": "4",
+      "unit": "pair",
+      "unit_price": "6.40",
+      "line_amount": "25.60",
+      "tax_rate": "0.20"
+    }
+  ],
+  "subtotal": "288.10",
+  "tax": "57.62",
+  "tax_rate": "0.20",
+  "displayed_total": "345.72",
+  "calculated_total": "345.72",
+  "layout": 2,
+  "date_format": "%Y-%m-%d",
+  "expected_validation": {
+    "outcome": "eligible_for_draft",
+    "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+  },
+  "duplicate_of": null,
+  "source_document_type": "supplier_invoice",
+  "notes": "Payment due under agreed trade terms. No bank details supplied."
+}

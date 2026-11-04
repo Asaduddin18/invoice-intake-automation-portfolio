@@ -1,0 +1,1611 @@
+{
+  "scope": "20 original synthetic invoices; final extraction predictions, no provider telemetry or account IDs",
+  "results": [
+    {
+      "filename": "invoice_001.pdf",
+      "split": "tuning",
+      "scenario": "valid",
+      "status": "extracted_valid",
+      "source_sha256": "9e8b84308a50ef9b754ced75ce95b94c3e54e2f2b563257bdf9d4ce7a2a3d228",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [],
+      "invoice": {
+        "supplier": {
+          "name": "Alder Packing Supplies Ltd",
+          "email": "accounts@alder.example",
+          "address": "10 Fictional Trade Park, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "AP-2026-1001",
+        "invoice_date": "2026-08-03",
+        "due_date": "2026-08-17",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Recycled pallet wrap, 400 mm x 250 m",
+            "quantity": "2",
+            "unit": "roll",
+            "unit_price": "12.35",
+            "line_amount": "24.70",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Storage bin labels, printed batch of 100",
+            "quantity": "3",
+            "unit": "batch",
+            "unit_price": "18.20",
+            "line_amount": "54.60",
+            "tax_rate": "0.20"
+          }
+        ],
+        "subtotal": "79.30",
+        "tax": "15.86",
+        "displayed_total": "95.16"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_002.pdf",
+      "split": "tuning",
+      "scenario": "valid",
+      "status": "extracted_valid",
+      "source_sha256": "258ef16e1fb495c87278ba435c5589991c290488f0d6a317fdf655baebe82b2a",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [],
+      "invoice": {
+        "supplier": {
+          "name": "Bracken Industrial Components Ltd",
+          "email": "accounts@bracken.example",
+          "address": "11 Fictional Trade Park, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "BC-2026-1002",
+        "invoice_date": "2026-08-05",
+        "due_date": "2026-09-04",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "M12 zinc-plated fasteners, box of 100",
+            "quantity": "3",
+            "unit": "box",
+            "unit_price": "14.85",
+            "line_amount": "44.55",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse handling gloves, size L",
+            "quantity": "4",
+            "unit": "pair",
+            "unit_price": "6.40",
+            "line_amount": "25.60",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Machine coupling replacement, specification M24",
+            "quantity": "5",
+            "unit": "unit",
+            "unit_price": "38.95",
+            "line_amount": "194.75",
+            "tax_rate": "0.20"
+          }
+        ],
+        "subtotal": "264.90",
+        "tax": "52.98",
+        "displayed_total": "317.88"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_003.pdf",
+      "split": "tuning",
+      "scenario": "valid",
+      "status": "extracted_valid",
+      "source_sha256": "654866c6dde4a826143ccb14348f303b36555bc79f914fbd2418c1870f9dd2e2",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [],
+      "invoice": {
+        "supplier": {
+          "name": "Cedar Facilities Services Ltd",
+          "email": "accounts@cedar.example",
+          "address": "12 Fictional Trade Park, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "CF-2026-1003",
+        "invoice_date": "2026-08-07",
+        "due_date": "2026-09-21",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "4",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "260.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "5",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "142.50",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "6",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "690.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "7",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "455.00",
+            "tax_rate": "0.20"
+          }
+        ],
+        "subtotal": "1547.50",
+        "tax": "309.50",
+        "displayed_total": "1857.00"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_009.pdf",
+      "split": "tuning",
+      "scenario": "valid",
+      "status": "extracted_valid",
+      "source_sha256": "9b00f905ce4db578755db36c8fdf6bf515a9e44ac13aeb37b1ab458b0b8e472c",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [],
+      "invoice": {
+        "supplier": {
+          "name": "Cedar Facilities Services Ltd",
+          "email": "accounts@cedar.example",
+          "address": "12 Fictional Trade Park, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "CF-2026-1009",
+        "invoice_date": "2026-08-19",
+        "due_date": "2026-10-03",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "1",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "65.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "2",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "57.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "3",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "345.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "4",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "260.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "5",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "142.50",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "6",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "690.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "7",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "455.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "8",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "228.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "9",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "1035.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "1",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "65.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "2",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "57.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "3",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "345.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "4",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "260.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "5",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "142.50",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "6",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "690.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "7",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "455.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "8",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "228.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "9",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "1035.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "1",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "65.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "2",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "57.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "3",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "345.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "4",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "260.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "5",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "142.50",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "6",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "690.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "7",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "455.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "8",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "228.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "9",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "1035.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "1",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "65.00",
+            "tax_rate": "0.20"
+          }
+        ],
+        "subtotal": "9897.50",
+        "tax": "1979.50",
+        "displayed_total": "11877.00"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_013.pdf",
+      "split": "tuning",
+      "scenario": "missing_invoice_number",
+      "status": "held",
+      "source_sha256": "5c53d37d0eeca08e4043547cce5f9852df1fee1b37df98c57d29a9b6eae1f7ed",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [
+        "missing:invoice_number"
+      ],
+      "invoice": {
+        "supplier": {
+          "name": "Alder Packing Supplies Ltd",
+          "email": "accounts@alder.example",
+          "address": "10 Fictional Trade Park, Demo Borough, United Kingdom"
+        },
+        "invoice_number": null,
+        "invoice_date": "2026-08-27",
+        "due_date": "2026-09-10",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Recycled pallet wrap, 400 mm x 250 m",
+            "quantity": "5",
+            "unit": "roll",
+            "unit_price": "12.35",
+            "line_amount": "61.75",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Storage bin labels, printed batch of 100",
+            "quantity": "6",
+            "unit": "batch",
+            "unit_price": "18.20",
+            "line_amount": "109.20",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Double-wall shipping cartons, pack of 25",
+            "quantity": "7",
+            "unit": "pack",
+            "unit_price": "24.75",
+            "line_amount": "173.25",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Recycled pallet wrap, 400 mm x 250 m",
+            "quantity": "8",
+            "unit": "roll",
+            "unit_price": "12.35",
+            "line_amount": "98.80",
+            "tax_rate": "0.20"
+          }
+        ],
+        "subtotal": "443.00",
+        "tax": "88.60",
+        "displayed_total": "531.60"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_015.pdf",
+      "split": "tuning",
+      "scenario": "inconsistent_displayed_total",
+      "status": "held",
+      "source_sha256": "38bdc3d1e4bd755e773fdabcc675e841ba4d62b0fa9f51794620b96700b13660",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [
+        "arithmetic:total"
+      ],
+      "invoice": {
+        "supplier": {
+          "name": "Cedar Facilities Services Ltd",
+          "email": "accounts@cedar.example",
+          "address": "12 Fictional Trade Park, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "CF-2026-1015",
+        "invoice_date": "2026-08-31",
+        "due_date": "2026-10-15",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "7",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "455.00",
+            "tax_rate": "0.20"
+          }
+        ],
+        "subtotal": "455.00",
+        "tax": "91.00",
+        "displayed_total": "553.13"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_031.pdf",
+      "split": "evaluation",
+      "scenario": "valid",
+      "status": "extracted_valid",
+      "source_sha256": "4e04742b4f32b732de86e46f818e9b39427fc4c4af52556b51b61563a1d163c6",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [],
+      "invoice": {
+        "supplier": {
+          "name": "Alder Packing Supplies Ltd",
+          "email": "accounts@alder.example",
+          "address": "10 Fictional Trade Park, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "AP-2026-1031",
+        "invoice_date": "2026-10-02",
+        "due_date": "2026-10-16",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Recycled pallet wrap, 400 mm x 250 m",
+            "quantity": "5",
+            "unit": "roll",
+            "unit_price": "12.35",
+            "line_amount": "61.75",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Storage bin labels, printed batch of 100",
+            "quantity": "6",
+            "unit": "batch",
+            "unit_price": "18.20",
+            "line_amount": "109.20",
+            "tax_rate": "0.20"
+          }
+        ],
+        "subtotal": "170.95",
+        "tax": "34.19",
+        "displayed_total": "205.14"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_033.pdf",
+      "split": "evaluation",
+      "scenario": "missing_due_date",
+      "status": "held",
+      "source_sha256": "1c4815e62ce964d9468590ee6c13c2a450a066ee8b92f708ef5975346c013efc",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [
+        "missing:due_date"
+      ],
+      "invoice": {
+        "supplier": {
+          "name": "Cedar Facilities Services Ltd",
+          "email": "accounts@cedar.example",
+          "address": "12 Fictional Trade Park, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "CF-2026-1033",
+        "invoice_date": "2026-10-06",
+        "due_date": null,
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "7",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "455.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "8",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "228.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "9",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "1035.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "1",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "65.00",
+            "tax_rate": "0.20"
+          }
+        ],
+        "subtotal": "1783.00",
+        "tax": "356.60",
+        "displayed_total": "2139.60"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_035.pdf",
+      "split": "evaluation",
+      "scenario": "inconsistent_subtotal",
+      "status": "held",
+      "source_sha256": "f22d29e7bd561c47445193b216f6ba025772cf64c8acede3ea6ff98ca91eb1a7",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [
+        "arithmetic:subtotal"
+      ],
+      "invoice": {
+        "supplier": {
+          "name": "Bracken Industrial Components Ltd",
+          "email": "accounts@bracken.example",
+          "address": "11 Fictional Trade Park, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "BC-2026-1035",
+        "invoice_date": "2026-10-10",
+        "due_date": "2026-11-09",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "M12 zinc-plated fasteners, box of 100",
+            "quantity": "9",
+            "unit": "box",
+            "unit_price": "14.85",
+            "line_amount": "133.65",
+            "tax_rate": "0.00"
+          }
+        ],
+        "subtotal": "140.78",
+        "tax": "0.00",
+        "displayed_total": "133.65"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_039.pdf",
+      "split": "evaluation",
+      "scenario": "valid",
+      "status": "held",
+      "source_sha256": "5024883463693e6f929898c18ce5803a18b632fce113e089e8d1277eb25b7631",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [
+        "text_vision_disagreement"
+      ],
+      "invoice": {
+        "supplier": {
+          "name": "Cedar Facilities Services Ltd",
+          "email": "accounts@cedar.example",
+          "address": "12 Fictional Trade Park, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "CF-2026-1039",
+        "invoice_date": "2026-10-18",
+        "due_date": "2026-12-02",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "4",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "260.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "5",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "142.50",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "6",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "690.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "7",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "455.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "8",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "228.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "9",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "1035.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "1",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "65.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "2",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "57.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "3",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "345.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "4",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "260.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "5",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "142.50",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "6",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "690.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "7",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "455.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "8",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "228.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "9",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "1035.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "1",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "65.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "2",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "57.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "3",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "345.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "4",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "260.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "5",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "142.50",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "6",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "690.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "7",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "455.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "8",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "228.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "9",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "1035.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "1",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "65.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "2",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "57.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "3",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "345.00",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "4",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "260.00",
+            "tax_rate": "0.20"
+          }
+        ],
+        "subtotal": "10092.50",
+        "tax": "2018.50",
+        "displayed_total": "12111.00"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_005.pdf",
+      "split": "tuning",
+      "scenario": "valid",
+      "status": "extracted_valid",
+      "source_sha256": "ceab3beb28e35cd2b80280809196c08bbfe0006682c3b058bfe5e83f9e7b001f",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [],
+      "invoice": {
+        "supplier": {
+          "name": "Bracken Industrial Components Ltd",
+          "email": "accounts@bracken.example",
+          "address": "11 Fictional Trade Park, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "BC-2026-1005",
+        "invoice_date": "2026-08-11",
+        "due_date": "2026-09-10",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "M12 zinc-plated fasteners, box of 100",
+            "quantity": "6",
+            "unit": "box",
+            "unit_price": "14.85",
+            "line_amount": "89.10",
+            "tax_rate": "0.20"
+          }
+        ],
+        "subtotal": "89.10",
+        "tax": "17.82",
+        "displayed_total": "106.92"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_006.pdf",
+      "split": "tuning",
+      "scenario": "valid",
+      "status": "extracted_valid",
+      "source_sha256": "d18f9d618cd8ecd76c92b1fb6f6e87a750fd8834e8c9ca9c2d507ceee94eab2e",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [],
+      "invoice": {
+        "supplier": {
+          "name": "Cedar Facilities Services Ltd",
+          "email": "accounts@cedar.example",
+          "address": "12 Fictional Trade Park, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "CF-2026-1006",
+        "invoice_date": "2026-08-13",
+        "due_date": "2026-09-27",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "1.5",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "97.50",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "8",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "228.00",
+            "tax_rate": "0.20"
+          }
+        ],
+        "subtotal": "325.50",
+        "tax": "65.10",
+        "displayed_total": "390.60"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_014.pdf",
+      "split": "tuning",
+      "scenario": "missing_supplier",
+      "status": "held",
+      "source_sha256": "6919730e3108b7b7363557ebb9eda0f3590b5a73c97a59997832af5c461ca247",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [
+        "missing:supplier.name"
+      ],
+      "invoice": {
+        "supplier": {
+          "name": null,
+          "email": null,
+          "address": null
+        },
+        "invoice_number": "BC-2026-1014",
+        "invoice_date": "2026-08-29",
+        "due_date": "2026-09-28",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "M12 zinc-plated fasteners, box of 100",
+            "quantity": "6",
+            "unit": "box",
+            "unit_price": "14.85",
+            "line_amount": "89.10",
+            "tax_rate": "0.00"
+          },
+          {
+            "description": "Warehouse handling gloves, size L",
+            "quantity": "7",
+            "unit": "pair",
+            "unit_price": "6.40",
+            "line_amount": "44.80",
+            "tax_rate": "0.00"
+          },
+          {
+            "description": "Machine coupling replacement, specification M24",
+            "quantity": "8",
+            "unit": "unit",
+            "unit_price": "38.95",
+            "line_amount": "311.60",
+            "tax_rate": "0.00"
+          },
+          {
+            "description": "M12 zinc-plated fasteners, box of 100",
+            "quantity": "9",
+            "unit": "box",
+            "unit_price": "14.85",
+            "line_amount": "133.65",
+            "tax_rate": "0.00"
+          },
+          {
+            "description": "Warehouse handling gloves, size L",
+            "quantity": "1",
+            "unit": "pair",
+            "unit_price": "6.40",
+            "line_amount": "6.40",
+            "tax_rate": "0.00"
+          }
+        ],
+        "subtotal": "585.55",
+        "tax": "0.00",
+        "displayed_total": "585.55"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_016.pdf",
+      "split": "tuning",
+      "scenario": "inconsistent_tax",
+      "status": "held",
+      "source_sha256": "137ce39fad67bbebd72014a81bd3c787b9ab2bd849e17fa71a31faa4bb02af7e",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [
+        "arithmetic:tax"
+      ],
+      "invoice": {
+        "supplier": {
+          "name": "Alder Packing Supplies Ltd",
+          "email": "accounts@alder.example",
+          "address": "10 Fictional Trade Park, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "AP-2026-1016",
+        "invoice_date": "2026-09-02",
+        "due_date": "2026-09-16",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Recycled pallet wrap, 400 mm x 250 m",
+            "quantity": "8",
+            "unit": "roll",
+            "unit_price": "12.35",
+            "line_amount": "98.80",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Storage bin labels, printed batch of 100",
+            "quantity": "9",
+            "unit": "batch",
+            "unit_price": "18.20",
+            "line_amount": "163.80",
+            "tax_rate": "0.20"
+          }
+        ],
+        "subtotal": "262.60",
+        "tax": "59.65",
+        "displayed_total": "315.12"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_017.pdf",
+      "split": "tuning",
+      "scenario": "unknown_supplier",
+      "status": "extracted_valid",
+      "source_sha256": "8357c68c8303e26222e8d52f23d5321077b2d9525c2e0b19de9e5824fafbc021",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [],
+      "invoice": {
+        "supplier": {
+          "name": "Dovetail Trade Supplies Ltd",
+          "email": "accounts@dovetail.example",
+          "address": "88 Fictional Supply Estate, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "BC-2026-1017",
+        "invoice_date": "2026-09-04",
+        "due_date": "2026-10-04",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "M12 zinc-plated fasteners, box of 100",
+            "quantity": "9",
+            "unit": "box",
+            "unit_price": "14.85",
+            "line_amount": "133.65",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse handling gloves, size L",
+            "quantity": "1",
+            "unit": "pair",
+            "unit_price": "6.40",
+            "line_amount": "6.40",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Machine coupling replacement, specification M24",
+            "quantity": "2",
+            "unit": "unit",
+            "unit_price": "38.95",
+            "line_amount": "77.90",
+            "tax_rate": "0.20"
+          }
+        ],
+        "subtotal": "217.95",
+        "tax": "43.59",
+        "displayed_total": "261.54"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_029_resubmitted.pdf",
+      "split": "tuning",
+      "scenario": "duplicate_relayout",
+      "status": "extracted_valid",
+      "source_sha256": "e683944ca4b72f204e64690234fbc20f279217f24203f533ee9f354073d61422",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [],
+      "invoice": {
+        "supplier": {
+          "name": "Bracken Industrial Components Ltd",
+          "email": "accounts@bracken.example",
+          "address": "11 Fictional Trade Park, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "BC-2026-1002",
+        "invoice_date": "2026-08-05",
+        "due_date": "2026-09-04",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "M12 zinc-plated fasteners, box of 100",
+            "quantity": "3",
+            "unit": "box",
+            "unit_price": "14.85",
+            "line_amount": "44.55",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse handling gloves, size L",
+            "quantity": "4",
+            "unit": "pair",
+            "unit_price": "6.40",
+            "line_amount": "25.60",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Machine coupling replacement, specification M24",
+            "quantity": "5",
+            "unit": "unit",
+            "unit_price": "38.95",
+            "line_amount": "194.75",
+            "tax_rate": "0.20"
+          }
+        ],
+        "subtotal": "264.90",
+        "tax": "52.98",
+        "displayed_total": "317.88"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_034.pdf",
+      "split": "evaluation",
+      "scenario": "missing_invoice_date",
+      "status": "held",
+      "source_sha256": "9b1181897074e79487622d3c779e2e814b24bbb3a9008767a8cb1b66d9a275dd",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [
+        "missing:invoice_date"
+      ],
+      "invoice": {
+        "supplier": {
+          "name": "Alder Packing Supplies Ltd",
+          "email": "accounts@alder.example",
+          "address": "10 Fictional Trade Park, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "AP-2026-1034",
+        "invoice_date": null,
+        "due_date": "2026-10-22",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Recycled pallet wrap, 400 mm x 250 m",
+            "quantity": "8",
+            "unit": "roll",
+            "unit_price": "12.35",
+            "line_amount": "98.80",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Storage bin labels, printed batch of 100",
+            "quantity": "9",
+            "unit": "batch",
+            "unit_price": "18.20",
+            "line_amount": "163.80",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Double-wall shipping cartons, pack of 25",
+            "quantity": "1",
+            "unit": "pack",
+            "unit_price": "24.75",
+            "line_amount": "24.75",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Recycled pallet wrap, 400 mm x 250 m",
+            "quantity": "2",
+            "unit": "roll",
+            "unit_price": "12.35",
+            "line_amount": "24.70",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Storage bin labels, printed batch of 100",
+            "quantity": "3",
+            "unit": "batch",
+            "unit_price": "18.20",
+            "line_amount": "54.60",
+            "tax_rate": "0.20"
+          }
+        ],
+        "subtotal": "366.65",
+        "tax": "73.33",
+        "displayed_total": "439.98"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_036.pdf",
+      "split": "evaluation",
+      "scenario": "inconsistent_displayed_total",
+      "status": "held",
+      "source_sha256": "2926d4be4711fc9221236fa61000d8284ab36ec04db47652977eaa460d98bf33",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [
+        "arithmetic:total"
+      ],
+      "invoice": {
+        "supplier": {
+          "name": "Cedar Facilities Services Ltd",
+          "email": "accounts@cedar.example",
+          "address": "12 Fictional Trade Park, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "CF-2026-1036",
+        "invoice_date": "2026-10-12",
+        "due_date": "2026-11-26",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "1.5",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "97.50",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "2",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "57.00",
+            "tax_rate": "0.20"
+          }
+        ],
+        "subtotal": "154.50",
+        "tax": "30.90",
+        "displayed_total": "192.53"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_037.pdf",
+      "split": "evaluation",
+      "scenario": "unknown_supplier",
+      "status": "extracted_valid",
+      "source_sha256": "1ad40d636167ff7ff2af92c4321012976ffc5376e1f9ba290dd0cd8bae340724",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [],
+      "invoice": {
+        "supplier": {
+          "name": "Dovetail Trade Supplies Ltd",
+          "email": "accounts@dovetail.example",
+          "address": "88 Fictional Supply Estate, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "AP-2026-1037",
+        "invoice_date": "2026-10-14",
+        "due_date": "2026-10-28",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Recycled pallet wrap, 400 mm x 250 m",
+            "quantity": "2",
+            "unit": "roll",
+            "unit_price": "12.35",
+            "line_amount": "24.70",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Storage bin labels, printed batch of 100",
+            "quantity": "3",
+            "unit": "batch",
+            "unit_price": "18.20",
+            "line_amount": "54.60",
+            "tax_rate": "0.20"
+          },
+          {
+            "description": "Double-wall shipping cartons, pack of 25",
+            "quantity": "4",
+            "unit": "pack",
+            "unit_price": "24.75",
+            "line_amount": "99.00",
+            "tax_rate": "0.20"
+          }
+        ],
+        "subtotal": "178.30",
+        "tax": "35.66",
+        "displayed_total": "213.96"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    },
+    {
+      "filename": "invoice_042.pdf",
+      "split": "evaluation",
+      "scenario": "valid",
+      "status": "extracted_valid",
+      "source_sha256": "8d23cb1bfb67f39616a04ed8ac31c44af49e89fe4e62a6643c337b21125153e1",
+      "prompt_sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "requested_model": "deepseek-flash",
+      "issues": [],
+      "invoice": {
+        "supplier": {
+          "name": "Cedar Facilities Services Ltd",
+          "email": "accounts@cedar.example",
+          "address": "12 Fictional Trade Park, Demo Borough, United Kingdom"
+        },
+        "invoice_number": "CF-2026-1042",
+        "invoice_date": "2026-10-24",
+        "due_date": "2026-12-08",
+        "currency": "GBP",
+        "line_items": [
+          {
+            "description": "Preventive equipment inspection, October service",
+            "quantity": "1.5",
+            "unit": "hour",
+            "unit_price": "65.00",
+            "line_amount": "97.50",
+            "tax_rate": "0.00"
+          },
+          {
+            "description": "Warehouse cleaning, scheduled service",
+            "quantity": "8",
+            "unit": "hour",
+            "unit_price": "28.50",
+            "line_amount": "228.00",
+            "tax_rate": "0.00"
+          },
+          {
+            "description": "Equipment safety inspection, itemised service",
+            "quantity": "9",
+            "unit": "visit",
+            "unit_price": "115.00",
+            "line_amount": "1035.00",
+            "tax_rate": "0.00"
+          }
+        ],
+        "subtotal": "1360.50",
+        "tax": "0.00",
+        "displayed_total": "1360.50"
+      },
+      "reference_comparison": {
+        "invoice_number": true,
+        "invoice_date": true,
+        "due_date": true,
+        "currency": true,
+        "subtotal": true,
+        "tax": true,
+        "displayed_total": true,
+        "supplier_name": true,
+        "line_items": true
+      }
+    }
+  ]
+}

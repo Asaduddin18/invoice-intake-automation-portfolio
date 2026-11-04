@@ -1,0 +1,55 @@
+{
+  "id": "INV-006",
+  "filename": "invoice_006.pdf",
+  "split": "tuning",
+  "scenario": "valid",
+  "supplier": {
+    "name": "Cedar Facilities Services Ltd",
+    "email": "accounts@cedar.example",
+    "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+    "known": true,
+    "category": "Facilities services"
+  },
+  "buyer": {
+    "name": "Northmere Distribution Ltd",
+    "email": "finance@northmere.example",
+    "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+  },
+  "invoice_number": "CF-2026-1006",
+  "invoice_date": "2026-08-13",
+  "due_date": "2026-09-27",
+  "currency": "GBP",
+  "purchase_order_reference": null,
+  "line_items": [
+    {
+      "description": "Preventive equipment inspection, October service",
+      "quantity": "1.5",
+      "unit": "hour",
+      "unit_price": "65.00",
+      "line_amount": "97.50",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Warehouse cleaning, scheduled service",
+      "quantity": "8",
+      "unit": "hour",
+      "unit_price": "28.50",
+      "line_amount": "228.00",
+      "tax_rate": "0.20"
+    }
+  ],
+  "subtotal": "325.50",
+  "tax": "65.10",
+  "tax_rate": "0.20",
+  "displayed_total": "390.60",
+  "calculated_total": "390.60",
+  "layout": 3,
+  "date_format": "%d/%m/%Y",
+  "expected_validation": {
+    "outcome": "eligible_for_draft",
+    "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+  },
+  "duplicate_of": null,
+  "source_document_type": "supplier_invoice",
+  "notes": "Payment due under agreed trade terms. No bank details supplied."
+}

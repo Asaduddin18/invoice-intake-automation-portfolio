@@ -1,0 +1,263 @@
+{
+  "id": "INV-009",
+  "filename": "invoice_009.pdf",
+  "split": "tuning",
+  "scenario": "valid",
+  "supplier": {
+    "name": "Cedar Facilities Services Ltd",
+    "email": "accounts@cedar.example",
+    "address": "12 Fictional Trade Park, Demo Borough, United Kingdom",
+    "known": true,
+    "category": "Facilities services"
+  },
+  "buyer": {
+    "name": "Northmere Distribution Ltd",
+    "email": "finance@northmere.example",
+    "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+  },
+  "invoice_number": "CF-2026-1009",
+  "invoice_date": "2026-08-19",
+  "due_date": "2026-10-03",
+  "currency": "GBP",
+  "purchase_order_reference": null,
+  "line_items": [
+    {
+      "description": "Preventive equipment inspection, October service",
+      "quantity": "1",
+      "unit": "hour",
+      "unit_price": "65.00",
+      "line_amount": "65.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Warehouse cleaning, scheduled service",
+      "quantity": "2",
+      "unit": "hour",
+      "unit_price": "28.50",
+      "line_amount": "57.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Equipment safety inspection, itemised service",
+      "quantity": "3",
+      "unit": "visit",
+      "unit_price": "115.00",
+      "line_amount": "345.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Preventive equipment inspection, October service",
+      "quantity": "4",
+      "unit": "hour",
+      "unit_price": "65.00",
+      "line_amount": "260.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Warehouse cleaning, scheduled service",
+      "quantity": "5",
+      "unit": "hour",
+      "unit_price": "28.50",
+      "line_amount": "142.50",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Equipment safety inspection, itemised service",
+      "quantity": "6",
+      "unit": "visit",
+      "unit_price": "115.00",
+      "line_amount": "690.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Preventive equipment inspection, October service",
+      "quantity": "7",
+      "unit": "hour",
+      "unit_price": "65.00",
+      "line_amount": "455.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Warehouse cleaning, scheduled service",
+      "quantity": "8",
+      "unit": "hour",
+      "unit_price": "28.50",
+      "line_amount": "228.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Equipment safety inspection, itemised service",
+      "quantity": "9",
+      "unit": "visit",
+      "unit_price": "115.00",
+      "line_amount": "1035.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Preventive equipment inspection, October service",
+      "quantity": "1",
+      "unit": "hour",
+      "unit_price": "65.00",
+      "line_amount": "65.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Warehouse cleaning, scheduled service",
+      "quantity": "2",
+      "unit": "hour",
+      "unit_price": "28.50",
+      "line_amount": "57.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Equipment safety inspection, itemised service",
+      "quantity": "3",
+      "unit": "visit",
+      "unit_price": "115.00",
+      "line_amount": "345.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Preventive equipment inspection, October service",
+      "quantity": "4",
+      "unit": "hour",
+      "unit_price": "65.00",
+      "line_amount": "260.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Warehouse cleaning, scheduled service",
+      "quantity": "5",
+      "unit": "hour",
+      "unit_price": "28.50",
+      "line_amount": "142.50",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Equipment safety inspection, itemised service",
+      "quantity": "6",
+      "unit": "visit",
+      "unit_price": "115.00",
+      "line_amount": "690.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Preventive equipment inspection, October service",
+      "quantity": "7",
+      "unit": "hour",
+      "unit_price": "65.00",
+      "line_amount": "455.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Warehouse cleaning, scheduled service",
+      "quantity": "8",
+      "unit": "hour",
+      "unit_price": "28.50",
+      "line_amount": "228.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Equipment safety inspection, itemised service",
+      "quantity": "9",
+      "unit": "visit",
+      "unit_price": "115.00",
+      "line_amount": "1035.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Preventive equipment inspection, October service",
+      "quantity": "1",
+      "unit": "hour",
+      "unit_price": "65.00",
+      "line_amount": "65.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Warehouse cleaning, scheduled service",
+      "quantity": "2",
+      "unit": "hour",
+      "unit_price": "28.50",
+      "line_amount": "57.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Equipment safety inspection, itemised service",
+      "quantity": "3",
+      "unit": "visit",
+      "unit_price": "115.00",
+      "line_amount": "345.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Preventive equipment inspection, October service",
+      "quantity": "4",
+      "unit": "hour",
+      "unit_price": "65.00",
+      "line_amount": "260.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Warehouse cleaning, scheduled service",
+      "quantity": "5",
+      "unit": "hour",
+      "unit_price": "28.50",
+      "line_amount": "142.50",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Equipment safety inspection, itemised service",
+      "quantity": "6",
+      "unit": "visit",
+      "unit_price": "115.00",
+      "line_amount": "690.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Preventive equipment inspection, October service",
+      "quantity": "7",
+      "unit": "hour",
+      "unit_price": "65.00",
+      "line_amount": "455.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Warehouse cleaning, scheduled service",
+      "quantity": "8",
+      "unit": "hour",
+      "unit_price": "28.50",
+      "line_amount": "228.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Equipment safety inspection, itemised service",
+      "quantity": "9",
+      "unit": "visit",
+      "unit_price": "115.00",
+      "line_amount": "1035.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Preventive equipment inspection, October service",
+      "quantity": "1",
+      "unit": "hour",
+      "unit_price": "65.00",
+      "line_amount": "65.00",
+      "tax_rate": "0.20"
+    }
+  ],
+  "subtotal": "9897.50",
+  "tax": "1979.50",
+  "tax_rate": "0.20",
+  "displayed_total": "11877.00",
+  "calculated_total": "11877.00",
+  "layout": 3,
+  "date_format": "%d/%m/%Y",
+  "expected_validation": {
+    "outcome": "eligible_for_draft",
+    "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+  },
+  "duplicate_of": null,
+  "source_document_type": "supplier_invoice",
+  "notes": "Payment due under agreed trade terms. No bank details supplied."
+}

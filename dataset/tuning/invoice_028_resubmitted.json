@@ -1,0 +1,55 @@
+{
+  "id": "INV-028",
+  "filename": "invoice_028_resubmitted.pdf",
+  "split": "tuning",
+  "scenario": "duplicate_renamed",
+  "supplier": {
+    "name": "Alder Packing Supplies Ltd",
+    "email": "accounts@alder.example",
+    "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+    "known": true,
+    "category": "Packaging materials"
+  },
+  "buyer": {
+    "name": "Northmere Distribution Ltd",
+    "email": "finance@northmere.example",
+    "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+  },
+  "invoice_number": "AP-2026-1001",
+  "invoice_date": "2026-08-03",
+  "due_date": "2026-08-17",
+  "currency": "GBP",
+  "purchase_order_reference": "PO-7001",
+  "line_items": [
+    {
+      "description": "Recycled pallet wrap, 400 mm x 250 m",
+      "quantity": "2",
+      "unit": "roll",
+      "unit_price": "12.35",
+      "line_amount": "24.70",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Storage bin labels, printed batch of 100",
+      "quantity": "3",
+      "unit": "batch",
+      "unit_price": "18.20",
+      "line_amount": "54.60",
+      "tax_rate": "0.20"
+    }
+  ],
+  "subtotal": "79.30",
+  "tax": "15.86",
+  "tax_rate": "0.20",
+  "displayed_total": "95.16",
+  "calculated_total": "95.16",
+  "layout": 1,
+  "date_format": "%d %b %Y",
+  "expected_validation": {
+    "outcome": "duplicate_if_original_processed",
+    "reason": "Same supplier and invoice number as the referenced original. If this arrives first, process once and hold the later copy."
+  },
+  "duplicate_of": "INV-001",
+  "source_document_type": "supplier_invoice",
+  "notes": "Payment due under agreed trade terms. No bank details supplied."
+}

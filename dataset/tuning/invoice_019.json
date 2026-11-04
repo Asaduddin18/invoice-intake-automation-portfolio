@@ -1,0 +1,79 @@
+{
+  "id": "INV-019",
+  "filename": "invoice_019.pdf",
+  "split": "tuning",
+  "scenario": "valid",
+  "supplier": {
+    "name": "Alder Packing Supplies Ltd",
+    "email": "accounts@alder.example",
+    "address": "10 Fictional Trade Park, Demo Borough, United Kingdom",
+    "known": true,
+    "category": "Packaging materials"
+  },
+  "buyer": {
+    "name": "Northmere Distribution Ltd",
+    "email": "finance@northmere.example",
+    "address": "50 Example Distribution Park, Demo Borough, United Kingdom"
+  },
+  "invoice_number": "AP-2026-1019",
+  "invoice_date": "2026-09-08",
+  "due_date": "2026-09-22",
+  "currency": "GBP",
+  "purchase_order_reference": "PO-7019",
+  "line_items": [
+    {
+      "description": "Recycled pallet wrap, 400 mm x 250 m",
+      "quantity": "2",
+      "unit": "roll",
+      "unit_price": "12.35",
+      "line_amount": "24.70",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Storage bin labels, printed batch of 100",
+      "quantity": "3",
+      "unit": "batch",
+      "unit_price": "18.20",
+      "line_amount": "54.60",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Double-wall shipping cartons, pack of 25",
+      "quantity": "4",
+      "unit": "pack",
+      "unit_price": "24.75",
+      "line_amount": "99.00",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Recycled pallet wrap, 400 mm x 250 m",
+      "quantity": "5",
+      "unit": "roll",
+      "unit_price": "12.35",
+      "line_amount": "61.75",
+      "tax_rate": "0.20"
+    },
+    {
+      "description": "Storage bin labels, printed batch of 100",
+      "quantity": "6",
+      "unit": "batch",
+      "unit_price": "18.20",
+      "line_amount": "109.20",
+      "tax_rate": "0.20"
+    }
+  ],
+  "subtotal": "349.25",
+  "tax": "69.85",
+  "tax_rate": "0.20",
+  "displayed_total": "419.10",
+  "calculated_total": "419.10",
+  "layout": 1,
+  "date_format": "%d %b %Y",
+  "expected_validation": {
+    "outcome": "eligible_for_draft",
+    "reason": "Known supplier; complete fields; totals agree. Review setting determines approval requirement."
+  },
+  "duplicate_of": null,
+  "source_document_type": "supplier_invoice",
+  "notes": "Payment due under agreed trade terms. No bank details supplied."
+}

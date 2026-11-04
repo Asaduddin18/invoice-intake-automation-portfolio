@@ -1,0 +1,1115 @@
+{
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "0d47e69e6361bce1e3dc1dadcf63f936a0925c0cb2ca04ab7de2f5420d35a006",
+      "bytes": 327
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "547f59603028195ff9f8a87d04c4651551e8bd0d68f075257dfd549cd846b25b",
+      "bytes": 13
+    },
+    {
+      "path": ".github/workflows/pages.yml",
+      "sha256": "0992855309e7dc4ee733dadc99d35cc865f1e69cdc6fa31f1fb1e03ad0432e2e",
+      "bytes": 646
+    },
+    {
+      "path": ".github/workflows/tests.yml",
+      "sha256": "6c0b62e813e253c5061e2d7e19eccc2f197346bed2e2fb3d6817292d6ec493f5",
+      "bytes": 332
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "b275b565954e706522309c7dc501fb0b1444b82993391eb88be90248410295bb",
+      "bytes": 91
+    },
+    {
+      "path": "README.md",
+      "sha256": "c14c43d3b405c947d85fa3e153fd4637222f42e001459b6e3fa0c617c153753b",
+      "bytes": 6069
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "266e4ae59d46b12cf8f8de716077b530d41502c2c0eb9475f799f4e45807e148",
+      "bytes": 790
+    },
+    {
+      "path": "app/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "app/bills.py",
+      "sha256": "47026766f6cb50f9f484bb495c532ebbe4b8f393ca09397c7db8cca713491800",
+      "bytes": 5764
+    },
+    {
+      "path": "app/connection.py",
+      "sha256": "a3ffd37a54cbe4b6bbf84a2e9ee72658d13b2bfde4b49144c4958c40c238d061",
+      "bytes": 8372
+    },
+    {
+      "path": "app/extraction.py",
+      "sha256": "12d819cac24c692d8d67cef20c99baaab4118a8001caaaa08820a196f0e00525",
+      "bytes": 12687
+    },
+    {
+      "path": "app/extraction_runs.py",
+      "sha256": "35eeb2968e8b6e235465335bb40a6546df93307a3d456eb18e04c23b9130bf43",
+      "bytes": 3499
+    },
+    {
+      "path": "app/extraction_view.py",
+      "sha256": "70910896fdc7ad4a9daa813a3f9320ab8acebed6c82e4c92b49b6a41c9ce96bc",
+      "bytes": 3883
+    },
+    {
+      "path": "app/google_connection.py",
+      "sha256": "78525bbd74a907808b6faf9dedaafb18a66bc50b8bb9638b4bbb1b631a729bf5",
+      "bytes": 6265
+    },
+    {
+      "path": "app/google_routes.py",
+      "sha256": "0477beeb711a281dea12025948f59a207ab25bd806cc4737077789e1a7833eb6",
+      "bytes": 11087
+    },
+    {
+      "path": "app/ledger.py",
+      "sha256": "d6321c7af43895ab569aad7e74fd03065af714228483e58364e3656a8dc2a25a",
+      "bytes": 11431
+    },
+    {
+      "path": "app/ledger_view.py",
+      "sha256": "8138ba77c81f16363685dc02b408796fe9448e0c501b232823b1fa1ad4fab550",
+      "bytes": 5467
+    },
+    {
+      "path": "app/mail_intake.py",
+      "sha256": "78c7b6c8568319699673d988d8434c0d544347d336102d5264bd71fd4bff78c3",
+      "bytes": 9683
+    },
+    {
+      "path": "app/mail_store.py",
+      "sha256": "bf3d1048b53511d98446d042e38d63e63990e6bedae0624aae9cad9a99ee0dcc",
+      "bytes": 5855
+    },
+    {
+      "path": "app/main.py",
+      "sha256": "259688a60866e33806965b440b17d034b4674d15f42ec14467e99f3739373df7",
+      "bytes": 19724
+    },
+    {
+      "path": "app/monthly_report.py",
+      "sha256": "d068c950b2bd8d37e8be5cce53feebba59598ea14df50e4a9cd6d34e5c42b2b7",
+      "bytes": 10632
+    },
+    {
+      "path": "app/pages/phase02.css",
+      "sha256": "a3f2e0454b877ab26009c044b77a47762e0f2083650bf08ef27833aee7016e0e",
+      "bytes": 3964
+    },
+    {
+      "path": "app/pages/phase02.html",
+      "sha256": "31624f6bc7458312c2f6e0ebdc84b8016dad35dd170869e367f8eccd38b07640",
+      "bytes": 5152
+    },
+    {
+      "path": "app/pipeline.py",
+      "sha256": "3705571f54556414915e534356661f3f34a65af85ba39e86865b7b339fc1c1bf",
+      "bytes": 11835
+    },
+    {
+      "path": "app/prompts/invoice-extraction.md",
+      "sha256": "389adfebf11dec96c8ea6e14f7fa212ff22b40de8f4992a816c7e4a9567caae0",
+      "bytes": 1609
+    },
+    {
+      "path": "app/review.py",
+      "sha256": "2fe15a8e783f58f0a750dfef866d12267a877e8a727f5ced602d807351528de5",
+      "bytes": 15249
+    },
+    {
+      "path": "app/review_routes.py",
+      "sha256": "41f57336aca1563b27c55750d572279e562341af2d42f40e429765fffcfd0c5f",
+      "bytes": 9700
+    },
+    {
+      "path": "app/review_view.py",
+      "sha256": "5e0c30c92cb8cd8d2e3bfd7d07668c50e2e47d8a814b325a138fcaa21deef2af",
+      "bytes": 10741
+    },
+    {
+      "path": "app/samples.py",
+      "sha256": "d7fbd4799f214940d2ed5db846f50a176a52e28ed9f6dff329846b31f079a0cb",
+      "bytes": 1433
+    },
+    {
+      "path": "app/workflow.py",
+      "sha256": "9e585ed13edbb6598bb9626c2564fefd7151a0a7d6ce0bdf228be2e89ee9c7a2",
+      "bytes": 1653
+    },
+    {
+      "path": "artifacts/deepseek-prompts.md",
+      "sha256": "5175eb0bf22a3444a422094fc4a5508236e2f8bc3acb8b4a914906635f9e89ca",
+      "bytes": 3858
+    },
+    {
+      "path": "artifacts/public/evaluation.json",
+      "sha256": "c7bf6b4960cd4d085f03e64addf48b36c5465d0f43d72751829f7796264dacb2",
+      "bytes": 51282
+    },
+    {
+      "path": "artifacts/public/metrics.json",
+      "sha256": "f15274f0cda03573e4cd519d163cb9e120c9b4c123aaa959b94537de093a03ad",
+      "bytes": 851
+    },
+    {
+      "path": "artifacts/public/release-verification.json",
+      "sha256": "aa2d7152df5706c1e090f5b41593bd9717a985eb838a1620683d986495b6db78",
+      "bytes": 451
+    },
+    {
+      "path": "dataset/README.md",
+      "sha256": "1c64744775aba90a631eabebf65316365adccfee3a8c2af995472e84ceaace5a",
+      "bytes": 6035
+    },
+    {
+      "path": "dataset/evaluation/invoice_031.json",
+      "sha256": "223a5452aa175af8bb2322357b50e9984ced8acf0e8f3abb2626dcb1a6a667bc",
+      "bytes": 1603
+    },
+    {
+      "path": "dataset/evaluation/invoice_031.pdf",
+      "sha256": "4e04742b4f32b732de86e46f818e9b39427fc4c4af52556b51b61563a1d163c6",
+      "bytes": 2626
+    },
+    {
+      "path": "dataset/evaluation/invoice_032.json",
+      "sha256": "fa93b1ed37b300f8ca6927e5b66894410f55c2e271ecba39d9734ef46b5c545c",
+      "bytes": 1819
+    },
+    {
+      "path": "dataset/evaluation/invoice_032.pdf",
+      "sha256": "7a9a75d9986c9f0412defb339c399be25802ab787504e16f93aa77de14637c2c",
+      "bytes": 2718
+    },
+    {
+      "path": "dataset/evaluation/invoice_033.json",
+      "sha256": "0c32ea58d7f1cedd3d1174bcfd5de8065a3b7b78423acbce40ce234f7675cd25",
+      "bytes": 1980
+    },
+    {
+      "path": "dataset/evaluation/invoice_033.pdf",
+      "sha256": "1c4815e62ce964d9468590ee6c13c2a450a066ee8b92f708ef5975346c013efc",
+      "bytes": 2728
+    },
+    {
+      "path": "dataset/evaluation/invoice_034.json",
+      "sha256": "db74f18214861938fd88f09a3f25c1fbb3a69ee19805e3e7b7d494a0932930e6",
+      "bytes": 2164
+    },
+    {
+      "path": "dataset/evaluation/invoice_034.pdf",
+      "sha256": "9b1181897074e79487622d3c779e2e814b24bbb3a9008767a8cb1b66d9a275dd",
+      "bytes": 2775
+    },
+    {
+      "path": "dataset/evaluation/invoice_035.json",
+      "sha256": "d2c78e6bce945d7853b20c6c5fdd87a29300dd259c55f3972a08a7943252aa66",
+      "bytes": 1386
+    },
+    {
+      "path": "dataset/evaluation/invoice_035.pdf",
+      "sha256": "f22d29e7bd561c47445193b216f6ba025772cf64c8acede3ea6ff98ca91eb1a7",
+      "bytes": 2551
+    },
+    {
+      "path": "dataset/evaluation/invoice_036.json",
+      "sha256": "87067e1b25cec2fa12505370be09924dda17a66e35095fc7b23d5e00c04e3c00",
+      "bytes": 1605
+    },
+    {
+      "path": "dataset/evaluation/invoice_036.pdf",
+      "sha256": "2926d4be4711fc9221236fa61000d8284ab36ec04db47652977eaa460d98bf33",
+      "bytes": 2631
+    },
+    {
+      "path": "dataset/evaluation/invoice_037.json",
+      "sha256": "22e0d76622c5e882e6bf3c6076cc48bbee63ff4d32f1634bd1cd2f3b480708ef",
+      "bytes": 1805
+    },
+    {
+      "path": "dataset/evaluation/invoice_037.pdf",
+      "sha256": "1ad40d636167ff7ff2af92c4321012976ffc5376e1f9ba290dd0cd8bae340724",
+      "bytes": 2703
+    },
+    {
+      "path": "dataset/evaluation/invoice_038.json",
+      "sha256": "7b526d5cfbc90f7d6c386c55be5783373cc9602b617b051f6ca64f0a5da750c6",
+      "bytes": 2022
+    },
+    {
+      "path": "dataset/evaluation/invoice_038.pdf",
+      "sha256": "4f2e7fb00bbcb9a35db46f91f5465f5efe07a346f4c075eb5aa593d96c0749f3",
+      "bytes": 2763
+    },
+    {
+      "path": "dataset/evaluation/invoice_039.json",
+      "sha256": "4c5c2bc9dfb7f92393b139d45b3bd1e5cd2922e2c8a1f60ab292a49d475afbb1",
+      "bytes": 7134
+    },
+    {
+      "path": "dataset/evaluation/invoice_039.pdf",
+      "sha256": "5024883463693e6f929898c18ce5803a18b632fce113e089e8d1277eb25b7631",
+      "bytes": 4364
+    },
+    {
+      "path": "dataset/evaluation/invoice_040.json",
+      "sha256": "e51f5aa95799cd09616a37dad4f1fab8d98d9151ce40e0d81b5ca82947723045",
+      "bytes": 1391
+    },
+    {
+      "path": "dataset/evaluation/invoice_040.pdf",
+      "sha256": "d9007d28c68b1c605b87badc26e935cab00acdeaf48e4ceea037b169e10d6d56",
+      "bytes": 2535
+    },
+    {
+      "path": "dataset/evaluation/invoice_041.json",
+      "sha256": "18acde08400298a20d66948f63feaac8f84bce13df6039d82c70f561dbc0f364",
+      "bytes": 1604
+    },
+    {
+      "path": "dataset/evaluation/invoice_041.pdf",
+      "sha256": "7098c41e36a3fe1264555fd04d7e718d2ff67abc084f3a8b7c46b0e5cb703def",
+      "bytes": 2640
+    },
+    {
+      "path": "dataset/evaluation/invoice_042.json",
+      "sha256": "46a4c46240c20f0bc0c1a7e288da35792c7fdccc4308d61bbd811a3dee550ca4",
+      "bytes": 1829
+    },
+    {
+      "path": "dataset/evaluation/invoice_042.pdf",
+      "sha256": "8d23cb1bfb67f39616a04ed8ac31c44af49e89fe4e62a6643c337b21125153e1",
+      "bytes": 2684
+    },
+    {
+      "path": "dataset/evaluation/invoice_043.json",
+      "sha256": "c6eb92aeef51c9575601d3dcb89a5d7970868d4e1d3f892e8889cc7c91a0f2d2",
+      "bytes": 2013
+    },
+    {
+      "path": "dataset/evaluation/invoice_043.pdf",
+      "sha256": "2cf2f2dd08d4d3ef4bba050d2283f76e4e41764262749bc2817064d8b3946af2",
+      "bytes": 2741
+    },
+    {
+      "path": "dataset/evaluation/invoice_044.json",
+      "sha256": "addddd62b91ed97b8fa8bb465029636a1d6cda0b0931aa98ddf01274ff600765",
+      "bytes": 2220
+    },
+    {
+      "path": "dataset/evaluation/invoice_044.pdf",
+      "sha256": "7598a6d57b153604108d062f2fed681d9fe4eb769d8acda88e155c5af9a3d238",
+      "bytes": 2793
+    },
+    {
+      "path": "dataset/evaluation/invoice_045.json",
+      "sha256": "afa68b564cbbbc43a752f03b168533de9259b7d25b65f1c2c0139f8f9b75a407",
+      "bytes": 1401
+    },
+    {
+      "path": "dataset/evaluation/invoice_045.pdf",
+      "sha256": "eb095f6349c56f52ff9a1945ab1cc3917bbb715f02e4a7678b61ae0fb77cd808",
+      "bytes": 2543
+    },
+    {
+      "path": "dataset/evaluation/invoice_046.json",
+      "sha256": "1ef9af0d3b93c9e1489767c851abe0dccc67d28316a9ce6735614a3fc81454cb",
+      "bytes": 1599
+    },
+    {
+      "path": "dataset/evaluation/invoice_046.pdf",
+      "sha256": "f798a38ee90f712cc52f47fa2b825116811a8e6547cce18e7b8fb4d9ae466f39",
+      "bytes": 2629
+    },
+    {
+      "path": "dataset/evaluation/invoice_047.json",
+      "sha256": "2ec7b65c02ef2644ef93b229456644fab7355754a9bbaa12c8885d313263f1f4",
+      "bytes": 1819
+    },
+    {
+      "path": "dataset/evaluation/invoice_047.pdf",
+      "sha256": "65b6f680be8aeca04502bd01549d9396825406e6c14533ea924306d5cbd16636",
+      "bytes": 2720
+    },
+    {
+      "path": "dataset/evaluation/invoice_048_resubmitted.json",
+      "sha256": "e98f806ef1edf4b1bf6702c28ee6d00f11309e75e7a8ded97203a905dcd84dd1",
+      "bytes": 1672
+    },
+    {
+      "path": "dataset/evaluation/invoice_048_resubmitted.pdf",
+      "sha256": "5d0935027b31bbc0a131519b8730e90e3ebcb27f44e9de539e446ae7ef6ae2c5",
+      "bytes": 2626
+    },
+    {
+      "path": "dataset/evaluation/invoice_049_resubmitted.json",
+      "sha256": "0e5602fca7898cf421e9c89dd51eee4da989ef3d648ca8c4ca21fcac60522681",
+      "bytes": 1896
+    },
+    {
+      "path": "dataset/evaluation/invoice_049_resubmitted.pdf",
+      "sha256": "4a58e4087cdfccb74b77e5ed8d681f5fddd963a77ba0675b13201d5323f97cf2",
+      "bytes": 2714
+    },
+    {
+      "path": "dataset/evaluation/invoice_050_resubmitted.json",
+      "sha256": "02816035c34b6afbd74fa5e15d23e49e06cd13b7fb2858641dda58cfa10fbcbb",
+      "bytes": 2099
+    },
+    {
+      "path": "dataset/evaluation/invoice_050_resubmitted.pdf",
+      "sha256": "d8b571a18e1a8f490830ba9f066a27c7a730eae5059da919c44c1ebbe9aa39ae",
+      "bytes": 2756
+    },
+    {
+      "path": "dataset/generate.py",
+      "sha256": "5d8954089317d62b3aa9c630641f53ec44b1a0053ba12b23638bc085c2ed706e",
+      "bytes": 9108
+    },
+    {
+      "path": "dataset/ground_truth.json",
+      "sha256": "2295bf08214f7bb9c4bcd3f44236ba20e1e3c4ab4e40f4d8607aac8fd0d5d519",
+      "bytes": 112263
+    },
+    {
+      "path": "dataset/manifest.csv",
+      "sha256": "e08cd191d2851cd25a4cdb05c43ade58a1239ca562a17aef07516d0ded18aaa0",
+      "bytes": 3539
+    },
+    {
+      "path": "dataset/requirements.txt",
+      "sha256": "0b97b378a622d66096bb4e016e2dd53e276e1dffff688e05acb358cc598e1d2f",
+      "bytes": 67
+    },
+    {
+      "path": "dataset/supplier_master.json",
+      "sha256": "cc956d3f1d3deb97cad97c18e3bc1fd294e78f6b912d89c29620ef72c04ccc25",
+      "bytes": 607
+    },
+    {
+      "path": "dataset/tuning/invoice_001.json",
+      "sha256": "8f28c6e99a1396a80a47fe89d8d0fea842a24ad11f21436606430775875c0835",
+      "bytes": 1595
+    },
+    {
+      "path": "dataset/tuning/invoice_001.pdf",
+      "sha256": "9e8b84308a50ef9b754ced75ce95b94c3e54e2f2b563257bdf9d4ce7a2a3d228",
+      "bytes": 2629
+    },
+    {
+      "path": "dataset/tuning/invoice_002.json",
+      "sha256": "54ab5365112064ce3e5d176cd986fc20848c128ce92cf7d8bc0255a57a3f75d8",
+      "bytes": 1815
+    },
+    {
+      "path": "dataset/tuning/invoice_002.pdf",
+      "sha256": "258ef16e1fb495c87278ba435c5589991c290488f0d6a317fdf655baebe82b2a",
+      "bytes": 2724
+    },
+    {
+      "path": "dataset/tuning/invoice_003.json",
+      "sha256": "040193cb580001da41ef7a60394f2cc6510c3eba434f3914abc1a8c89d314303",
+      "bytes": 2041
+    },
+    {
+      "path": "dataset/tuning/invoice_003.pdf",
+      "sha256": "654866c6dde4a826143ccb14348f303b36555bc79f914fbd2418c1870f9dd2e2",
+      "bytes": 2723
+    },
+    {
+      "path": "dataset/tuning/invoice_004.json",
+      "sha256": "e5c7e05a41b8f34913c7c3050669fb5bb3c57239c24702da7cab18aa3b7925c4",
+      "bytes": 2220
+    },
+    {
+      "path": "dataset/tuning/invoice_004.pdf",
+      "sha256": "7f6ceea8f6e171f8d886cbea71f5db1ec82aa0e0494d110fd62cde72db22e4a3",
+      "bytes": 2778
+    },
+    {
+      "path": "dataset/tuning/invoice_005.json",
+      "sha256": "8c679fd85479ccd25eb6d36d7faf1d0a59cd90b2696b51c9fcd23e6ce135aaf4",
+      "bytes": 1400
+    },
+    {
+      "path": "dataset/tuning/invoice_005.pdf",
+      "sha256": "ceab3beb28e35cd2b80280809196c08bbfe0006682c3b058bfe5e83f9e7b001f",
+      "bytes": 2558
+    },
+    {
+      "path": "dataset/tuning/invoice_006.json",
+      "sha256": "84c30eab26de78f1a472ccb1303741a3e21854dded2137a10106a5d755e92504",
+      "bytes": 1607
+    },
+    {
+      "path": "dataset/tuning/invoice_006.pdf",
+      "sha256": "d18f9d618cd8ecd76c92b1fb6f6e87a750fd8834e8c9ca9c2d507ceee94eab2e",
+      "bytes": 2633
+    },
+    {
+      "path": "dataset/tuning/invoice_007.json",
+      "sha256": "7212376bbb448df3d0e904b5a4a273bb9bbb676a3c0e3728adaa94690990c744",
+      "bytes": 1805
+    },
+    {
+      "path": "dataset/tuning/invoice_007.pdf",
+      "sha256": "66aafc4a98358ad022658df07cf364e362dbd8ed8704f141bd2b7d2e4314ac62",
+      "bytes": 2686
+    },
+    {
+      "path": "dataset/tuning/invoice_008.json",
+      "sha256": "8d917ad80bcee77cc0e7d38a2446c85bc532bfc430e6fb0469ee608987657e88",
+      "bytes": 2017
+    },
+    {
+      "path": "dataset/tuning/invoice_008.pdf",
+      "sha256": "6b6b234f75e96a2fcf30d42ab478c8138b8f26fd2e9e0338565d1f15c8141880",
+      "bytes": 2756
+    },
+    {
+      "path": "dataset/tuning/invoice_009.json",
+      "sha256": "a679d98a4290298726f2a7b31e3ed20c96f7e136fd7aeaec99461c961ecfb61d",
+      "bytes": 7128
+    },
+    {
+      "path": "dataset/tuning/invoice_009.pdf",
+      "sha256": "9b00f905ce4db578755db36c8fdf6bf515a9e44ac13aeb37b1ab458b0b8e472c",
+      "bytes": 4353
+    },
+    {
+      "path": "dataset/tuning/invoice_010.json",
+      "sha256": "4207e7dab4619195deb4d0d99f570c15acc0c76255a61488edb0a0a4a158a974",
+      "bytes": 1386
+    },
+    {
+      "path": "dataset/tuning/invoice_010.pdf",
+      "sha256": "8053cfa55173779a70dcc2d4c02ec76155b9d9a45176f6aa064271575a7e277a",
+      "bytes": 2539
+    },
+    {
+      "path": "dataset/tuning/invoice_011.json",
+      "sha256": "367109cc78e5a8d526f4b722e68dac9d1deaca8cbd1e50d80b2f95dfacfb8186",
+      "bytes": 1597
+    },
+    {
+      "path": "dataset/tuning/invoice_011.pdf",
+      "sha256": "5bcc6cc41aa6ab4f239f7bfc12c0dd15c453323e59f9cc72ddc3b86b1811d1d1",
+      "bytes": 2643
+    },
+    {
+      "path": "dataset/tuning/invoice_012.json",
+      "sha256": "45236c64bcb675e1ed446e08f1851ae6d833a12fea37e5d28ebefa5c65cc1bf5",
+      "bytes": 1825
+    },
+    {
+      "path": "dataset/tuning/invoice_012.pdf",
+      "sha256": "c6f4db710789686214649317f75ebb423e03cbc1f7b784ab5ba991a0c099884a",
+      "bytes": 2685
+    },
+    {
+      "path": "dataset/tuning/invoice_013.json",
+      "sha256": "86edfab20ae95630f0842fa5931e56f682971b7ce5da4025de9af130c567475a",
+      "bytes": 1955
+    },
+    {
+      "path": "dataset/tuning/invoice_013.pdf",
+      "sha256": "5c53d37d0eeca08e4043547cce5f9852df1fee1b37df98c57d29a9b6eae1f7ed",
+      "bytes": 2751
+    },
+    {
+      "path": "dataset/tuning/invoice_014.json",
+      "sha256": "ec6c0c4129c5fb996080b97beb3758f38436bb7d3ee21e5d078f1df1ae6c43f1",
+      "bytes": 1937
+    },
+    {
+      "path": "dataset/tuning/invoice_014.pdf",
+      "sha256": "6919730e3108b7b7363557ebb9eda0f3590b5a73c97a59997832af5c461ca247",
+      "bytes": 2761
+    },
+    {
+      "path": "dataset/tuning/invoice_015.json",
+      "sha256": "9449719d369eba9906a278bbeea8163e8610451a40e5c0e33af168ec2391785c",
+      "bytes": 1396
+    },
+    {
+      "path": "dataset/tuning/invoice_015.pdf",
+      "sha256": "38bdc3d1e4bd755e773fdabcc675e841ba4d62b0fa9f51794620b96700b13660",
+      "bytes": 2548
+    },
+    {
+      "path": "dataset/tuning/invoice_016.json",
+      "sha256": "fc0bfd5c019289ed6e91978a1367fc90268e27378d10588a3eaf9274e46adc23",
+      "bytes": 1570
+    },
+    {
+      "path": "dataset/tuning/invoice_016.pdf",
+      "sha256": "137ce39fad67bbebd72014a81bd3c787b9ab2bd849e17fa71a31faa4bb02af7e",
+      "bytes": 2630
+    },
+    {
+      "path": "dataset/tuning/invoice_017.json",
+      "sha256": "84550e67d9ad56495dcf22665b59d4458490b2c72f678bb1017e78aa8d71f9fa",
+      "bytes": 1799
+    },
+    {
+      "path": "dataset/tuning/invoice_017.pdf",
+      "sha256": "8357c68c8303e26222e8d52f23d5321077b2d9525c2e0b19de9e5824fafbc021",
+      "bytes": 2716
+    },
+    {
+      "path": "dataset/tuning/invoice_018.json",
+      "sha256": "72fa727e0a20bf8136784e5dc043af8aed5f57956117498644681d9c85c9998c",
+      "bytes": 2038
+    },
+    {
+      "path": "dataset/tuning/invoice_018.pdf",
+      "sha256": "b39cb77895d0e8a53d398f395fd30d9d95230fea13ee25fd60e4ba719c5014ba",
+      "bytes": 2730
+    },
+    {
+      "path": "dataset/tuning/invoice_019.json",
+      "sha256": "0afd9c6bbb7886954007740b99530550d9d4ad3f92d6029f4f974d053e14ca5d",
+      "bytes": 2217
+    },
+    {
+      "path": "dataset/tuning/invoice_019.pdf",
+      "sha256": "360b36d88f388479859d6fadf09209b3b2785b8791937c56bdba2732c48f451c",
+      "bytes": 2771
+    },
+    {
+      "path": "dataset/tuning/invoice_020.json",
+      "sha256": "1fd330866656055dfeafe54c8cdfad511a496981a1ca5dedb7dd292798ac3ef6",
+      "bytes": 1397
+    },
+    {
+      "path": "dataset/tuning/invoice_020.pdf",
+      "sha256": "61392f788cca2fd189133d4bb480fa1bdd16dda4821292e547b70783bef9cfc5",
+      "bytes": 2554
+    },
+    {
+      "path": "dataset/tuning/invoice_021.json",
+      "sha256": "b4e038902f9428cce81fd85b0174f8df7d546929a806fcc525d20758485e4b82",
+      "bytes": 1605
+    },
+    {
+      "path": "dataset/tuning/invoice_021.pdf",
+      "sha256": "ae6cf3ef1ef91ccf03ce87ad8a253ffaab70aff615ac41a233975846266500b1",
+      "bytes": 2620
+    },
+    {
+      "path": "dataset/tuning/invoice_022.json",
+      "sha256": "f9c6dbc820afa986cc4577bbf0b453769ca86799b0a2931b2cb81900dab707b5",
+      "bytes": 1807
+    },
+    {
+      "path": "dataset/tuning/invoice_022.pdf",
+      "sha256": "29792d880353cb3426f879c2cf89dcc2ead3d9f3ddb6ae89f7bc60cabb57b522",
+      "bytes": 2701
+    },
+    {
+      "path": "dataset/tuning/invoice_023.json",
+      "sha256": "0f4cf68affbb941c2c8ca58624bcd38fd9856f2699eae8ab0e0da0ddd2f07918",
+      "bytes": 2020
+    },
+    {
+      "path": "dataset/tuning/invoice_023.pdf",
+      "sha256": "9412233afccb935843b0c2d56ebb86fdfb08eaec8d3f2d621af3b851f2633e9f",
+      "bytes": 2765
+    },
+    {
+      "path": "dataset/tuning/invoice_024.json",
+      "sha256": "740098bea614ba8daa244afe912eda89587b26bedf7b91df151c529b2db9feb8",
+      "bytes": 7130
+    },
+    {
+      "path": "dataset/tuning/invoice_024.pdf",
+      "sha256": "5e0498dbdabce182ca38ab73b1a11a613c4dbfe46daa35337224da3f4bb5e83a",
+      "bytes": 4364
+    },
+    {
+      "path": "dataset/tuning/invoice_025.json",
+      "sha256": "16cb3bd4a987da6979e8e567bb9c1040e6d94728576e1c8af3ba14d592d0bc74",
+      "bytes": 1389
+    },
+    {
+      "path": "dataset/tuning/invoice_025.pdf",
+      "sha256": "71126605005f34ea7d9fee6e85bab454b6a2b21f7a55bc87dce89057ca171f35",
+      "bytes": 2543
+    },
+    {
+      "path": "dataset/tuning/invoice_026.json",
+      "sha256": "9bcf8349c25a4d3f4e9d5a07bd87b507c92e8f435152d412658731d8a8e2490c",
+      "bytes": 1600
+    },
+    {
+      "path": "dataset/tuning/invoice_026.pdf",
+      "sha256": "feec512333789af6a9238bc0c59dcd7b699e8f8d3f7eb1b98729c786695c682d",
+      "bytes": 2635
+    },
+    {
+      "path": "dataset/tuning/invoice_027.json",
+      "sha256": "ae0d055b19e8ef76195efecbf36e6739ddfef6383f758e0f560ea3c0b4b02c80",
+      "bytes": 1819
+    },
+    {
+      "path": "dataset/tuning/invoice_027.pdf",
+      "sha256": "e72daf286e394a979cd15c0008845d178c31b5aca51b23c8593dbf6cc94a8d0b",
+      "bytes": 2680
+    },
+    {
+      "path": "dataset/tuning/invoice_028_resubmitted.json",
+      "sha256": "72a39d5609189fb128598680bc0b6f225433cb0ca03fe9447fb142600a2225eb",
+      "bytes": 1664
+    },
+    {
+      "path": "dataset/tuning/invoice_028_resubmitted.pdf",
+      "sha256": "832a38a4747983b3109482b353da2a9fe97213d04e3f37b38a4dfc0a18576077",
+      "bytes": 2629
+    },
+    {
+      "path": "dataset/tuning/invoice_029_resubmitted.json",
+      "sha256": "01700e3c1a89d57e6788b008e9a3c78f473c8573b121bfaac61d33e4a447d0af",
+      "bytes": 1892
+    },
+    {
+      "path": "dataset/tuning/invoice_029_resubmitted.pdf",
+      "sha256": "e683944ca4b72f204e64690234fbc20f279217f24203f533ee9f354073d61422",
+      "bytes": 2720
+    },
+    {
+      "path": "dataset/tuning/invoice_030_resubmitted.json",
+      "sha256": "8d59fdb868b978e7641237e7bd494c38b6f96083eaffc4f706f2f0f0875c1e4c",
+      "bytes": 2118
+    },
+    {
+      "path": "dataset/tuning/invoice_030_resubmitted.pdf",
+      "sha256": "c91675220868cbf413871b88156afd859f5364263508d7f00b69f09459fca022",
+      "bytes": 2738
+    },
+    {
+      "path": "dataset/verification.json",
+      "sha256": "14cff4f68264ee2788863d418c598cfc1a822983b417874b33ce10411cdd4eb9",
+      "bytes": 304
+    },
+    {
+      "path": "dataset/verify.py",
+      "sha256": "a8f22d81c20793af940e08c3d2e5104f8d8b77252cc5490e0deceeb68c79888a",
+      "bytes": 2923
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha256": "b578330cd2799e88271106d74e2502028d7e582fe004bf79c5d097794d5d504a",
+      "bytes": 3027
+    },
+    {
+      "path": "docs/case-study.md",
+      "sha256": "2f757012a0c32f72b5a755c2d4daccbf15cbceef5c57c53064434d882dde597f",
+      "bytes": 4215
+    },
+    {
+      "path": "docs/client-pilot.md",
+      "sha256": "01492932f1260ce44211fb6fe86ae05559ff4dc65826b69070eb84ce82429fd3",
+      "bytes": 1881
+    },
+    {
+      "path": "docs/demo-script.md",
+      "sha256": "d0a9a613b47879e8a4324879876b641f14ce213a526066c4b3d0fb1632ca405f",
+      "bytes": 1728
+    },
+    {
+      "path": "docs/operations.md",
+      "sha256": "7a47dca687c305b530eb55c352fbf64821d1a260769fc743c36338e9ed9dc857",
+      "bytes": 3968
+    },
+    {
+      "path": "docs/privacy.md",
+      "sha256": "a62edd1dc891d17c1588cb893afbc888b822718fbe9538d1992a49e65c24a7fa",
+      "bytes": 3017
+    },
+    {
+      "path": "docs/sign-off.md",
+      "sha256": "3cddb7753e2f613d6fab1aa53b52d3de03d8d67ea13a441f8ce587358451b670",
+      "bytes": 1745
+    },
+    {
+      "path": "fixtures/README.md",
+      "sha256": "4c031966f4ea9aa37b2f567a6dee05b5dde51a8a1d1d1f70bb34d165ee46811d",
+      "bytes": 1884
+    },
+    {
+      "path": "fixtures/extraction/README.md",
+      "sha256": "d68fc449734c61afffbf8d65484da2758c2e7b56135bd30e6c70f4a84ce33ec5",
+      "bytes": 1509
+    },
+    {
+      "path": "fixtures/extraction/additional/evaluation/invoice_034.json",
+      "sha256": "db74f18214861938fd88f09a3f25c1fbb3a69ee19805e3e7b7d494a0932930e6",
+      "bytes": 2164
+    },
+    {
+      "path": "fixtures/extraction/additional/evaluation/invoice_034.pdf",
+      "sha256": "9b1181897074e79487622d3c779e2e814b24bbb3a9008767a8cb1b66d9a275dd",
+      "bytes": 2775
+    },
+    {
+      "path": "fixtures/extraction/additional/evaluation/invoice_036.json",
+      "sha256": "87067e1b25cec2fa12505370be09924dda17a66e35095fc7b23d5e00c04e3c00",
+      "bytes": 1605
+    },
+    {
+      "path": "fixtures/extraction/additional/evaluation/invoice_036.pdf",
+      "sha256": "2926d4be4711fc9221236fa61000d8284ab36ec04db47652977eaa460d98bf33",
+      "bytes": 2631
+    },
+    {
+      "path": "fixtures/extraction/additional/evaluation/invoice_037.json",
+      "sha256": "22e0d76622c5e882e6bf3c6076cc48bbee63ff4d32f1634bd1cd2f3b480708ef",
+      "bytes": 1805
+    },
+    {
+      "path": "fixtures/extraction/additional/evaluation/invoice_037.pdf",
+      "sha256": "1ad40d636167ff7ff2af92c4321012976ffc5376e1f9ba290dd0cd8bae340724",
+      "bytes": 2703
+    },
+    {
+      "path": "fixtures/extraction/additional/evaluation/invoice_042.json",
+      "sha256": "46a4c46240c20f0bc0c1a7e288da35792c7fdccc4308d61bbd811a3dee550ca4",
+      "bytes": 1829
+    },
+    {
+      "path": "fixtures/extraction/additional/evaluation/invoice_042.pdf",
+      "sha256": "8d23cb1bfb67f39616a04ed8ac31c44af49e89fe4e62a6643c337b21125153e1",
+      "bytes": 2684
+    },
+    {
+      "path": "fixtures/extraction/additional/tuning/invoice_005.json",
+      "sha256": "8c679fd85479ccd25eb6d36d7faf1d0a59cd90b2696b51c9fcd23e6ce135aaf4",
+      "bytes": 1400
+    },
+    {
+      "path": "fixtures/extraction/additional/tuning/invoice_005.pdf",
+      "sha256": "ceab3beb28e35cd2b80280809196c08bbfe0006682c3b058bfe5e83f9e7b001f",
+      "bytes": 2558
+    },
+    {
+      "path": "fixtures/extraction/additional/tuning/invoice_006.json",
+      "sha256": "84c30eab26de78f1a472ccb1303741a3e21854dded2137a10106a5d755e92504",
+      "bytes": 1607
+    },
+    {
+      "path": "fixtures/extraction/additional/tuning/invoice_006.pdf",
+      "sha256": "d18f9d618cd8ecd76c92b1fb6f6e87a750fd8834e8c9ca9c2d507ceee94eab2e",
+      "bytes": 2633
+    },
+    {
+      "path": "fixtures/extraction/additional/tuning/invoice_014.json",
+      "sha256": "ec6c0c4129c5fb996080b97beb3758f38436bb7d3ee21e5d078f1df1ae6c43f1",
+      "bytes": 1937
+    },
+    {
+      "path": "fixtures/extraction/additional/tuning/invoice_014.pdf",
+      "sha256": "6919730e3108b7b7363557ebb9eda0f3590b5a73c97a59997832af5c461ca247",
+      "bytes": 2761
+    },
+    {
+      "path": "fixtures/extraction/additional/tuning/invoice_016.json",
+      "sha256": "fc0bfd5c019289ed6e91978a1367fc90268e27378d10588a3eaf9274e46adc23",
+      "bytes": 1570
+    },
+    {
+      "path": "fixtures/extraction/additional/tuning/invoice_016.pdf",
+      "sha256": "137ce39fad67bbebd72014a81bd3c787b9ab2bd849e17fa71a31faa4bb02af7e",
+      "bytes": 2630
+    },
+    {
+      "path": "fixtures/extraction/additional/tuning/invoice_017.json",
+      "sha256": "84550e67d9ad56495dcf22665b59d4458490b2c72f678bb1017e78aa8d71f9fa",
+      "bytes": 1799
+    },
+    {
+      "path": "fixtures/extraction/additional/tuning/invoice_017.pdf",
+      "sha256": "8357c68c8303e26222e8d52f23d5321077b2d9525c2e0b19de9e5824fafbc021",
+      "bytes": 2716
+    },
+    {
+      "path": "fixtures/extraction/additional/tuning/invoice_029_resubmitted.json",
+      "sha256": "01700e3c1a89d57e6788b008e9a3c78f473c8573b121bfaac61d33e4a447d0af",
+      "bytes": 1892
+    },
+    {
+      "path": "fixtures/extraction/additional/tuning/invoice_029_resubmitted.pdf",
+      "sha256": "e683944ca4b72f204e64690234fbc20f279217f24203f533ee9f354073d61422",
+      "bytes": 2720
+    },
+    {
+      "path": "fixtures/extraction/evaluation/invoice_031.json",
+      "sha256": "223a5452aa175af8bb2322357b50e9984ced8acf0e8f3abb2626dcb1a6a667bc",
+      "bytes": 1603
+    },
+    {
+      "path": "fixtures/extraction/evaluation/invoice_031.pdf",
+      "sha256": "4e04742b4f32b732de86e46f818e9b39427fc4c4af52556b51b61563a1d163c6",
+      "bytes": 2626
+    },
+    {
+      "path": "fixtures/extraction/evaluation/invoice_033.json",
+      "sha256": "0c32ea58d7f1cedd3d1174bcfd5de8065a3b7b78423acbce40ce234f7675cd25",
+      "bytes": 1980
+    },
+    {
+      "path": "fixtures/extraction/evaluation/invoice_033.pdf",
+      "sha256": "1c4815e62ce964d9468590ee6c13c2a450a066ee8b92f708ef5975346c013efc",
+      "bytes": 2728
+    },
+    {
+      "path": "fixtures/extraction/evaluation/invoice_035.json",
+      "sha256": "d2c78e6bce945d7853b20c6c5fdd87a29300dd259c55f3972a08a7943252aa66",
+      "bytes": 1386
+    },
+    {
+      "path": "fixtures/extraction/evaluation/invoice_035.pdf",
+      "sha256": "f22d29e7bd561c47445193b216f6ba025772cf64c8acede3ea6ff98ca91eb1a7",
+      "bytes": 2551
+    },
+    {
+      "path": "fixtures/extraction/evaluation/invoice_039.json",
+      "sha256": "4c5c2bc9dfb7f92393b139d45b3bd1e5cd2922e2c8a1f60ab292a49d475afbb1",
+      "bytes": 7134
+    },
+    {
+      "path": "fixtures/extraction/evaluation/invoice_039.pdf",
+      "sha256": "5024883463693e6f929898c18ce5803a18b632fce113e089e8d1277eb25b7631",
+      "bytes": 4364
+    },
+    {
+      "path": "fixtures/extraction/tuning/invoice_001.json",
+      "sha256": "8f28c6e99a1396a80a47fe89d8d0fea842a24ad11f21436606430775875c0835",
+      "bytes": 1595
+    },
+    {
+      "path": "fixtures/extraction/tuning/invoice_001.pdf",
+      "sha256": "9e8b84308a50ef9b754ced75ce95b94c3e54e2f2b563257bdf9d4ce7a2a3d228",
+      "bytes": 2629
+    },
+    {
+      "path": "fixtures/extraction/tuning/invoice_002.json",
+      "sha256": "54ab5365112064ce3e5d176cd986fc20848c128ce92cf7d8bc0255a57a3f75d8",
+      "bytes": 1815
+    },
+    {
+      "path": "fixtures/extraction/tuning/invoice_002.pdf",
+      "sha256": "258ef16e1fb495c87278ba435c5589991c290488f0d6a317fdf655baebe82b2a",
+      "bytes": 2724
+    },
+    {
+      "path": "fixtures/extraction/tuning/invoice_003.json",
+      "sha256": "040193cb580001da41ef7a60394f2cc6510c3eba434f3914abc1a8c89d314303",
+      "bytes": 2041
+    },
+    {
+      "path": "fixtures/extraction/tuning/invoice_003.pdf",
+      "sha256": "654866c6dde4a826143ccb14348f303b36555bc79f914fbd2418c1870f9dd2e2",
+      "bytes": 2723
+    },
+    {
+      "path": "fixtures/extraction/tuning/invoice_009.json",
+      "sha256": "a679d98a4290298726f2a7b31e3ed20c96f7e136fd7aeaec99461c961ecfb61d",
+      "bytes": 7128
+    },
+    {
+      "path": "fixtures/extraction/tuning/invoice_009.pdf",
+      "sha256": "9b00f905ce4db578755db36c8fdf6bf515a9e44ac13aeb37b1ab458b0b8e472c",
+      "bytes": 4353
+    },
+    {
+      "path": "fixtures/extraction/tuning/invoice_013.json",
+      "sha256": "86edfab20ae95630f0842fa5931e56f682971b7ce5da4025de9af130c567475a",
+      "bytes": 1955
+    },
+    {
+      "path": "fixtures/extraction/tuning/invoice_013.pdf",
+      "sha256": "5c53d37d0eeca08e4043547cce5f9852df1fee1b37df98c57d29a9b6eae1f7ed",
+      "bytes": 2751
+    },
+    {
+      "path": "fixtures/extraction/tuning/invoice_015.json",
+      "sha256": "9449719d369eba9906a278bbeea8163e8610451a40e5c0e33af168ec2391785c",
+      "bytes": 1396
+    },
+    {
+      "path": "fixtures/extraction/tuning/invoice_015.pdf",
+      "sha256": "38bdc3d1e4bd755e773fdabcc675e841ba4d62b0fa9f51794620b96700b13660",
+      "bytes": 2548
+    },
+    {
+      "path": "fixtures/gmail/README.md",
+      "sha256": "159e06dd92a24d74f79c51ccafd0057d7515b4589cec0f3c5046a56e00d64c98",
+      "bytes": 759
+    },
+    {
+      "path": "fixtures/gmail/invoice_001_duplicate.pdf",
+      "sha256": "9e8b84308a50ef9b754ced75ce95b94c3e54e2f2b563257bdf9d4ce7a2a3d228",
+      "bytes": 2629
+    },
+    {
+      "path": "fixtures/gmail/invoice_013.pdf",
+      "sha256": "5c53d37d0eeca08e4043547cce5f9852df1fee1b37df98c57d29a9b6eae1f7ed",
+      "bytes": 2751
+    },
+    {
+      "path": "fixtures/gmail/invoice_015.pdf",
+      "sha256": "38bdc3d1e4bd755e773fdabcc675e841ba4d62b0fa9f51794620b96700b13660",
+      "bytes": 2548
+    },
+    {
+      "path": "fixtures/gmail/unsupported.txt",
+      "sha256": "f253b525ac6dbd0e957ef79c9675e93b73d67d7e2e3197b0547557cb8cb2325c",
+      "bytes": 69
+    },
+    {
+      "path": "fixtures/invoice_001.json",
+      "sha256": "8f28c6e99a1396a80a47fe89d8d0fea842a24ad11f21436606430775875c0835",
+      "bytes": 1595
+    },
+    {
+      "path": "fixtures/invoice_001.pdf",
+      "sha256": "9e8b84308a50ef9b754ced75ce95b94c3e54e2f2b563257bdf9d4ce7a2a3d228",
+      "bytes": 2629
+    },
+    {
+      "path": "fixtures/invoice_001_reexport.pdf",
+      "sha256": "832a38a4747983b3109482b353da2a9fe97213d04e3f37b38a4dfc0a18576077",
+      "bytes": 2629
+    },
+    {
+      "path": "fixtures/invoice_004.json",
+      "sha256": "e5c7e05a41b8f34913c7c3050669fb5bb3c57239c24702da7cab18aa3b7925c4",
+      "bytes": 2220
+    },
+    {
+      "path": "fixtures/invoice_004.pdf",
+      "sha256": "7f6ceea8f6e171f8d886cbea71f5db1ec82aa0e0494d110fd62cde72db22e4a3",
+      "bytes": 2778
+    },
+    {
+      "path": "requirements.lock.txt",
+      "sha256": "47d68ddd1f3ed38385cbb36b7f1cde83aa020b7fe3e1139a89b43a92c50fcccb",
+      "bytes": 506
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "a65c17e1788397110ee4b2c93bdd650d4b2412b4438e36fdebd20c84de1cfab3",
+      "bytes": 148
+    },
+    {
+      "path": "scripts/build_portfolio_demo.py",
+      "sha256": "06af780b902c586774e24f1ddc3491eac273f98a53c66c7cab7c7ef1459b83cb",
+      "bytes": 2999
+    },
+    {
+      "path": "scripts/export_portfolio.py",
+      "sha256": "d7f46169ec3183fe42606daae5110fe8298948d806f8f49049a7f97bf8ddb168",
+      "bytes": 2983
+    },
+    {
+      "path": "scripts/seed_review_demo.py",
+      "sha256": "6e45b885ba6ea7b322b8eb582aeb39741ff66f6b370fed292b4d9ae9ecc2a826",
+      "bytes": 2599
+    },
+    {
+      "path": "scripts/verify_google_demo.py",
+      "sha256": "36e25f470f8118185a5e66d0649ad20ef88f63731bfc1ec70fe24128f7d9e0f3",
+      "bytes": 4916
+    },
+    {
+      "path": "site/data.json",
+      "sha256": "efd99fc6e200ad4838ad7c925ac10b98e9f379f9d6ee6ff3419aeae40042e888",
+      "bytes": 3914
+    },
+    {
+      "path": "site/demo.js",
+      "sha256": "24d65bacf6dbb00f362e4757a2cd1510c575fdc60db2992ea44e1a57a3e9c592",
+      "bytes": 2923
+    },
+    {
+      "path": "site/index.html",
+      "sha256": "fb63ddf9506a1b644d5a5d00dabd987fd8bd74fe4d75b03b37bc8f98a01b2762",
+      "bytes": 4037
+    },
+    {
+      "path": "site/sources/invoice_001.pdf",
+      "sha256": "9e8b84308a50ef9b754ced75ce95b94c3e54e2f2b563257bdf9d4ce7a2a3d228",
+      "bytes": 2629
+    },
+    {
+      "path": "site/sources/invoice_013.pdf",
+      "sha256": "5c53d37d0eeca08e4043547cce5f9852df1fee1b37df98c57d29a9b6eae1f7ed",
+      "bytes": 2751
+    },
+    {
+      "path": "site/sources/invoice_015.pdf",
+      "sha256": "38bdc3d1e4bd755e773fdabcc675e841ba4d62b0fa9f51794620b96700b13660",
+      "bytes": 2548
+    },
+    {
+      "path": "site/style.css",
+      "sha256": "368125266c5f31241db4d10e451539f2caac59bad72568a97cf489d69ac674b0",
+      "bytes": 5188
+    },
+    {
+      "path": "tests/test_bills.py",
+      "sha256": "182b2cbc8406310ad71e651c2f2384bc19a2a7f03f1ab3f0708c1e82e1539c5e",
+      "bytes": 6621
+    },
+    {
+      "path": "tests/test_connection.py",
+      "sha256": "49c697473ed79ae48b56f70ab7be8f154b1e790145dcd02d744f899e4ee3bfea",
+      "bytes": 3199
+    },
+    {
+      "path": "tests/test_extraction.py",
+      "sha256": "ebedecd631dcc174d84e14f540342992a5efd8701452335b50aefdb1590603b7",
+      "bytes": 10542
+    },
+    {
+      "path": "tests/test_google.py",
+      "sha256": "62aec8435e37455f7cbb06dc5ebaea7367219108647db844f598e4e8783cfe4b",
+      "bytes": 21996
+    },
+    {
+      "path": "tests/test_ledger.py",
+      "sha256": "b52f90a921270553447c0c763d8dbdaa2af8fd8470be1939ef0703a1bdfaad7b",
+      "bytes": 9545
+    },
+    {
+      "path": "tests/test_oauth.py",
+      "sha256": "fca404dc88061a9dfa2dc26ddb360f865a0fe0b102d0203024e457c23d46e038",
+      "bytes": 4380
+    },
+    {
+      "path": "tests/test_portfolio_release.py",
+      "sha256": "775f70478e9cde5afd812fbb94bd41ca9fc08d46906e81a8a254f220ca8684ff",
+      "bytes": 1840
+    },
+    {
+      "path": "tests/test_review.py",
+      "sha256": "7c78db779acc165122960628d025129b8bf356868e4ddd730fcad8c877a7273f",
+      "bytes": 16978
+    }
+  ],
+  "account_linked_development_artifacts_excluded": true
+}
