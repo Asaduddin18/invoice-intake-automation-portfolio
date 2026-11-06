@@ -1,9 +1,14 @@
 {
   "files": [
     {
+      "path": ".dockerignore",
+      "sha256": "083b63e518776c79ca06feb4fbc9d34160a70ece694defc8ee9dd422fa8f5745",
+      "bytes": 101
+    },
+    {
       "path": ".env.example",
-      "sha256": "0d47e69e6361bce1e3dc1dadcf63f936a0925c0cb2ca04ab7de2f5420d35a006",
-      "bytes": 327
+      "sha256": "b3d0170dc7c7b073813855aea1ff1ae1ef4119e109f6363bb38e4c369ae2ffbf",
+      "bytes": 436
     },
     {
       "path": ".gitattributes",
@@ -17,8 +22,8 @@
     },
     {
       "path": ".github/workflows/tests.yml",
-      "sha256": "c89406ff179a42a99c5d0772996eda66784077cafacd64a24a9d0dcd6a35a036",
-      "bytes": 411
+      "sha256": "4be56d849f19c10640c5e29f4388b8484c463e99cfd8532997474b509448074e",
+      "bytes": 1337
     },
     {
       "path": ".gitignore",
@@ -26,9 +31,14 @@
       "bytes": 91
     },
     {
+      "path": "Dockerfile",
+      "sha256": "049868ca5d3c09cfb37befa831a7b0d19105eee54d3e92ad224b3061f7996ed2",
+      "bytes": 680
+    },
+    {
       "path": "README.md",
-      "sha256": "40b5d3f5ec5ab17617c952458ba62ce318cbae05e52fe6325c4efb6e1bd66e83",
-      "bytes": 6069
+      "sha256": "36b45bd282984a2ec55149180e8f1add78005e12d877f3924401deea68e1e8bf",
+      "bytes": 7003
     },
     {
       "path": "SECURITY.md",
@@ -87,23 +97,28 @@
     },
     {
       "path": "app/mail_intake.py",
-      "sha256": "78c7b6c8568319699673d988d8434c0d544347d336102d5264bd71fd4bff78c3",
-      "bytes": 9683
+      "sha256": "8e0eb8be6a6a2319a4b68447017bdbdb19bf5a2bb1ec9f58bb4519105b626bef",
+      "bytes": 9891
     },
     {
       "path": "app/mail_store.py",
-      "sha256": "bf3d1048b53511d98446d042e38d63e63990e6bedae0624aae9cad9a99ee0dcc",
-      "bytes": 5855
+      "sha256": "21b5601e5c0dc64494f102ea99c7f337b275beab10ae904c14cbe42897a5613d",
+      "bytes": 5965
     },
     {
       "path": "app/main.py",
-      "sha256": "259688a60866e33806965b440b17d034b4674d15f42ec14467e99f3739373df7",
-      "bytes": 19724
+      "sha256": "94962486cf4036148b9562665a69c13c3523032a0b808027bede5ab69ee4fdc7",
+      "bytes": 20133
     },
     {
       "path": "app/monthly_report.py",
-      "sha256": "d068c950b2bd8d37e8be5cce53feebba59598ea14df50e4a9cd6d34e5c42b2b7",
-      "bytes": 10632
+      "sha256": "b5b24e298978665af90e110b9e11fecbe645426b7729e75338758a3ab3c3b604",
+      "bytes": 10778
+    },
+    {
+      "path": "app/n8n_routes.py",
+      "sha256": "175948e174c4215dc0fb647bd258e9dff9b90a0e64e299fd879cb202e222bb2a",
+      "bytes": 7855
     },
     {
       "path": "app/pages/phase02.css",
@@ -166,9 +181,19 @@
       "bytes": 851
     },
     {
+      "path": "artifacts/public/n8n-release.json",
+      "sha256": "401e3195c5122ca9cf72632d1d1eee8e33e10a66d4010c6f7b27e5b2abc0aadb",
+      "bytes": 2959
+    },
+    {
       "path": "artifacts/public/release-verification.json",
       "sha256": "d83c797210eb595a10b6893e7a4c3d0f34a2eeed5f117e85883ac88a12b29c5a",
       "bytes": 907
+    },
+    {
+      "path": "compose.yaml",
+      "sha256": "62a4d8fe3ec4f2b8b10e6f2c51c1ace427f1f40b7016a33fb5901827f2dec718",
+      "bytes": 2124
     },
     {
       "path": "dataset/README.md",
@@ -711,9 +736,54 @@
       "bytes": 2923
     },
     {
+      "path": "deploy/n8n/phase-08-connectivity.json",
+      "sha256": "ede9bf3cd7918cd2e8c2e2ded21bc1474fbbdd5ca1a92f9ddb29bf81e6b74b99",
+      "bytes": 988
+    },
+    {
+      "path": "deploy/n8n/phase-09-status.json",
+      "sha256": "f71fd031365307454aefe37ec93229983d449536487c9918e6ad2000206cbb96",
+      "bytes": 1114
+    },
+    {
+      "path": "deploy/n8n/phase-10/logic/failure.js",
+      "sha256": "e21c64b62201cfc83530038f9d14ed6aa13e005276aa6277bdf91e41b2beec82",
+      "bytes": 1122
+    },
+    {
+      "path": "deploy/n8n/phase-10/logic/months.js",
+      "sha256": "bc9776c3d4d9f2b3a9af76fa519e96e2f52f1da318968f3e94701143ded82992",
+      "bytes": 514
+    },
+    {
+      "path": "deploy/n8n/phase-10/logic/normalize.js",
+      "sha256": "bd40fb10908e45c8bb6e20cd40fa0692c177b51c1f8b60d90c03193ffaf202cd",
+      "bytes": 3775
+    },
+    {
+      "path": "deploy/n8n/phase-10/logic/report-summary.js",
+      "sha256": "8afd8020dc2e62e3bf1b17ff2424eb9c2c732ea9cce9ccbf805f1b1659035439",
+      "bytes": 766
+    },
+    {
+      "path": "deploy/n8n/phase-10/phase-10-errors.json",
+      "sha256": "ac48a2ca61753a550e2b189c9a3a5eabaea65edc8da2e9fed23d6b46882001d3",
+      "bytes": 2758
+    },
+    {
+      "path": "deploy/n8n/phase-10/phase-10-intake.json",
+      "sha256": "27220f52e8fbc9b8ff0c5fe2d6fa3dd6864eec2ce52b473662f7ba12ce972bb4",
+      "bytes": 12211
+    },
+    {
+      "path": "deploy/n8n/phase-10/phase-10-reports.json",
+      "sha256": "fd53017d8ed1b5e1767be74fcf9faae818b6deec64b7b6032a08aae1c695be78",
+      "bytes": 21568
+    },
+    {
       "path": "docs/architecture.md",
-      "sha256": "b578330cd2799e88271106d74e2502028d7e582fe004bf79c5d097794d5d504a",
-      "bytes": 3027
+      "sha256": "08b1bd81f2ac6532204e16bb0e100adde4b70b1dc4100aab6d0fbc89458abadc",
+      "bytes": 4039
     },
     {
       "path": "docs/case-study.md",
@@ -722,13 +792,33 @@
     },
     {
       "path": "docs/client-pilot.md",
-      "sha256": "01492932f1260ce44211fb6fe86ae05559ff4dc65826b69070eb84ce82429fd3",
-      "bytes": 1881
+      "sha256": "5fcbb7f6604a546a227cbe5b4b3dbccc16d67496fb87d6152defcb539c04c04a",
+      "bytes": 2374
     },
     {
       "path": "docs/demo-script.md",
-      "sha256": "d0a9a613b47879e8a4324879876b641f14ce213a526066c4b3d0fb1632ca405f",
-      "bytes": 1728
+      "sha256": "c14fb714e9c2d0d00e17761dd4d35ec7ee23cffcd7936eb565100f05661e62e3",
+      "bytes": 2361
+    },
+    {
+      "path": "docs/n8n-api.md",
+      "sha256": "6c909061347a96c580b60e326365439a4a58bf250c6d67a3d082a88470db3ae5",
+      "bytes": 7816
+    },
+    {
+      "path": "docs/n8n-handover.md",
+      "sha256": "fe5705e26360809b363b753eef77be234209c441d960f3b2212aa0c6288eb979",
+      "bytes": 9948
+    },
+    {
+      "path": "docs/n8n-local.md",
+      "sha256": "c0dc666c5b193bd448a9e49fa8c97c5d86d1177d09caac955a241a05f536a017",
+      "bytes": 6303
+    },
+    {
+      "path": "docs/n8n-workflows.md",
+      "sha256": "4355518b4818378922b1f7bac3407d7018580e2efb3da8808b518f3aaa809257",
+      "bytes": 6127
     },
     {
       "path": "docs/operations.md",
@@ -742,8 +832,8 @@
     },
     {
       "path": "docs/sign-off.md",
-      "sha256": "e8e30d0a56aa57c37989298e2c6fa05e3b2095f2b9dfaa2b7437e21edd63d8e0",
-      "bytes": 1749
+      "sha256": "d508ee33e7666ae445340a734ddc3f3380c90cd9b8a898076982461d4523062e",
+      "bytes": 2919
     },
     {
       "path": "fixtures/README.md",
@@ -1016,14 +1106,34 @@
       "bytes": 148
     },
     {
+      "path": "scripts/build_n8n_workflows.py",
+      "sha256": "650385494adc76c2c84ce9f868692b104752415d5d81856b00e785c738c14d89",
+      "bytes": 7712
+    },
+    {
       "path": "scripts/build_portfolio_demo.py",
       "sha256": "06af780b902c586774e24f1ddc3491eac273f98a53c66c7cab7c7ef1459b83cb",
       "bytes": 2999
     },
     {
       "path": "scripts/export_portfolio.py",
-      "sha256": "d7f46169ec3183fe42606daae5110fe8298948d806f8f49049a7f97bf8ddb168",
-      "bytes": 2983
+      "sha256": "4a951afe38438b424c430bf023e1b53d311a5f4b2ec9d96569939da4e7ebb32c",
+      "bytes": 3286
+    },
+    {
+      "path": "scripts/install_n8n_workflows.py",
+      "sha256": "2ccdfd96587cc8e4f4cfc14ebd4f4b1c79e67611fb0bc2d124656eb1ef740d38",
+      "bytes": 3075
+    },
+    {
+      "path": "scripts/prepare_n8n_api.py",
+      "sha256": "fc65474b7476734b54f2506bc3e0c56459840ef5592029694464c6a299ca91e1",
+      "bytes": 1299
+    },
+    {
+      "path": "scripts/prepare_n8n_local.py",
+      "sha256": "799372bf1e252f2fe9b50cc6208339b4c767c3a3944e9715ef7ff211a138e94c",
+      "bytes": 929
     },
     {
       "path": "scripts/seed_review_demo.py",
@@ -1036,6 +1146,31 @@
       "bytes": 4916
     },
     {
+      "path": "scripts/verify_n8n_api.py",
+      "sha256": "16bce6041152adb187c4bc51a5b2db0192c9fb495846642bd26e8241cd23188f",
+      "bytes": 3477
+    },
+    {
+      "path": "scripts/verify_n8n_environment.py",
+      "sha256": "0b6f56cff2531a3ec92bfe2c259d410185770dd0438ce000227aee5d78ef7341",
+      "bytes": 4719
+    },
+    {
+      "path": "scripts/verify_n8n_error_trigger.py",
+      "sha256": "1cc7b8950d1bde4cbb2375163344a70708e7e2be91507e43ae86ecb54288cf24",
+      "bytes": 4972
+    },
+    {
+      "path": "scripts/verify_n8n_handoff.py",
+      "sha256": "ff59dd5da0a94fbdf6875a6e9e3c54284525a861b418d48efc0c0cd06120dcd4",
+      "bytes": 7266
+    },
+    {
+      "path": "scripts/verify_n8n_workflows.py",
+      "sha256": "5476b47c37a7aaf63ab4d7736cb8bce92311bdad8a7a624611a0e1d4c6c3cc39",
+      "bytes": 7614
+    },
+    {
       "path": "site/data.json",
       "sha256": "efd99fc6e200ad4838ad7c925ac10b98e9f379f9d6ee6ff3419aeae40042e888",
       "bytes": 3914
@@ -1046,9 +1181,29 @@
       "bytes": 2923
     },
     {
+      "path": "site/images/n8n-architecture.svg",
+      "sha256": "91436d0653389b17548b165f5e24131dffe34aa58aed71ba891e5cad9c319ae2",
+      "bytes": 2472
+    },
+    {
       "path": "site/index.html",
-      "sha256": "fb63ddf9506a1b644d5a5d00dabd987fd8bd74fe4d75b03b37bc8f98a01b2762",
-      "bytes": 4037
+      "sha256": "57364ebb958cd3e40c283bf8cf1a71e6b3096aa82d9a62bc9c4918e99b232115",
+      "bytes": 4118
+    },
+    {
+      "path": "site/n8n-demo.js",
+      "sha256": "630cf2dced35b36bd8baea7cf8a34dac75052a87d1d7bc534c2961568a943d16",
+      "bytes": 3697
+    },
+    {
+      "path": "site/n8n.css",
+      "sha256": "5dff01578e93d6b124e1b6361a4feb2a8456f3840eb8eb3848f080097c2cb0c4",
+      "bytes": 1664
+    },
+    {
+      "path": "site/n8n.html",
+      "sha256": "421206e0a9c15932abcd0bea338b20d5cb236ab500e9ee1c79c49b748f711b0e",
+      "bytes": 4752
     },
     {
       "path": "site/sources/invoice_001.pdf",
@@ -1069,6 +1224,21 @@
       "path": "site/style.css",
       "sha256": "368125266c5f31241db4d10e451539f2caac59bad72568a97cf489d69ac674b0",
       "bytes": 5188
+    },
+    {
+      "path": "tests/fixtures/n8n_phase10_server.py",
+      "sha256": "48a9a56c196672d0b95ba054524d7d38dd5ea4bf9f57eff5c81f6396875b5f04",
+      "bytes": 2967
+    },
+    {
+      "path": "tests/n8n_replay_checks.cjs",
+      "sha256": "7f9d9dcc359aaa34c0411085e7cabe476c38ea27e970861b55d2055197e9feb1",
+      "bytes": 2263
+    },
+    {
+      "path": "tests/phase10_workflows.cjs",
+      "sha256": "9c8d20844a384e0801d7c8e91555558bfd8e3202f332259ba240709498214ca9",
+      "bytes": 5253
     },
     {
       "path": "tests/replay_checks.cjs",
@@ -1099,6 +1269,26 @@
       "path": "tests/test_ledger.py",
       "sha256": "b52f90a921270553447c0c763d8dbdaa2af8fd8470be1939ef0703a1bdfaad7b",
       "bytes": 9545
+    },
+    {
+      "path": "tests/test_local_environment.py",
+      "sha256": "28a39e6ef1df0f8c69d4a62099e04804107a2879d02cdc9ff5146c4ebfadca8a",
+      "bytes": 1760
+    },
+    {
+      "path": "tests/test_n8n_api.py",
+      "sha256": "55a2e1c37f5e33bf68f589f7656aefcb65ab86db365fd21a2f146ea1792152c2",
+      "bytes": 10745
+    },
+    {
+      "path": "tests/test_n8n_handover.py",
+      "sha256": "be1e1f6174fdf28465bfb48a8a5f6f23410e3930426cf7113cab355139816611",
+      "bytes": 1390
+    },
+    {
+      "path": "tests/test_n8n_workflows.py",
+      "sha256": "8ec680a8dc23cf35404ebb4ee4e459e8ea4d98dd7138b4c57f2b821de1774af5",
+      "bytes": 1074
     },
     {
       "path": "tests/test_oauth.py",

@@ -10,10 +10,10 @@ import shutil
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-FOLDERS=('app','tests','fixtures','dataset','docs','site','.github')
-FILES=('.env.example','.gitignore','.gitattributes','README.md','SECURITY.md','requirements.txt','requirements.lock.txt')
-SCRIPTS=('build_portfolio_demo.py','export_portfolio.py','verify_google_demo.py','seed_review_demo.py')
-PUBLIC_ARTIFACTS=('public/metrics.json','public/evaluation.json','public/release-verification.json','deepseek-prompts.md')
+FOLDERS=('app','tests','fixtures','dataset','docs','site','.github','deploy')
+FILES=('.env.example','.gitignore','.gitattributes','README.md','SECURITY.md','requirements.txt','requirements.lock.txt','Dockerfile','.dockerignore','compose.yaml')
+SCRIPTS=('build_portfolio_demo.py','export_portfolio.py','verify_google_demo.py','seed_review_demo.py','prepare_n8n_local.py','verify_n8n_environment.py','prepare_n8n_api.py','verify_n8n_api.py','build_n8n_workflows.py','install_n8n_workflows.py','verify_n8n_workflows.py','verify_n8n_error_trigger.py','verify_n8n_handoff.py')
+PUBLIC_ARTIFACTS=('public/metrics.json','public/evaluation.json','public/release-verification.json','deepseek-prompts.md','public/n8n-release.json')
 
 
 def export(destination):

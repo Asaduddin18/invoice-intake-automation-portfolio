@@ -84,7 +84,9 @@ class MailIntake:
             # Safe local messages only; no raw upstream responses, mail bodies or auth data.
             self.store.update(rid,'needs_inspection',str(exc) if isinstance(exc,(GoogleError,ExtractionError)) else 'Processing stopped. Inspect the source and saved workflow before resuming.')
 
-    async def poll(self):
+    async def poll(self, *, max_new_extractions=3):
+        if type(max_new_extractions) is not int or not 0<=max_new_extractions<=3:
+            raise ValueError('Extraction budget must be between zero and three.')
         tenant=InvoicePipeline(self.connection).tenant();mailbox=self.google.mailbox
         label=os.getenv('GMAIL_INTAKE_LABEL','Invoices-Demo')
         with self.store.gate('intake'):
@@ -103,7 +105,7 @@ class MailIntake:
             params={'labelIds':matches[0],'maxResults':10,'includeSpamTrash':'false'}
             if page_token:params['pageToken']=page_token
             listing=await self.google.request('GET',GMAIL+'/messages',params=params)
-            count=0;skipped=0;budget=[3]
+            count=0;skipped=0;budget=[max_new_extractions]
             for item in listing.get('messages',[]):
                 message=await self.google.request('GET',GMAIL+'/messages/'+quote(item['id'],safe=''),params={'format':'full'})
                 # Labels can change between listing and retrieval.

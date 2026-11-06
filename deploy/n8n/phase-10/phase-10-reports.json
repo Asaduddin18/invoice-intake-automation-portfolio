@@ -1,0 +1,558 @@
+{
+  "id": "northmereP10Reports",
+  "name": "Phase 10 - Monthly reporting",
+  "nodes": [
+    {
+      "id": "run-manually",
+      "name": "Run manually",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "daily-09-00---disabled",
+      "name": "Daily 09-00 - DISABLED",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        -200
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "days",
+              "daysInterval": 1,
+              "triggerAtHour": 9,
+              "triggerAtMinute": 0
+            }
+          ]
+        }
+      },
+      "disabled": true
+    },
+    {
+      "id": "read-available-report-months",
+      "name": "Read available report months",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        250,
+        0
+      ],
+      "parameters": {
+        "url": "http://invoice-api:8080/integrations/n8n/status",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {
+          "timeout": 300000,
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "onError": "continueErrorOutput",
+      "retryOnFail": false
+    },
+    {
+      "id": "read-safe-status",
+      "name": "Read safe status",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        500,
+        0
+      ],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "// Operational summaries only. Never copy raw error text or invoice fields.\nfunction normalize(input, operation, mode) {\n  const allowedCodes = new Set(['API_NOT_CONFIGURED','UNAUTHORIZED','SERVER_REQUEST_REQUIRED','INVALID_REQUEST',\n    'UNKNOWN_REPORT_MONTH','CONNECTION_REQUIRED','OPERATION_BUSY','OPERATION_FAILED','STATUS_UNAVAILABLE']);\n  const expected = {intake:'INTAKE_COMPLETED',status:'STATUS_READY',report:'REPORT_VERIFIED'};\n  const body = input && typeof input.body === 'object' && input.body !== null ? input.body : null;\n  const integer = value => Number.isSafeInteger(value) && value >= 0;\n  const month = value => typeof value === 'string' && /^[0-9]{4}-(0[1-9]|1[0-2])$/.test(value);\n  const correlation = body && typeof body.correlation_id === 'string' && /^[a-f0-9]{32}$/.test(body.correlation_id) ? body.correlation_id : null;\n  const base = {operation,request_ok:false,manual_invocation:mode==='manual'||mode==='cli'||mode==='test',\n    correlation_id:correlation,automatic_retry:false,code:'TRANSPORT_FAILED',\n    next_action:operation==='report'?'inspect_saved_report':'inspect_saved_state'};\n  if (!body) return base;\n  base.code = allowedCodes.has(body.code) ? body.code : 'RESPONSE_INVALID';\n  if (input.statusCode !== 200 || body.code !== expected[operation] || !body.data || typeof body.data !== 'object') return base;\n  const data = body.data;\n  if (operation === 'report') {\n    if (!month(data.month) || !integer(data.deliveries) || data.report_status !== 'verified') return base;\n    return {...base,request_ok:true,code:body.code,month:data.month,deliveries:data.deliveries,\n      report_status:'verified',next_action:'none'};\n  }\n  const statuses = new Set(['verified','held','awaiting_approval','awaiting_review','ready','unsupported',\n    'needs_inspection','received','extracted','extracting','uncertain','processing','other']);\n  if (!integer(data.deliveries) || !integer(data.duplicate_deliveries) || data.duplicate_deliveries>data.deliveries ||\n      !data.counts || Array.isArray(data.counts) || typeof data.counts!=='object' ||\n      !Array.isArray(data.available_report_months) || !data.available_report_months.every(month) ||\n      !['automatic','required'].includes(data.review_policy) || data.new_extraction_budget!==0) return base;\n  const counts={};\n  for (const [key,value] of Object.entries(data.counts)) {\n    if (!statuses.has(key) || !integer(value)) return base;\n    counts[key]=value;\n  }\n  if (Object.values(counts).reduce((a,b)=>a+b,0)!==data.deliveries) return base;\n  if (operation==='status' && (!data.readiness || !['xero_saved','google_saved','xero_configured','google_configured'].every(k=>data.readiness[k]===true))) {\n    return {...base,code:'CONNECTION_REQUIRED',next_action:'inspect_local_connections'};\n  }\n  let poll;\n  if (operation==='intake') {\n    if (!data.poll || !integer(data.poll.new_deliveries) || !integer(data.poll.already_recorded) || typeof data.poll.more_pages!=='boolean') return base;\n    poll={new_deliveries:data.poll.new_deliveries,already_recorded:data.poll.already_recorded,more_pages:data.poll.more_pages};\n  }\n  const attention = Object.entries(counts).some(([key,value])=>key!=='verified'&&value>0);\n  return {...base,request_ok:true,code:body.code,deliveries:data.deliveries,counts,\n    duplicate_deliveries:data.duplicate_deliveries,review_policy:data.review_policy,\n    available_report_months:[...new Set(data.available_report_months)].sort(),new_extraction_budget:0,\n    attention_required:attention,...(poll?{poll}:{}),next_action:attention?'inspect_invoice_app':'none',\n    operator_message:attention?'The request completed. Review the held, unsupported or pending deliveries in the invoice app.':'The request completed. No pending delivery exceptions are recorded.'};\n}\n\nreturn [{json:normalize($input.first().json,'status',$('Run manually').isExecuted?'manual':$execution.mode)}];",
+        "mode": "runOnceForAllItems"
+      }
+    },
+    {
+      "id": "status-request-succeeded",
+      "name": "Status request succeeded",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        750,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "check",
+              "leftValue": "={{ $json.request_ok }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "prepare-reporting-months",
+      "name": "Prepare reporting months",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1000,
+        0
+      ],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "function reportItems(input) {\n  const months=input.available_report_months;\n  if (!Array.isArray(months)||!months.every(m=>typeof m==='string'&&/^[0-9]{4}-(0[1-9]|1[0-2])$/.test(m))) throw Error('Reporting month list is invalid. Inspect saved status.');\n  const unique=[...new Set(months)].sort();\n  return unique.length ? unique.map(month=>({json:{month,has_month:true}})) : [{json:{status:'nothing_to_report',has_month:false,operator_message:'No saved reporting months exist. No report API call was made.'}}];\n}\n\nreturn reportItems($input.first().json);",
+        "mode": "runOnceForAllItems"
+      }
+    },
+    {
+      "id": "any-report-month-exists",
+      "name": "Any report month exists",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1250,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "check",
+              "leftValue": "={{ $json.has_month }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "nothing-to-report",
+      "name": "Nothing to report",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        -200
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "one-month-at-a-time",
+      "name": "One month at a time",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1500,
+        0
+      ],
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      }
+    },
+    {
+      "id": "refresh-this-report-month",
+      "name": "Refresh this report month",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1750,
+        200
+      ],
+      "parameters": {
+        "url": "http://invoice-api:8080/integrations/n8n/report",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {
+          "timeout": 300000,
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        },
+        "method": "POST",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({month:$json.month}) }}"
+      },
+      "onError": "continueErrorOutput",
+      "retryOnFail": false
+    },
+    {
+      "id": "read-safe-report-result",
+      "name": "Read safe report result",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2000,
+        200
+      ],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "// Operational summaries only. Never copy raw error text or invoice fields.\nfunction normalize(input, operation, mode) {\n  const allowedCodes = new Set(['API_NOT_CONFIGURED','UNAUTHORIZED','SERVER_REQUEST_REQUIRED','INVALID_REQUEST',\n    'UNKNOWN_REPORT_MONTH','CONNECTION_REQUIRED','OPERATION_BUSY','OPERATION_FAILED','STATUS_UNAVAILABLE']);\n  const expected = {intake:'INTAKE_COMPLETED',status:'STATUS_READY',report:'REPORT_VERIFIED'};\n  const body = input && typeof input.body === 'object' && input.body !== null ? input.body : null;\n  const integer = value => Number.isSafeInteger(value) && value >= 0;\n  const month = value => typeof value === 'string' && /^[0-9]{4}-(0[1-9]|1[0-2])$/.test(value);\n  const correlation = body && typeof body.correlation_id === 'string' && /^[a-f0-9]{32}$/.test(body.correlation_id) ? body.correlation_id : null;\n  const base = {operation,request_ok:false,manual_invocation:mode==='manual'||mode==='cli'||mode==='test',\n    correlation_id:correlation,automatic_retry:false,code:'TRANSPORT_FAILED',\n    next_action:operation==='report'?'inspect_saved_report':'inspect_saved_state'};\n  if (!body) return base;\n  base.code = allowedCodes.has(body.code) ? body.code : 'RESPONSE_INVALID';\n  if (input.statusCode !== 200 || body.code !== expected[operation] || !body.data || typeof body.data !== 'object') return base;\n  const data = body.data;\n  if (operation === 'report') {\n    if (!month(data.month) || !integer(data.deliveries) || data.report_status !== 'verified') return base;\n    return {...base,request_ok:true,code:body.code,month:data.month,deliveries:data.deliveries,\n      report_status:'verified',next_action:'none'};\n  }\n  const statuses = new Set(['verified','held','awaiting_approval','awaiting_review','ready','unsupported',\n    'needs_inspection','received','extracted','extracting','uncertain','processing','other']);\n  if (!integer(data.deliveries) || !integer(data.duplicate_deliveries) || data.duplicate_deliveries>data.deliveries ||\n      !data.counts || Array.isArray(data.counts) || typeof data.counts!=='object' ||\n      !Array.isArray(data.available_report_months) || !data.available_report_months.every(month) ||\n      !['automatic','required'].includes(data.review_policy) || data.new_extraction_budget!==0) return base;\n  const counts={};\n  for (const [key,value] of Object.entries(data.counts)) {\n    if (!statuses.has(key) || !integer(value)) return base;\n    counts[key]=value;\n  }\n  if (Object.values(counts).reduce((a,b)=>a+b,0)!==data.deliveries) return base;\n  if (operation==='status' && (!data.readiness || !['xero_saved','google_saved','xero_configured','google_configured'].every(k=>data.readiness[k]===true))) {\n    return {...base,code:'CONNECTION_REQUIRED',next_action:'inspect_local_connections'};\n  }\n  let poll;\n  if (operation==='intake') {\n    if (!data.poll || !integer(data.poll.new_deliveries) || !integer(data.poll.already_recorded) || typeof data.poll.more_pages!=='boolean') return base;\n    poll={new_deliveries:data.poll.new_deliveries,already_recorded:data.poll.already_recorded,more_pages:data.poll.more_pages};\n  }\n  const attention = Object.entries(counts).some(([key,value])=>key!=='verified'&&value>0);\n  return {...base,request_ok:true,code:body.code,deliveries:data.deliveries,counts,\n    duplicate_deliveries:data.duplicate_deliveries,review_policy:data.review_policy,\n    available_report_months:[...new Set(data.available_report_months)].sort(),new_extraction_budget:0,\n    attention_required:attention,...(poll?{poll}:{}),next_action:attention?'inspect_invoice_app':'none',\n    operator_message:attention?'The request completed. Review the held, unsupported or pending deliveries in the invoice app.':'The request completed. No pending delivery exceptions are recorded.'};\n}\n\nreturn [{json:normalize($input.first().json,'report',$('Run manually').isExecuted?'manual':$execution.mode)}];",
+        "mode": "runOnceForAllItems"
+      }
+    },
+    {
+      "id": "report-read-back-verified",
+      "name": "Report read-back verified",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2250,
+        200
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "check",
+              "leftValue": "={{ $json.request_ok }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "reporting-complete",
+      "name": "Reporting complete",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1750,
+        -100
+      ],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "function reportSummary(items) {\n  if (!items.length||!items.every(x=>x.request_ok===true&&x.report_status==='verified'&&typeof x.month==='string'&&/^[0-9]{4}-(0[1-9]|1[0-2])$/.test(x.month)&&Number.isSafeInteger(x.deliveries)&&x.deliveries>=0)) throw Error('Not all report results were verified. Inspect saved reports.');\n  const seen=new Set();\n  for(const item of items){if(seen.has(item.month))throw Error('Duplicate reporting month. Inspect workflow loop.');seen.add(item.month);}\n  return {status:'completed',refreshed_months:items.length,verified_reports:items.map(x=>({month:x.month,deliveries:x.deliveries})),\n    automatic_retry:false,operator_message:'All requested monthly reports were refreshed and read back. No accounting operation was requested.'};\n}\n\nreturn [{json:reportSummary($input.all().map(item=>item.json))}];",
+        "mode": "runOnceForAllItems"
+      }
+    },
+    {
+      "id": "manual-or-cli-run",
+      "name": "Manual or CLI run",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1000,
+        500
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "check",
+              "leftValue": "={{ $json.manual_invocation }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "record-safe-failure",
+      "name": "Record safe failure",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        1240,
+        500
+      ],
+      "parameters": {
+        "source": "database",
+        "workflowId": {
+          "__rl": true,
+          "value": "northmereP10Errors",
+          "mode": "id"
+        },
+        "mode": "once",
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      }
+    },
+    {
+      "id": "stop-and-inspect-saved-state",
+      "name": "Stop and inspect saved state",
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        1480,
+        500
+      ],
+      "parameters": {
+        "errorType": "errorMessage",
+        "errorMessage": "Operation failed. Inspect the saved state and failure summary before a manual retry."
+      }
+    }
+  ],
+  "connections": {
+    "Run manually": {
+      "main": [
+        [
+          {
+            "node": "Read available report months",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Daily 09-00 - DISABLED": {
+      "main": [
+        [
+          {
+            "node": "Read available report months",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read available report months": {
+      "main": [
+        [
+          {
+            "node": "Read safe status",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Read safe status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read safe status": {
+      "main": [
+        [
+          {
+            "node": "Status request succeeded",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Status request succeeded": {
+      "main": [
+        [
+          {
+            "node": "Prepare reporting months",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Manual or CLI run",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare reporting months": {
+      "main": [
+        [
+          {
+            "node": "Any report month exists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Any report month exists": {
+      "main": [
+        [
+          {
+            "node": "One month at a time",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Nothing to report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "One month at a time": {
+      "main": [
+        [
+          {
+            "node": "Reporting complete",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Refresh this report month",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Refresh this report month": {
+      "main": [
+        [
+          {
+            "node": "Read safe report result",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Read safe report result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read safe report result": {
+      "main": [
+        [
+          {
+            "node": "Report read-back verified",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Report read-back verified": {
+      "main": [
+        [
+          {
+            "node": "One month at a time",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Manual or CLI run",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Manual or CLI run": {
+      "main": [
+        [
+          {
+            "node": "Record safe failure",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Stop and inspect saved state",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Record safe failure": {
+      "main": [
+        [
+          {
+            "node": "Stop and inspect saved state",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Asia/Kolkata",
+    "saveExecutionProgress": false,
+    "executionTimeout": 900,
+    "errorWorkflow": "northmereP10Errors"
+  },
+  "active": false,
+  "pinData": {}
+}

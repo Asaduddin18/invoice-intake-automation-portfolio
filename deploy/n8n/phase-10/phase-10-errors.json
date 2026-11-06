@@ -1,0 +1,77 @@
+{
+  "id": "northmereP10Errors",
+  "name": "Phase 10 - Safe failure handling",
+  "nodes": [
+    {
+      "id": "automatic-workflow-failure",
+      "name": "Automatic workflow failure",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "failure-from-a-manual-run",
+      "name": "Failure from a manual run",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        220
+      ],
+      "parameters": {
+        "inputSource": "passthrough"
+      }
+    },
+    {
+      "id": "safe-failure-summary",
+      "name": "Safe failure summary",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        300,
+        100
+      ],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "function safeFailure(input) {\n  const ids={northmereP10Intake:'intake',northmereP10Reports:'reporting'};\n  const operation=['intake','status','report'].includes(input.operation)?input.operation:(ids[input.workflow?.id]||'workflow');\n  const codes=new Set(['API_NOT_CONFIGURED','UNAUTHORIZED','SERVER_REQUEST_REQUIRED','INVALID_REQUEST','UNKNOWN_REPORT_MONTH',\n    'CONNECTION_REQUIRED','OPERATION_BUSY','OPERATION_FAILED','STATUS_UNAVAILABLE','TRANSPORT_FAILED','RESPONSE_INVALID']);\n  return {status:'action_required',operation,code:codes.has(input.code)?input.code:'WORKFLOW_FAILED',\n    correlation_id:typeof input.correlation_id==='string'&&/^[a-f0-9]{32}$/.test(input.correlation_id)?input.correlation_id:null,\n    execution_ref:typeof input.execution?.id==='string'&&/^[A-Za-z0-9_-]{1,64}$/.test(input.execution.id)?input.execution.id:null,\n    automatic_retry:false,next_action:operation==='report'||operation==='reporting'?'inspect_saved_report':'inspect_saved_state',\n    operator_message:'Inspect the saved operation before retrying. Do not rerun invoice creation to fix a report. No notification was sent.'};\n}\n\nreturn [{json:safeFailure($input.first().json)}];",
+        "mode": "runOnceForAllItems"
+      }
+    }
+  ],
+  "connections": {
+    "Automatic workflow failure": {
+      "main": [
+        [
+          {
+            "node": "Safe failure summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Failure from a manual run": {
+      "main": [
+        [
+          {
+            "node": "Safe failure summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Asia/Kolkata",
+    "saveExecutionProgress": false,
+    "executionTimeout": 900
+  },
+  "active": false,
+  "pinData": {}
+}

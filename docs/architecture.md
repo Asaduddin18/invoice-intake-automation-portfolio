@@ -40,3 +40,11 @@ Before accounting writes, the application validates an active expense account an
 The model extracts printed facts. Deterministic code checks arithmetic and business rules. Text/vision disagreement remains held. Unknown suppliers require explicit mapping. Approval can be required, and changes invalidate the approval signature. Automatic is the default; invalid data remains held in either mode.
 
 A poll reads at most ten messages and permits at most three uncached documents, each with at most one text and one vision request. API failures do not trigger paid fallback retries. Monthly reporting never invokes model extraction or accounting creation. Report month follows invoice date, falling back to received month UTC for missing/invalid dates.
+
+## n8n orchestration boundary
+
+![n8n operation boundary](../site/images/n8n-architecture.svg)
+
+n8n sends dedicated bearer-authenticated requests to the local FastAPI integration API. Manual intake calls one existing Gmail poll with zero uncached extraction allowance; cached eligible invoices retain the existing configurable review and duplicate-safe draft controls. Sequential reporting refreshes saved months independently and requires read-back verification. Code nodes validate response shape and allowlist summary fields. Technical failures require saved-state inspection before a manual retry.
+
+Provider credentials stay with Python. The n8n credential grants intake/report/status operations only. The three exports contain no credential values or local credential bindings. Optional schedule nodes are disabled and intake/reporting stay unpublished; only the failure helper is published locally for sub-workflow calls. No outgoing notifications are configured. See [operator handover](n8n-handover.md).
