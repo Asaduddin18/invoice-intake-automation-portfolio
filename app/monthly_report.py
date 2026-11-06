@@ -23,6 +23,12 @@ def numeric(value):
     except (InvalidOperation,ValueError):pass
     return value
 
+def reporting_period(invoice_date, received):
+    try:return date.fromisoformat(invoice_date).strftime('%Y-%m'),'invoice date'
+    except (ValueError,TypeError):
+        return datetime.fromtimestamp(received,timezone.utc).strftime('%Y-%m'),'receipt date, invoice date missing/invalid'
+
+
 class MonthlyReport:
     def __init__(self,connection,google):
         self.connection=connection;self.google=google
@@ -37,8 +43,7 @@ class MonthlyReport:
             invoice=invoice or {};outcome=(case or {}).get('outcome') or {}
             received=datetime.fromtimestamp(row['received'],timezone.utc).isoformat()
             invdate=invoice.get('invoice_date')
-            try:report_month=date.fromisoformat(invdate).strftime('%Y-%m');basis='invoice date'
-            except (ValueError,TypeError):report_month=received[:7];basis='receipt date, invoice date missing/invalid'
+            report_month,basis=reporting_period(invdate,row['received'])
             if report_month!=month:continue
             status=row['status'];reason=row['detail']
             if case:

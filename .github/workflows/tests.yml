@@ -15,3 +15,28 @@ jobs:
           node-version: '22'
       - run: python -m pip install -r requirements.lock.txt
       - run: python -m pytest -q
+
+  local-container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          cp .env.example .env
+          python3 scripts/prepare_n8n_local.py
+          docker compose config --quiet
+          docker build -t invoice-ci-health .
+          docker run --detach --name invoice-ci-health --publish 127.0.0.1:8080:8080 invoice-ci-health
+      - run: |
+          python3 - <<'PYCODE'
+          import json,time,urllib.request
+          for attempt in range(30):
+              try:
+                  with urllib.request.urlopen('http://localhost:8080/health',timeout=2) as response:
+                      assert json.load(response)=={'status':'ok','service':'invoice-intake'}
+                  break
+              except OSError:
+                  if attempt==29:raise
+                  time.sleep(1)
+          PYCODE
+      - if: always()
+        run: docker rm -f invoice-ci-health || true

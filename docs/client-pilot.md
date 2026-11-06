@@ -20,3 +20,7 @@ What accounting software and organisation are used? Which mailbox receives invoi
 Measure field correctness and missing/invented values on held-out client examples. Test identical and reformatted duplicates, wrong totals, unknown suppliers, interrupted writes and reporting retries. Define which documents must be held and who resolves them. Reconcile the resulting draft fields, amounts and status with the source.
 
 This portfolio demonstrates a local synthetic workflow. A client pilot needs separately scoped authentication, deployment, monitoring, secret management, retention, access control and provider terms. Scans, handwriting, mixed tax, credit notes, foreign currency, payments and bill authorization expand the scope. No time-saving, error-reduction, compliance or production-accuracy claim has been measured here.
+
+## n8n orchestration option
+
+The portfolio includes visible intake/reporting workflows, safe local failure summaries and disabled schedule examples. A client pilot can agree who operates them, which permitted mailbox is in scope, which exceptions need action and how report recovery is accepted. The demonstration uses a zero-new-extraction n8n budget; increasing uncached processing, enabling schedules, notifications or production hosting requires an explicit client scope and cost policy.

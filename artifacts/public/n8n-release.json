@@ -1,0 +1,93 @@
+{
+  "release": "v1.1.0",
+  "date": "2026-11-06",
+  "scope": "Final local n8n extension and static public walkthrough using fictional invoices.",
+  "repository": "https://github.com/Asaduddin18/invoice-intake-automation-portfolio",
+  "walkthrough": "https://asaduddin18.github.io/invoice-intake-automation-portfolio/n8n.html",
+  "acceptance": {
+    "phase": 11,
+    "verified_at": "2026-11-06T12:53:52.513398+00:00",
+    "fresh_import": "passed",
+    "restart": "passed",
+    "existing_saved_credential_rebound": true,
+    "credential_values_exported": false,
+    "cases": [
+      {
+        "case": "fresh-status",
+        "status": "passed",
+        "saved_credential_authenticated": true
+      },
+      {
+        "case": "fresh-intake",
+        "status": "passed",
+        "deliveries": 5,
+        "counts": {
+          "held": 2,
+          "unsupported": 1,
+          "verified": 2
+        },
+        "duplicate_deliveries": 1,
+        "poll": {
+          "new_deliveries": 0,
+          "already_recorded": 5,
+          "more_pages": false
+        }
+      },
+      {
+        "case": "fresh-reports",
+        "status": "passed",
+        "verified_reports": [
+          {
+            "month": "2026-08",
+            "deliveries": 4
+          },
+          {
+            "month": "2026-11",
+            "deliveries": 1
+          }
+        ]
+      }
+    ],
+    "before": {
+      "ledger_invoices": 3,
+      "bill_creation_intents": 2,
+      "saved_extractions": 28
+    },
+    "after": {
+      "ledger_invoices": 3,
+      "bill_creation_intents": 2,
+      "saved_extractions": 28
+    },
+    "new_model_calls": 0,
+    "new_bill_creation_intents": 0,
+    "schedules_enabled": false,
+    "scope": "New IDs in the existing local n8n instance; not a new owner-account installation. Synthetic Gmail/Sheets acceptance uses existing provider grants.",
+    "temporary_acceptance_workflows_unpublished_after_test": true
+  },
+  "phase10_fault_acceptance": {
+    "workflow_cases": 8,
+    "automatic_error_trigger": "passed",
+    "source": "Prior Phase 10 synthetic fault/recovery acceptance; no fault injection into provider accounts."
+  },
+  "workflow_exports": 3,
+  "fixture_pdfs": 50,
+  "model_evaluated_invoices": 20,
+  "operator_attestation": "Not claimed; independent user walkthrough is a learning exercise.",
+  "limits": [
+    "Local single-worker synthetic demo.",
+    "Public page uses fixed examples and makes no API calls.",
+    "Fresh workflow IDs in existing local instance; no second owner-account provisioning.",
+    "No production hosting, payments, bill authorization or commercial performance claim."
+  ],
+  "offline_tests": {
+    "passed": 164,
+    "failed": 0,
+    "warning": "Existing Starlette/httpx deprecation"
+  },
+  "fresh_environment": {
+    "pinned_install": "passed",
+    "clean_export_tests_passed": 164,
+    "clean_export_tests_failed": 0
+  },
+  "browser_preview": "Passed: node selection, JSON panels and architecture rendered on desktop."
+}

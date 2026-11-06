@@ -1,0 +1,371 @@
+{
+  "id": "northmereP10Intake",
+  "name": "Phase 10 - Invoice intake",
+  "nodes": [
+    {
+      "id": "run-manually",
+      "name": "Run manually",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "every-15-minutes---disabled",
+      "name": "Every 15 minutes - DISABLED",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        -200
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 15
+            }
+          ]
+        }
+      },
+      "disabled": true
+    },
+    {
+      "id": "check-invoice-inbox",
+      "name": "Check invoice inbox",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        250,
+        0
+      ],
+      "parameters": {
+        "url": "http://invoice-api:8080/integrations/n8n/intake",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {
+          "timeout": 300000,
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true,
+              "responseFormat": "json"
+            }
+          }
+        },
+        "method": "POST",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{}"
+      },
+      "onError": "continueErrorOutput",
+      "retryOnFail": false
+    },
+    {
+      "id": "read-safe-intake-result",
+      "name": "Read safe intake result",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        500,
+        0
+      ],
+      "parameters": {
+        "language": "javaScript",
+        "jsCode": "// Operational summaries only. Never copy raw error text or invoice fields.\nfunction normalize(input, operation, mode) {\n  const allowedCodes = new Set(['API_NOT_CONFIGURED','UNAUTHORIZED','SERVER_REQUEST_REQUIRED','INVALID_REQUEST',\n    'UNKNOWN_REPORT_MONTH','CONNECTION_REQUIRED','OPERATION_BUSY','OPERATION_FAILED','STATUS_UNAVAILABLE']);\n  const expected = {intake:'INTAKE_COMPLETED',status:'STATUS_READY',report:'REPORT_VERIFIED'};\n  const body = input && typeof input.body === 'object' && input.body !== null ? input.body : null;\n  const integer = value => Number.isSafeInteger(value) && value >= 0;\n  const month = value => typeof value === 'string' && /^[0-9]{4}-(0[1-9]|1[0-2])$/.test(value);\n  const correlation = body && typeof body.correlation_id === 'string' && /^[a-f0-9]{32}$/.test(body.correlation_id) ? body.correlation_id : null;\n  const base = {operation,request_ok:false,manual_invocation:mode==='manual'||mode==='cli'||mode==='test',\n    correlation_id:correlation,automatic_retry:false,code:'TRANSPORT_FAILED',\n    next_action:operation==='report'?'inspect_saved_report':'inspect_saved_state'};\n  if (!body) return base;\n  base.code = allowedCodes.has(body.code) ? body.code : 'RESPONSE_INVALID';\n  if (input.statusCode !== 200 || body.code !== expected[operation] || !body.data || typeof body.data !== 'object') return base;\n  const data = body.data;\n  if (operation === 'report') {\n    if (!month(data.month) || !integer(data.deliveries) || data.report_status !== 'verified') return base;\n    return {...base,request_ok:true,code:body.code,month:data.month,deliveries:data.deliveries,\n      report_status:'verified',next_action:'none'};\n  }\n  const statuses = new Set(['verified','held','awaiting_approval','awaiting_review','ready','unsupported',\n    'needs_inspection','received','extracted','extracting','uncertain','processing','other']);\n  if (!integer(data.deliveries) || !integer(data.duplicate_deliveries) || data.duplicate_deliveries>data.deliveries ||\n      !data.counts || Array.isArray(data.counts) || typeof data.counts!=='object' ||\n      !Array.isArray(data.available_report_months) || !data.available_report_months.every(month) ||\n      !['automatic','required'].includes(data.review_policy) || data.new_extraction_budget!==0) return base;\n  const counts={};\n  for (const [key,value] of Object.entries(data.counts)) {\n    if (!statuses.has(key) || !integer(value)) return base;\n    counts[key]=value;\n  }\n  if (Object.values(counts).reduce((a,b)=>a+b,0)!==data.deliveries) return base;\n  if (operation==='status' && (!data.readiness || !['xero_saved','google_saved','xero_configured','google_configured'].every(k=>data.readiness[k]===true))) {\n    return {...base,code:'CONNECTION_REQUIRED',next_action:'inspect_local_connections'};\n  }\n  let poll;\n  if (operation==='intake') {\n    if (!data.poll || !integer(data.poll.new_deliveries) || !integer(data.poll.already_recorded) || typeof data.poll.more_pages!=='boolean') return base;\n    poll={new_deliveries:data.poll.new_deliveries,already_recorded:data.poll.already_recorded,more_pages:data.poll.more_pages};\n  }\n  const attention = Object.entries(counts).some(([key,value])=>key!=='verified'&&value>0);\n  return {...base,request_ok:true,code:body.code,deliveries:data.deliveries,counts,\n    duplicate_deliveries:data.duplicate_deliveries,review_policy:data.review_policy,\n    available_report_months:[...new Set(data.available_report_months)].sort(),new_extraction_budget:0,\n    attention_required:attention,...(poll?{poll}:{}),next_action:attention?'inspect_invoice_app':'none',\n    operator_message:attention?'The request completed. Review the held, unsupported or pending deliveries in the invoice app.':'The request completed. No pending delivery exceptions are recorded.'};\n}\n\nreturn [{json:normalize($input.first().json,'intake',$('Run manually').isExecuted?'manual':$execution.mode)}];",
+        "mode": "runOnceForAllItems"
+      }
+    },
+    {
+      "id": "intake-request-succeeded",
+      "name": "Intake request succeeded",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        750,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "check",
+              "leftValue": "={{ $json.request_ok }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "any-deliveries-need-attention",
+      "name": "Any deliveries need attention",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1000,
+        0
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "check",
+              "leftValue": "={{ $json.attention_required }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "review-exceptions-in-invoice-app",
+      "name": "Review exceptions in invoice app",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        -100
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "intake-complete---no-pending-exceptions",
+      "name": "Intake complete - no pending exceptions",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1250,
+        150
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "manual-or-cli-run",
+      "name": "Manual or CLI run",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1000,
+        400
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "check",
+              "leftValue": "={{ $json.manual_invocation }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "record-safe-failure",
+      "name": "Record safe failure",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        1240,
+        400
+      ],
+      "parameters": {
+        "source": "database",
+        "workflowId": {
+          "__rl": true,
+          "value": "northmereP10Errors",
+          "mode": "id"
+        },
+        "mode": "once",
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      }
+    },
+    {
+      "id": "stop-and-inspect-saved-state",
+      "name": "Stop and inspect saved state",
+      "type": "n8n-nodes-base.stopAndError",
+      "typeVersion": 1,
+      "position": [
+        1480,
+        400
+      ],
+      "parameters": {
+        "errorType": "errorMessage",
+        "errorMessage": "Operation failed. Inspect the saved state and failure summary before a manual retry."
+      }
+    }
+  ],
+  "connections": {
+    "Run manually": {
+      "main": [
+        [
+          {
+            "node": "Check invoice inbox",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Every 15 minutes - DISABLED": {
+      "main": [
+        [
+          {
+            "node": "Check invoice inbox",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check invoice inbox": {
+      "main": [
+        [
+          {
+            "node": "Read safe intake result",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Read safe intake result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read safe intake result": {
+      "main": [
+        [
+          {
+            "node": "Intake request succeeded",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Intake request succeeded": {
+      "main": [
+        [
+          {
+            "node": "Any deliveries need attention",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Manual or CLI run",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Any deliveries need attention": {
+      "main": [
+        [
+          {
+            "node": "Review exceptions in invoice app",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Intake complete - no pending exceptions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Manual or CLI run": {
+      "main": [
+        [
+          {
+            "node": "Record safe failure",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Stop and inspect saved state",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Record safe failure": {
+      "main": [
+        [
+          {
+            "node": "Stop and inspect saved state",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Asia/Kolkata",
+    "saveExecutionProgress": false,
+    "executionTimeout": 900,
+    "errorWorkflow": "northmereP10Errors"
+  },
+  "active": false,
+  "pinData": {}
+}

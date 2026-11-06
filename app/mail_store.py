@@ -9,6 +9,10 @@ from contextlib import contextmanager
 from pathlib import Path
 from app.google_connection import GoogleError
 
+class MailBusyError(GoogleError):
+    """Another operator holds the existing intake or reporting lock."""
+
+
 class MailStore:
     def __init__(self,directory):
         self.directory=Path(directory)/'mail'
@@ -57,7 +61,7 @@ class MailStore:
         fd=os.open(self.directory/(name+'.lock'),os.O_RDWR|os.O_CREAT,0o600)
         try:
             try:fcntl.flock(fd,fcntl.LOCK_EX|fcntl.LOCK_NB)
-            except BlockingIOError:raise GoogleError('Another '+name+' operation is running. Inspect the result shortly.') from None
+            except BlockingIOError:raise MailBusyError('Another '+name+' operation is running. Inspect the result shortly.') from None
             yield
         finally:
             fcntl.flock(fd,fcntl.LOCK_UN);os.close(fd)

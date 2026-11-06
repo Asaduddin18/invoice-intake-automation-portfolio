@@ -2,7 +2,7 @@
 
 **Supplier email → checked invoice data → duplicate-safe Xero draft → traceable monthly report.**
 
-A Python/FastAPI portfolio project for accounts-payable workflow automation. It combines DeepSeek extraction with deterministic financial checks, configurable approval, durable duplicate protection and recoverable Google Sheets reporting.
+A Python/FastAPI and n8n portfolio project for accounts-payable workflow automation. It combines DeepSeek extraction with deterministic financial checks, configurable approval, durable duplicate protection and recoverable Google Sheets reporting.
 
 [**Explore the illustrated demo**](https://asaduddin18.github.io/invoice-intake-automation-portfolio/) · [Case study](docs/case-study.md) · [Architecture](docs/architecture.md) · [Client pilot scope](docs/client-pilot.md)
 
@@ -22,6 +22,7 @@ Supplier invoices arrive in different PDF layouts. Copying fields into accountin
 - Applies explicit supplier/account/tax mappings and optional revision-bound approval. Automatic is the default; invalid invoices remain held in either mode.
 - Reconciles supplier/invoice identity and saves a creation intent before creating a Xero **DRAFT** bill. Retrieved fields and totals are compared with the source.
 - Refreshes monthly Sheets reports independently, counts a verified bill once across duplicate arrivals and verifies the saved values by reading them back.
+- Orchestrates bounded intake and sequential reporting through inspectable n8n workflows, with safe failure summaries and disabled optional schedules.
 
 ## Evidence and limits
 
@@ -33,7 +34,7 @@ Supplier invoices arrive in different PDF layouts. Copying fields into accountin
 | Live intake acceptance | Five arrivals: valid + duplicate linked to one GBP 95.16 draft, two invalid invoices held, one text attachment unsupported |
 | Repeated polling | Zero new receipts for the same five deliveries after fixing rotating Gmail download locators |
 | Reporting recovery | Locally injected write failure recovered against live Sheets; accounting and extraction counts stayed unchanged |
-| Test suite | 127 automated tests; see CI and release evidence |
+| Test suite | 164 automated tests; see CI and release evidence |
 
 These are small synthetic tests, not production accuracy or scan/OCR coverage. The full dataset has 50 searchable fictional PDFs, but only 20 were evaluated with the model. Phase 6 reused saved extractions and an existing draft, adding no model calls or bill creation intents. [Measured evidence](artifacts/public/metrics.json) · [Case study](docs/case-study.md).
 
@@ -62,6 +63,10 @@ python -m uvicorn app.main:app --host 127.0.0.1 --port 8080 --no-access-log
 Open `http://localhost:8080`. The real integration needs your own Google OAuth client, Gmail/Sheets APIs, synthetic-data mailbox, Xero developer app and UK Demo Company, plus a DeepSeek key for uncached extraction. [Complete setup and recovery](docs/operations.md).
 
 Keep one worker. Do not deploy this unauthenticated connected app publicly. Source PDFs and extraction data are local plaintext; provider tokens are encrypted with a key on the same machine. [Privacy and retention](docs/privacy.md).
+
+## Operate the n8n extension
+
+A separate Docker learning setup connects n8n to the existing backend. [Local setup and recovery](docs/n8n-local.md). The [authenticated operation API](docs/n8n-api.md) exposes status, cache-only intake and monthly reporting. The [Phase 10 workflows](docs/n8n-workflows.md) add manual intake, sequential report refresh and safe failure summaries. Optional schedules are disabled. Python retains invoice extraction, validation, configurable review and Xero duplicate protection. Start with the [final operator handover](docs/n8n-handover.md), including node input/output inspection, recovery, schedule shutdown and token rotation. [Explore the public n8n walkthrough](https://asaduddin18.github.io/invoice-intake-automation-portfolio/n8n.html).
 
 ## Inspect the implementation
 

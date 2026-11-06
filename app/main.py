@@ -44,7 +44,10 @@ def create_app(settings=None, transport=None):
     connection = XeroConnection(TokenStore(settings.storage_dir), settings, transport)
     bills = DemoBills(connection)
     app = FastAPI(title='Invoice Intake: Xero connection test', docs_url=None, redoc_url=None)
-    app.add_middleware(TrustedHostMiddleware, allowed_hosts=['localhost', '127.0.0.1', 'testserver'])
+    allowed_hosts=['localhost', '127.0.0.1', 'testserver']
+    if os.getenv('INVOICE_DOCKER_NETWORK')=='true':
+        allowed_hosts.append('invoice-api')
+    app.add_middleware(TrustedHostMiddleware, allowed_hosts=allowed_hosts)
     # One process, ten-minute authorization attempts. Restarting clears pending flows.
     pending = {}
     app.state.pending = pending
@@ -59,6 +62,11 @@ def create_app(settings=None, transport=None):
         response.headers['X-Content-Type-Options'] = 'nosniff'
         response.headers['Content-Security-Policy'] = "default-src 'none'; style-src 'self'; img-src 'self'; form-action 'self' https://login.xero.com; frame-ancestors 'none'"
         return response
+
+    @app.get('/health')
+    async def health():
+        # Liveness only: never read credentials or call external providers.
+        return {'status':'ok','service':'invoice-intake'}
 
     @app.get('/', response_class=HTMLResponse)
     async def home():
@@ -328,6 +336,8 @@ def create_app(settings=None, transport=None):
     register(app,connection,settings)
     from app.google_routes import register as register_google
     register_google(app,connection,settings,extraction_lock)
+    from app.n8n_routes import register as register_n8n
+    register_n8n(app,connection,settings)
     return app
 
 app = create_app()
